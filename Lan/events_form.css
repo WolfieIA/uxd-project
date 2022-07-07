@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+body {
+  background-image: url(./event_photos/texture1.jpg);
+}
+
+form {
+  width: 60%;
+  margin: 100px auto;
+  position: inherit;
+  padding: 30px;
+  background-color: white;
+}
+
+h2 {
+  font-family: libre Baskerville;
+  text-transform: uppercase;
+  padding: 0.5vh 1vw 0.5vh 1vw;
+  letter-spacing: 0.1vw;
+  align-items: center;
+  color: rgba(12, 105, 118, 1);
+}
+
+h2:after {
+ content: '';
+ border-top: 2px solid;
+ margin: auto auto auto 1vw;
+ padding: auto;
+ flex: 1 0 20px;
+ color: rgba(12, 105, 118, 1);
+}
+
+fieldset {
+ display: inline-flex ;
+ width: 50%;
+ margin: 10px 10px 10px 10px;
+}
+
+select {
+  margin: 3vh 2vw;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: FontAwesome, 'Work Sans';
+  display: inline;
+  width: 21%;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  font-size: 2vh;
+  text-align: left;
+}
+
+input:focus {
+  outline-color: rgba(228, 99, 27, 1);
+  outline-style: solid;
+  outline-width: 2px;
+  border-bottom: none;
+}
+
+select:focus {
+  outline-color: rgba(228, 99, 27, 1);
+  outline-style: solid;
+  outline-width: 2px;
+  border-bottom: none;
+}
+
+input{
+  margin: 3vh 2vw;
+  padding:10px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: FontAwesome, "Work Sans";
+  display: inline-block;
+  background-color: transparent;
+  font-size: 2vh;
+  height: 2vh;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input[name=event_datetimerange] {
+  width: 30%;
+}
+
+input[name=alt_datetimerange] {
+  width: 70%;
+}
+
+input[name=event_name] {
+  width: 25%;
+}
+
+input[type=radio] {
+  margin: 10px;
+}
+
+input[type=radio]:hover {
+  cursor: pointer;
+}
+
+input[type=radio]:focus {
+  outline: none;
+}
+
+label {
+  font-family: work sans;
+  margin:5px;
+}
+
+.contact input[type=text]{
+  width: 35%;
+}
+
+.contact input[type=tel]{
+  width: 35%;
+}
+
+.contact input[type=email]{
+  width: 35%;
+}
+
+.contact label {
+  margin-left: 30px;
+}
+
+h1 {
+  font-family: Libre Baskerville;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 550;
+  margin: 70px auto;
+  font-size: 5vh;
+  text-align: center;
+
+}
+
+.form_section {
+  margin: 40px auto;
+  width: 90%;
+}
+
+::placeholder {
+  color: black;
+}
+
+button {
+  text-transform: uppercase;
+  padding: 10px 5px 10px 5px;
+  font-family: Work Sans;
+  color: rgba(228, 99, 27, 1);
+  background: none;
+  border: 2px solid rgba(228, 99, 27, 1);
+  width: 40%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 520;
+  font-size: 2vh;
+  transition: 0.12s ease-in-out;
+  align: center;
+  float: none;
+}
+
+button:hover {
+  color: white;
+  background-color: rgba(228, 99, 27, 1);
+  border-color: rgba(228, 99, 27, 1);
+  cursor: pointer;
+}
+
+.button {
+  margin: 0 0 0 300px;
