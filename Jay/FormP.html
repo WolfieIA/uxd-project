@@ -1,0 +1,90 @@
+
+<html>
+<head>
+<title>Form Processor</title>
+</head>
+<body>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <div class="topnav">
+    <a class="active" href="Homepage.html"><img src="Images/hotellogo.png" height="100"width="140"></a>
+    <a href="#">Rooms</a>
+    <a href="#">Facilities</a>
+    <a href="#">Events</a>
+    <a href="#">Promotion</a>
+    <a href="Contact Us.html">Contact Us</a>
+  </div>
+  <div>
+    <body style="background-color:powderblue;">
+    </div>
+<script type="text/javascript">
+document.write("<h1>Your form has been submitted!</h1><h2>You entered the following data:</h2>");
+var formData = location.search;
+
+formData = formData.substring(1, formData.length);
+while (formData.indexOf("+") != -1) {
+	formData = formData.replace("+", " ");
+}
+formData = unescape(formData);
+var formArray = formData.split("&");
+for (var i=0; i < formArray.length; ++i) {
+	document.writeln(formArray[i] + "<br />");
+}
+</script>
+<div>
+<footer class="footer">
+   <div class="containerA">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Sunny Coastal Hotel</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Rooms</h4>
+        <ul>
+          <li><a href="#">Classic</a></li>
+          <li><a href="#">Deluxe</a></li>
+          <li><a href="#">Suite</a></li>
+          <li><a href="#">Premier</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Facilities</h4>
+        <ul>
+          <li><a href="#">Gym</a></li>
+          <li><a href="#">Swimming Pool</a></li>
+          <li><a href="#">Spa</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Bookings</a></li>
+          <li><a href="#">Availability</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <ul>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </ul>
+        </div>
+      </div>
+    </div>
+   </div>
+</footer>
+</div>
+
+
+
+</body>
+</html>
