@@ -1,0 +1,266 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+body{
+  font-family: sans-serif;
+}
+nav{
+  height: 80px;
+  width: 100%;
+  background: orange;
+}
+img.logo{
+  height: 80px;
+  padding: 0 100px;
+  line-height: 80px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+}
+nav li{
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+nav a{
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+a.active,a.hover{
+  border: 1px solid orange;
+  transition: .5s;
+
+}
+
+nav #icon{
+  color: white;
+  font-size: 30px;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 1200px) {
+  label.logo{
+    font-size: 32px;
+    padding-left: 60px;
+
+  }
+  nav ul{
+    margin-right: 20px;
+  }
+  nav a{
+    font-size: 17px;
+  }
+}
+@media (max-width: 1230px) {
+  nav #icon{
+    display: block;
+
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: orange;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav li{
+    display: block;
+    margin: 50px 0;
+    line-height: 80px;
+  }
+  nav a{
+    font-size: 20px;
+  }
+  a:active,a:hover{
+    border: none;
+    color: #3498db;
+  }
+  nav ul.show{
+    left: 0;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  background-color: #f1f1f1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #d7d7d7}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+h1{
+position: absolute;
+top: 28%;
+left: 40%;
+text-align: center;
+margin-top: 15px;
+font-size: 400%;
+text-align: center;
+color: white;
+  text-shadow: 3px 2px black;
+  z-index: 5;
+}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #fff;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+p,h3 {
+  font-style: italic;
+  text-align: center;
+
+}
+
+/* Add a blue color to the author */
+.author {
+  clear: both;
+  text-align: center;
+  color: orange;
+  border-radius: 20px;
+  background-color: #fff;
+  border:1px solid orange;
+  padding:10px;
+  width: 20%;
+  margin: 20px 30px 30px 30px;
+}
+.author:hover{
+  background-color: orange;
+  color: #fff;
+}
+
+
+.type{
+  display: grid;
+}
+.grid{
+  display: inline-grid;
+}
+.imgheader{
+  clear: both;
+  width: 100%;
+  opacity: 0.5;
+  display: flex;
+z-index: 1;
+
+}
+.darken{
+  background-color: black;
+}
+.box{
+  border: 2px solid orange;
+  width: 500px;
+  height: 300px;
+  background-color: white;
+}
+@media screen and (max-width: 1400px) {
+  .slideshow-container{
+    clear: both;
+    width: 100%;
+  }
+  div.mySlide img{
+    clear: both;
+    width: 90%;
+    margin-bottom: 20px;
+    right: 10px;
+  }
+  div.box{
+    clear: both;
+    right: 5px;
+    margin-top: 1000px;
+    margin: 0 auto;
+
+  }
+}

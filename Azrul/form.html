@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"name="viewport" content="width=device-width, initial-scale=1">
+<title>facilities Form</title>
+<link rel="stylesheet" href="form.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+    <img src="logo.jpeg" height="100px" width="150px" class="header"></img>
+  <nav>
+    <ul>
+  <li><a href="#" class="standby">ABOUT US<i class="fa fa-caret-down"></i></a></li>
+  <div class="dropdown">
+  <li><a href="#" class="standby">ROOMS<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+    <a href="#">SWIMMING POOL</a>
+    <a href="#">GYM STUDIO</a>
+    <a href="#">SPA & RELAXING</a>
+  </div>
+  </li>
+  </div>
+  <div class="dropdown">
+  <li><a href="facilities.html" class="current">FACILITY<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="facilities.html" onclick="currentSlide(1)">SWIMMING POOL</a>
+      <a href="facilities.html" onclick="currentSlide(2)">GYM STUDIO</a>
+      <a href="facilities.html" onclick="currentSlide(3)">SPA & RELAXING</a>
+    </div>
+    <li>
+  </div>
+  <li><a href="#" class="standby" >EVENTS<i class="fa fa-caret-down"></i></a></li>
+    <li><a href="#" class="standby" >PROMOTION<i class="fa fa-caret-down"></i></a></li>
+      <li><a href="#" class="standby" >CONTACT US<i class="fa fa-caret-down"></i></a></li>
+  </nav>
+  </header>
+
+
+
+  <img src="logo.jpeg" class="logo" >
+ <h1>FACILITY FORM</h1>
+<div class="choice">
+  <div class="btn">
+    <button id="choice1"  onclick="swimmingpoolForm()">swimming pool</button>
+    <button id="choice2" onclick="GymForm()">gym studio</button>
+    <button id="choice3" onclick="SpaForm()" >Spa & Relaxing</button>
+  </div>
+<div class="type" id="type1">
+    <div class="border" >
+      <img src="swimming.jfif" height="400px" width="600px" class="center">
+      <p>venue: Swimming Pool loacated near Blk A</p>
+      <P>time: 9am - 9pm</p>
+        <form action="Formcompleted.html" >
+
+          <label for="Name" class="textalign">Name:</label>
+          <input type="text" id="Name" name="Name" placeholder="Your name.." required/>
+
+          <label for="contact">contact number:</label>
+          <input type="contact" id="contact" name="contact" placeholder="phone number" title="8 digit" pattern="\d{8}" required>
+          <br>
+          <label for="people" class="textalign">No. of people</label>
+          <input type="number" id="people" name="people" placeholder="no. of people" min="1" max="10" required/>
+
+          <label for="booking">date of booking:</label>
+          <input type="date" id="booking" name="booking" /required>
+          <br><br>
+          <label class="textalign1">select timing</label>
+
+          <br><div class="timeslot">
+            <div class="room">
+              <input type="checkbox" id="nine" name="nine" value="nine"/>
+              <label for="nine">9am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="ten" name="ten" value="ten"/>
+              <label for="ten">10am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="11" name="timeslot" value="3"/>
+              <label for="11">11am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="12" name="timeslot" value="12"/>
+              <label for="12">12pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="1pm" name="timeslot" value="1pm"/>
+              <label for="1pm">1pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="2" name="timeslot" value="2"/>
+              <label for="2">2pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="3" name="timeslot" value="3"/>
+              <label for="3">3pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="4" name="timeslot" value="4"/>
+              <label for="4">4pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="5" name="timeslot" value="5"/>
+              <label for="5">5pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="6" name="timeslot" value="6"/>
+              <label for="6">6pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="7" name="timeslot" value="7"/>
+              <label for="7">7pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="8" name="timeslot" value="8"/>
+              <label for="8">8pm</label>
+            </div>
+          </div>
+          <p>*1 Hour for each slot</p>
+          <input type="submit" value="Submit" >
+        </form>
+      </div>
+  </div>
+    <div class="type" id="type2">
+      <div class="border">
+        <img src="gym.png" height="400px" width="600px" class="center">
+
+      </div>
+    </div>
+    <div class="type" id="type3">
+      <div class="border">
+        <img src="spa.jpg" height="400px" width="600px" class="center">
+        <form >
+          <p>venue: Swimming Pool loacated near Blk A</p>
+          <P>time: 10am - 8pm</p>
+            <label for="Name" class="textalign">Name:</label>
+            <input type="text" id="Name" name="Name" placeholder="Your name.." required/>
+        </form>
+      </div>
+    </div>
+  </div>
+<script>
+var btn1 = document.getElementById("choice1");
+var btn2 = document.getElementById("choice2");
+var btn3 = document.getElementById("choice3");
+var form1 = document.getElementById("type1");
+var form2 = document.getElementById("type2");
+var form3 = document.getElementById("type3");
+
+function swimmingpoolForm() {
+  form1.style.display = "block";
+  form2.style.display = "none";
+  form3.style.display = "none";
+  btn1.style.color = "red";
+  btn2.style.color = "#fff";
+  btn3.style.color = "black";
+}
+function GymForm(){
+  form1.style.display = "none";
+  form2.style.display = "block";
+  form3.style.display = "none";
+  btn1.style.color = "#fff";
+  btn2.style.color = "red";
+  btn3.style.color = "#fff";
+}
+function SpaForm(){
+  form1.style.display = "none";
+  form2.style.display = "none";
+  form3.style.display = "block";
+  btn1.style.color = "#000";
+  btn2.style.color = "#fff";
+  btn3.style.color = "#fff";
+}
+
+</script>
+</body>

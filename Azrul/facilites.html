@@ -1,0 +1,156 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Facilites</title>
+<link rel="stylesheet" href="facilities.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#icon').click(function(){
+        $('ul').toggleclass('show');
+      });
+    });
+  </script>
+</head>
+<body>
+<nav>
+  <img src="logo.jpeg" class="logo">
+  <ul>
+    <li><a href="#" class="standby">ABOUT US<i class="fa fa-caret-down"></i></a></li>
+    <li><a href="#" class="standby">ROOMS<i class="fa fa-caret-down"></i></a></li>
+    <div class="dropdown">
+      <li><a href="#" class="active">FACILITY<i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#" onclick="currentSlide(1)">SWIMMING POOL</a>
+          <a href="#" onclick="currentSlide(2)">GYM STUDIO</a>
+          <a href="#" onclick="currentSlide(3)">SPA & RELAXING</a>
+        </div>
+      </li>
+    <li><a href="#" class="standby" >EVENTS<i class="fa fa-caret-down"></i></a></li>
+    <li><a href="#" class="standby" >PROMOTION<i class="fa fa-caret-down"></i></a></li>
+    <li><a href="#" class="standby" >CONTACT US<i class="fa fa-caret-down"></i></a></li>
+  </ul>
+    <label id="icon">
+      <i class="fas fa-bars"></i>
+    </label>
+</nav>
+</body>
+<div class="darken">
+  <img src="background.png"  class="imgheader" ></img>
+</div>
+<h1 >FACILITIES</h1>
+
+<div class="slideshow-container">
+<div class="mySlides">
+  <h2>Swimming Pool</h2>
+
+  <img src="swimming.jfif" height="300px" width="500px"  class="type"></img>
+  <div class="box">
+  <h3>SWIMMING POOL</h3>
+  <p>Sunny Coastal Hotel features Two swimming.<br>
+    <strong>kids swimming</strong> - provide a water slide in the pool.<br>
+    adult pool - is a deep pool for adult to swim.<br>
+    Operating Hours: 9am - 9pm<br><br>
+    <a href="form.html"class="author">BOOK NOW</p></a>
+  </div>
+</div>
+<div class="mySlides">
+  <h2>Gym Studio</h2>
+  <img src="gym.png" width="500px" height="300px" class="type"></img>
+  <div class="box">
+  <h3>GYM STUDIO</h3>
+  <p>A Sunny Coastal Hotel provide a gym studio for fitness activity.<br>
+    it can provide a healthy living for everyone.<br>
+    Operating Hours: 24 hours<br><br>
+  <br><a href="form.html" class="author"> BOOK NOW</a></p>
+</div>
+</div>
+<div class="mySlides" >
+  <h2>Spa & Relaxing</h2>
+  <img src="spa.jpg" width="500px" height="300px" class="type"></img>
+    <div class="box">
+  <h3>SPA & RELAXING</h3>
+  <p>A Sunny Coastal hotel provide a relaxing place for massage.<br>
+    it can relaxing your mind while doing the massage.<br>
+    Operating hours: 11pm - 9pm<br><br><br>
+  <a href="form.html"class="author"> BOOK NOW</a></p>
+</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+
+
+<!---
+<body>
+  <header>
+  <nav >
+      <img src="logo.jpeg" height="100px" width="100px" class="header"></img>
+    <ul>
+  <li><a href="#" class="standby">ABOUT US<i class="fa fa-caret-down"></i></a></li>
+  <div class="dropdown">
+  <li><a href="#" class="standby">ROOMS<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+    <a href="#">SWIMMING POOL</a>
+    <a href="#">GYM STUDIO</a>
+    <a href="#">SPA & RELAXING</a>
+  </div>
+</li>
+  </div>
+  <div class="dropdown">
+  <li><a href="#" class="current">FACILITY<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="#" onclick="currentSlide(1)">SWIMMING POOL</a>
+      <a href="#" onclick="currentSlide(2)">GYM STUDIO</a>
+      <a href="#" onclick="currentSlide(3)">SPA & RELAXING</a>
+    </div>
+    <li>
+</div>
+  <li><a href="#" class="standby" >EVENTS<i class="fa fa-caret-down"></i></a></li>
+  <li><a href="#" class="standby" >PROMOTION<i class="fa fa-caret-down"></i></a></li>
+  <li><a href="#" class="standby" >CONTACT US<i class="fa fa-caret-down"></i></a></li>
+  <label id="icon">
+    <i class="fas fa-bars"></i>
+  </label>
+</nav>
