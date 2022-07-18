@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UXD Hotel - About Room</title>
+
+  <link rel="stylesheet" href="UXD_assignment_roombooking1.css">
+  <link rel="stylesheet" type="text/css" href="UXD_assignment_roombooking1.css"
+</head>
+<body>
+
+  <header>
+      <img src="Hotel_logo.jpeg" height="100px" width="150px" top:"500px" margin:"100px" class="header"></img>
+    <nav>
+      <ul>
+    <li><a href="#" class="standby">ABOUT US<i class="fa fa-caret-down"></i></a></li>
+    <div class="dropdown">
+    <li><a href="#" class="standby">ROOMS<i class="fa fa-caret-down"></i></a>
+      <div class="dropdown-content">
+      <a href="#">CLASSIC ROOM</a>
+      <a href="#">DELUXE ROOM</a>
+      <a href="#">SUITE</a>
+    </div>
+    </li>
+    </div>
+    <div class="dropdown">
+    <li><a href="facilities.html" class="current">FACILITIES<i class="fa fa-caret-down"></i></a>
+      <div class="dropdown-content">
+        <a href="facilities.html" onclick="currentSlide(1)">SWIMMING POOL</a>
+        <a href="facilities.html" onclick="currentSlide(2)">GYM STUDIO</a>
+        <a href="facilities.html" onclick="currentSlide(3)">SPA & RELAXING</a>
+      </div>
+      <li>
+    </div>
+    <li><a href="#" class="standby" >EVENTS<i class="fa fa-caret-down"></i></a></li>
+      <li><a href="#" class="standby" >PROMOTION<i class="fa fa-caret-down"></i></a></li>
+        <li><a href="#" class="standby" >CONTACT US<i class="fa fa-caret-down"></i></a></li>
+    </nav>
+    </header>
+
+
+<div class = "book">
+           <form class = "book-form">
+               <div class = "form-item">
+                   <label for = "checkin-date">Check In Date: </label>
+                   <input type = "date" id = "chekin-date" name="date">
+               </div>
+               <div class = "form-item">
+                   <label for = "checkout-date">Check Out Date: </label>
+                   <input type = "date" id = "chekout-date" name="date">
+               </div>
+               <div class = "form-item">
+                   <label for = "adult">Adults: </label>
+                   <input type = "number" min = "1" value = "1" id = "adult" name="number">
+               </div>
+               <div class = "form-item">
+                   <label for = "children">Children: </label>
+                   <input type = "number" min = "1" value = "1" id = "children" name="number">
+               </div>
+               <div class = "form-item">
+                   <label for = "rooms">Rooms: </label>
+                   <input type = "number" min = "1" value = "1" id = "rooms" name="number">
+               </div>
+               <div class = "form-it+em">
+                   <input type = "submit" class = "btn" value = "Book Now" name="submit">
+               </div>
+           </form>
+       </div>

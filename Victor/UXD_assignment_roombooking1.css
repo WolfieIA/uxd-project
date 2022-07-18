@@ -1,0 +1,133 @@
+body {
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+  background: rgb(255, 255, 255);
+  text-align: center;
+  overflow-x: visible;
+  display: inline-block;
+  position: fixed;
+  top:0;
+  z-index: 12;
+}
+nav ul{
+  display: inline-flex;
+  list-style-type: none;
+  color: #fff;
+  z-index: 99;
+}
+nav ul li{
+  width: 200px;
+  margin: 10px;
+  padding: 1px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #005F88;
+}
+
+nav ul li a.current{
+  background-color: #72feff;
+  color: black;
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+nav ul li a.standby{
+  background-color: #fff;
+  color: #1477cf;
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+nav ul li:hover .standby {
+  color: white;
+  background-color: #038889;
+}
+nav ul li:hover .current {
+  color: white;
+  background-color: #038889;
+}
+nav ul li a:hover{
+  opacity: 50%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  background-color: #f1f1f1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #d7d7d7}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.book{
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("images/banner-img.jpg") center/cover no-repeat;
+    color: #fff;
+    padding: 40px 60px;
+    width: 500px;
+}
+.book-form{
+    display: grid;
+}
+.form-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.book-form input[type = "submit"]{
+    margin: 18px 0 0 0;
+    background: var(--dark);
+    color: #fff;
+    border: 1px solid #fff;
+}
+.book-form label, .book-form input{
+    width: 100%;
+}
+.book-form label{
+    font-weight: 600;
+    word-spacing: 5px;
+    padding-bottom: 8px;
+}
+.book-form input:not(.btn){
+    margin: 4px 0 16px 0;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    border: none;
+}
+.book-form input:focus{
+    outline: 0;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  top: 500px;
+
+}
