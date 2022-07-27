@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<div class="topnav">
+  <a class="active" href="Homepage.html"><img src="Images/hotellogo.png" height="100"width="140"></a>
+  <a href="#">Rooms</a>
+  <a href="#">Facilities</a>
+  <a href="#">Events</a>
+  <a href="#">Promotion</a>
+  <a href="Contact Us.html">Contact Us</a>
+</div>
+</head>
+<body>
+  <body style="background-color:lightgrey; ">
+
+
+
+</div>
+<div>
+  <div>
+<img class="Lady" src="Images/Lady standing on the ocean.png" height="" width="100%">
+
+<h2 class="heading">PARADISE IN THE CITY</h2>
+<h6 class="subheading">A place of relaxation , A place to empty the mind, Reflect on the past and the future.</h6>
+</div>
+<img class="vector1" src="Images/vector1.png" height="80%"width="50%" >
+
+    <div class="container">
+         <form action=""class="form book-form">
+
+             <div class="input-group">
+                  <label for="check-in"class="input-label">Check in</label>
+                  <input type="date"class="input"id="check-in">
+             </div>
+             <div class="input-group">
+                  <label for="check-out"class="input-label">Check out</label>
+                  <input type="date"class="input" id="check-out">
+             </div>
+             <div class="input-group">
+               <label for="children"class="input-label">Adults</label>
+               <select class="options"id="Adults">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+              </select>
+</div>
+<div class="input-group">
+    <label for="children"class="input-label">Children</label>
+    <select class="options"id="children">
+         <option value="0">0</option>
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+    </select>
+
+</div>
+<button type="submit"class="btn form-btn btn-purple">Check for availability
+<span class="dots"><i class="#"></i></span>
+</button>
+</form>
+</div>
+</div>
+
+<div>
+<img id="leaves" src="Images/leaves.png" height="100px" width="100%">
+<h2 class=heading2>ABOUT US</h2>
+</div>
+
+<p class="about">The sun streams in through the ceiling windows to the floor. Your request will be met with tea to fresh seafood. The Sunny Coastal is welcoming and pleasant, yet unmistakably nostalgic. Every design element was chosen with care to capture the playfulness and thoughtful look of childhood. This is your urban retreat, tucked away but only minutes from Singapore's excitement and delights. </p>
+<h1>Amenities</h1>
+<div id="Faci">
+<div class="slider">
+  <div class="slide active">
+    <img src="Images/Gym.jpg" alt="">
+    <div class="info">
+      <h2>Gym</h2>
+      <p>The Sunny Coastal Hotel's gym is outfitted with cutting-edge TechnoGym machines that are integrated with individual TV sets and cutting-edge cardiovascular monitors so you can enjoy your workout and track your activity levels.</p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="Images/nicespa.jpg" alt="">
+    <div class="info">
+      <h2>Swimming pool and Spa</h2>
+      <p>The award-winning Sunny Coastal Hotel's Spa at the Sunny Coastal Hotel Singapore is a tranquil haven in a setting that exudes timeless elegance.</p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="Images/Dine.jpg" alt="">
+    <div class="info">
+      <h2>Lobby Lounge</h2>
+      <p>Ideal for a hearty breakfast, a global lunch, brunch or a nice cup of coffee.</p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="Images/Ballroom.jpg" alt="">
+    <div class="info">
+      <h2>Ballroom</h2>
+      <p>The sumptuous Ballroom's elegant design, which includes elliptical drop chandeliers provides visitors an unmatched experience.</p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="Images/hotelbar.jpg" alt="">
+    <div class="info">
+      <h2>Bar</h2>
+      <p>The Bar, which consists of The Lounge and The Room, is a calm location that makes for the perfect getaway from the bustle of the city.</p>
+    </div>
+  </div>
+  <div class="navigation">
+    <i class="fas fa-chevron-left prev-btn"></i>
+    <i class="fas fa-chevron-right next-btn"></i>
+  </div>
+  <div class="navigation-visibility">
+    <div class="slide-icon active"></div>
+    <div class="slide-icon"></div>
+    <div class="slide-icon"></div>
+    <div class="slide-icon"></div>
+    <div class="slide-icon"></div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber++;
+
+      if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    prevBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber--;
+
+      if(slideNumber < 0){
+        slideNumber = numberOfSlides - 1;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+      playSlider = setInterval(function(){
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+
+        slideNumber++;
+
+        if(slideNumber > (numberOfSlides - 1)){
+          slideNumber = 0;
+        }
+
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      }, 4000);
+    }
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+      clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+      repeater();
+    });
+    </script>
+      <h1>Rooms</h1>
+    <div class="box1">
+      <img src="Images/room1.jpg" class="falpic">
+      <div class="venueinfo">
+        <h2>Classic Room</h2>
+        <hr>
+        <p>A cozy space with detailed fern and leaf patterns that recall the delights of travel. windows with views of blue skies.
+        A big space with exterior windows. Walls inside are covered with hand-painted woodland patterns.</p>
+        <button type="button" name="event-booking" onclick="document.location='events_form.html'">Book Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="box1">
+    <img src="Images/room2.jpg" class="falpic">
+    <div class="venueinfo">
+      <h2>Deluxe Room</h2>
+      <hr>
+      <p>A cozy space with detailed fern and leaf patterns that recall the delights of travel. windows with views of blue skies.
+      A big space with exterior windows. Walls inside are covered with hand-painted woodland patterns.</p>
+      <button type="button" name="event-booking" onclick="document.location='events_form.html'">Book Now</button>
+    </div>
+  </div>
+</div>
+
+<div class="box1">
+  <img src="Images/room3.jpg" class="falpic">
+  <div class="venueinfo">
+    <h2>Suite</h2>
+    <hr>
+    <p>A cozy space with detailed fern and leaf patterns that recall the delights of travel. windows with views of blue skies.
+    A big space with exterior windows. Walls inside are covered with hand-painted woodland patterns.</p>
+    <button type="button" name="event-booking" onclick="document.location='events_form.html'">Book Now</button>
+  </div>
+</div>
+</div>
+
+<div class="box1">
+  <img src="Images/room4.jpg" class="falpic">
+  <div class="venueinfo">
+    <h2>Premier room</h2>
+    <hr>
+    <p>A cozy space with detailed fern and leaf patterns that recall the delights of travel. windows with views of blue skies.
+    A big space with exterior windows. Walls inside are covered with hand-painted woodland patterns.</p>
+    <button type="button" name="event-booking" onclick="document.location='events_form.html'">Book Now</button>
+  </div>
+</div>
+</div>
+
+
+
+<div>
+<footer class="footer">
+   <div class="containerA">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Sunny Coastal Hotel</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Rooms</h4>
+        <ul>
+          <li><a href="#">Classic</a></li>
+          <li><a href="#">Deluxe</a></li>
+          <li><a href="#">Suite</a></li>
+          <li><a href="#">Premier</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Facilities</h4>
+        <ul>
+          <li><a href="#">Gym</a></li>
+          <li><a href="#">Swimming Pool</a></li>
+          <li><a href="#">Spa</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Bookings</a></li>
+          <li><a href="#">Availability</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <ul>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </ul>
+        </div>
+      </div>
+    </div>
+   </div>
+</footer>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
