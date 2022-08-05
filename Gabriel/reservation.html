@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <link rel="stylesheet" href="menu.css">
+
+  </head>
+  <body>
+
+    <header>
+
+      <div class="top">
+          <a href="#" class="logo"><img src="images/logo1.jpeg" height="100px"></a>
+        <div class="navbar">
+            <div class="navbar">
+            <nav>
+              <ul>
+                <div class="dropdown">
+                  <button type="button" name="button">rooms</button>
+                    <div class="dropdown-content">
+                      <a href="#">classic</a>
+                      <a href="#">deluxe</a>
+                      <a href="#">suite</a>
+                    </div>
+                  </div>
+                <div class="dropdown">
+                  <button type="button" name="button">facilities</button>
+                    <div class="dropdown-content">
+                      <a href="#">swimming pool</a>
+                      <a href="#">spa</a>
+                      <a href="#">gym</a>
+                    </div>
+                  </div>
+                <li><a href="#">events</a></li>
+                <div class="dropdown">
+                  <button type="button" name="button">dining</button>
+                    <div class="dropdown-content">
+                      <a href="menu.html">menu</a>
+                      <a href="reservation.html">reservation</a>
+                    </div>
+                  </div>
+                <li><a href="#"> contact us</a></li>
+               </ul>
+            </nav>
+            </div>
+          </div>
+
+    </header>
+    <section id="reservation.html">
+  </section>
+    <section class="book" id="book">
+
+    <div class="container">
+      <div class="container-time">
+           <h2 class="heading">Time <span>open</span></h2>
+           <h3 class="heading-days">Monday-Sunday</h3>
+           <p>7am-10pm</p>
+
+             <hr>
+
+             <h4 class"heading-phone">call us: (65)xxxx xxxx</h4>
+           </div>
+
+           <div class="container-form">
+                     <form action="#">
+                       <h2 class="heading heading-yellow">Reservation <span>online</span></h2>
+
+                       <div class="form-field">
+                         <p>Your Name:</p>
+                         <input type="text" placeholder="Your name">
+                       </div>
+                       <div class="form-field">
+                         <p>Your Email:</p>
+                         <input type="email" placeholder="Your email">
+                       </div>
+                       <div class="form-field">
+                         <p>Your Number:</p>
+                         <input type="number" placeholder="Your number">
+                       </div>
+                       <div class="form-field">
+                         <p>Date:</p>
+                         <input type="date">
+                       </div>
+                       <div class="form-field">
+                         <p>Time:</p>
+                         <input type="time">
+                       </div>
+                       <div class="form-field">
+                         <p>How many people:</p>
+                        <select name="select" id="#">
+                          <option value="1">1 person</option>
+                          <option value="2">2 persons</option>
+                          <option value="3">3 persons</option>
+                          <option value="4">4 persons</option>
+                          <option value="5">5 persons</option>
+                          <option value="5+">5+ persons</option>
+                        </select>
+                       </div>
+
+                       <button class="btn">Submit</button>
+      <script type="text/javascript">
+     var formData = location.search;
+     formData = formData.substring(1, formData.length);
+     while (formData.indexOf("+") != -1) {
+       formData = formData.replace("+", " ");
+     }
+     formData = unescape(formData);
+     var formArray = formData.split("&");
+     var strings = "";
+     //document.writeln(formArray+"<br>");
+     for (var i=0; i < formArray.length; ++i) {
+       strings += formArray[i] + "<br />";
+     }
+     document.getElementById("Response").innerHTML=strings;
+     </script>
+    </section>
+
+
+  </body>
+</html>
