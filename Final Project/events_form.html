@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Event Venue Booking</title>
+    <link rel="stylesheet" href="events_form.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <h1>Event proposal request</h1>
+      <div class="form_section">
+        <h2>event information</h2>
+            <input type="text" name="event_name" class="form_input" placeholder="Event Name*" required maxlength="60">
+            <select class="event_type" name="event_type" required>
+              <option value="" selected hidden disabled class="required">Type of Event*</option>
+              <option value="">Conference</option>
+              <option value="">Meeting</option>
+              <option value="">Wedding</option>
+              <option value="">Training</option>
+              <option value="">Social Event</option>
+            </select>
+            <select class="guestno" name="guestno" required>
+              <option value="" selected hidden disabled>Number of Guests*</option>
+              <option value="">0-25</option>
+              <option value="">26-50</option>
+              <option value="">51-75</option>
+              <option value="">76-100</option>
+            </select>
+        </div>
+
+        <div class="form_section">
+          <h2>Event Date</h2>
+          <div style="margin-left:15px;">
+            <label id="event_datetimerange">Official Date*</label>
+            <input type="text" name="event_datetimerange" value="" id="event_datetimerange" required>
+              <script>
+                $(function() {
+                  $('input[name="event_datetimerange"]').daterangepicker({
+                    timePicker: true,
+                    startDate: moment().startOf('hour'),
+                    endDate: moment().startOf('hour').add(32, 'hour'),
+                    locale: {
+                      format: 'M/DD hh:mm A'
+                    }
+                  });
+                });
+              </script>
+            <label for="">Are your dates flexible?*</label>
+            <label for="dateflex">Yes</label>
+            <input type="radio" name="dateflex" value="Yes" required id="yesflex" checked>
+            <label for="dateflex">No</label>
+            <input type="radio" name="dateflex" value="No" required id="noflex">
+            <div id="alt_datetimerange">
+              <label>Alternate Date*</label>
+              <input type="text" name="alt_datetimerange" value="" required>
+                <script>
+                  $(function() {
+                    $('input[name="alt_datetimerange"]').daterangepicker({
+                      timePicker: true,
+                      startDate: moment().startOf('hour'),
+                      endDate: moment().startOf('hour').add(32, 'hour'),
+                      locale: {
+                        format: 'M/DD hh:mm A'
+                      }
+                    });
+                  });
+                </script>
+                <script type="text/javascript">
+                  $('#yesflex').change(function() {
+                      if(this.checked) {
+                          $('#alt_datetimerange,#altdate').show();
+                          $('#alt_datetimerange').attr("required", true);
+                      }
+                  });
+                  $('#noflex').change(function() {
+                      if(this.checked) {
+                          $('#alt_datetimerange,#altdate').hide();
+                          $('#alt_datetimerange').attr("required", false);
+                      }
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="form_section contact">
+            <h2>Contact Information</h2>
+            <input type="text" name="name" placeholder="First name*" required>
+            <input type="text" name="name" placeholder="Last name*" required><br>
+            <input type="tel" name="name" placeholder="Phone Number*" required>
+            <input type="email" name="" placeholder="Email*" required><br><br><br>
+            <label for="">Are you a business*</label>
+            <label for="bizboolean">Yes</label>
+            <input type="radio" name="bizboolean" value="Yes" required id="amBiz" checked>
+            <label for="bizboolean">No</label>
+            <input type="radio" name="bizboolean" value="No" required id="notBiz"><br><br><br>
+            <div id="bizinfo">
+            <div class="">
+              <input type="text" name="company_name" placeholder="Company name*" required>
+              <input type="text" name="company_address" placeholder="Company Address*" required>
+              <input type="text" name="job_title" placeholder="Job Title*" required>
+              <script type="text/javascript">
+                $('#amBiz').change(function() {
+                    if(this.checked) {
+                        $('#bizinfo').show();
+                        $('#bizinfo').attr("required", true);
+                    }
+                });
+                $('#notBiz').change(function() {
+                    if(this.checked) {
+                        $('#bizinfo').hide();
+                        $('#bizinfo').attr("required", false);
+                    }
+                });
+              </script>
+            </div>
+          </div><br><br>
+        <div class="button">
+          <button type="button" name="button">submit</button>
+        </div>
+    </form>
+  </body>
+</html>

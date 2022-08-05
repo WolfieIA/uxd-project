@@ -16,13 +16,13 @@
         <a href="#" class="logo"><img src="hotel_logo.svg" height="100px"></a>
       <div class="navbar">
       <nav>
-        <ul>
           <div class="dropdown">
             <button type="button" name="button">rooms</button>
               <div class="dropdown-content">
                 <a href="#">classic</a>
                 <a href="#">deluxe</a>
                 <a href="#">suite</a>
+                <a href="#">premier</a>
               </div>
             </div>
           <div class="dropdown">
@@ -33,17 +33,15 @@
                 <a href="#">gym</a>
               </div>
             </div>
-          <li><a href="#">events</a></li>
+          <a href="#">events</a>
           <div class="dropdown">
             <button type="button" name="button">dining</button>
               <div class="dropdown-content">
                 <a href="#">breakfast menu</a>
-                <a href="#">dinner menu</a>
                 <a href="#">reservation</a>
               </div>
-            </div>
-          <li><a href="#"> contact us</a></li>
-         </ul>
+          </div>
+          <a href="#">contact us</a>
       </nav>
       </div>
     </div>
@@ -125,14 +123,15 @@
             });
               var today = new Date();
               var dd = today.getDate();
-              var mm = today.getMonth()+1; //January is 0!
+              var mm = today.getMonth()+1;
               var yyyy = today.getFullYear();
-              if(dd<10){ dd='0'+dd }
-              if(mm<10){ mm='0'+mm }
+              if(dd<10){
+                dd='0'+dd;
+              }
+              if(mm<10){
+                mm='0'+mm;
+              }
               var today = dd+'/'+mm+'/'+yyyy;
-              $('input[name="daterange"]').daterangepicker({
-              minDate:today
-              });
             });
             </script>
 
@@ -145,20 +144,93 @@
         <p>Guide users aka instructions for them :></p>
       </div>
 
-      <div class="category">
-        <h2>Category</h2>
-        <div class="bookingGrid">
-          <img class="facilityPic" src="./event_photos/parvus4.jpg">
-          <div class="facilityInfo">
-            <h3>name of facility</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-              sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button type="button" name="event-booking" onclick="document.location='events_form.html'">button function</button>
+        <!-- meeting -->
+        <div class="category">
+          <h2>meeting</h2>
+          <div class="bookingGrid">
+            <img class="facilityPic" src="./event_photos/parvus4.jpg">
+            <div class="facilityInfo">
+              <h3>parvus</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+            </div>
+          </div>
+
+          <div class="bookingGrid">
+            <img class="facilityPic" src="./event_photos/solitum1.jpg">
+            <div class="facilityInfo">
+              <h3>solitum</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+            </div>
           </div>
         </div>
+
+        <div class="category">
+          <h2>indoors</h2>
+          <div class="bookingGrid">
+            <img src="./event_photos/tableshot2.jpg" class="facilityPic">
+            <div class="facilityInfo">
+              <h3>comedere</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+            </div>
+          </div>
+
+            <div class="bookingGrid">
+              <img src="./event_photos/scaena1.jpg" class="facilityPic">
+              <div class="facilityInfo">
+                <h3>scaena</h3>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="category">
+            <h2>outdoors</h2>
+            <div class="bookingGrid">
+              <img class="facilityPic" src="./event_photos/wedding.jpg">
+              <div class="facilityInfo">
+                <h3>aeternum</h3>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+              </div>
+            </div>
+
+            <div class="bookingGrid">
+              <img src="./event_photos/caelum1.jpg" class="facilityPic">
+              <div class="facilityInfo">
+                <h3>caelum</h3>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+              </div>
+            </div>
+          </div>
         <div>
         <footer class="footer">
            <div class="containerA">
