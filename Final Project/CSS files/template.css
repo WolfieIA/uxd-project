@@ -40,96 +40,52 @@ overflow-x: hidden;
 }
 
 /*NAVIGATION BAR*/
-.navbar {
-font-family: Work Sans;
-font-weight: 450;
-font-size: 17px;
-display: inline-block;
-justify-self: center;
-margin-top: 35px;
-margin-bottom: auto;
-align-items: center;
-align-self: right;
-float: right;
-}
 
-.navbar a {
-color: rgba(17, 75, 130, 1);
-text-decoration: none;
-padding-bottom: 10px;
-text-decoration: none;
-text-transform: uppercase;
-list-style: none;
-display: inline;
-}
-
-.navbar a:hover {
+#navbar a:hover {
 color: rgba(17, 75, 130, 0.8);
-}
-
-.navbar a::before {
-content: "";
-position: absolute;
-display: block;
-width: 100%;
-height: 2px;
-bottom: 0.5px;
-left: 0;
-background-color: rgba(17, 75, 130, 1);
-transform: scaleX(0);
-transition: transform 0.3s ease;
-}
-
-.navbar a:hover::before {
-transform: scaleX(1);
-}
-
-.navbar button {
-font-family: Work Sans;
-font-weight: 450;
-font-size: 1em;
-display: inline-block;
-height: 50%;
-text-decoration: none;
-text-transform: uppercase;
-list-style: none;
-color: rgba(17, 75, 130, 1);
-border: none;
-background-color: transparent;
-padding: 10px;
-text-align: right;
 }
 
 .topnav {
   height: 120px;
+  margin: 0 50px;
+}
+
+.logo {
+  margin-top: 10px;
 }
 
 .top {
   background-color: white;
   overflow: hidden;
+  float: right;
+  margin-top: 35px;
 }
 
 .top a {
-  float: left;
   display: block;
-  color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+
+  font-family: Work Sans;
+  font-weight: 450;
+  display: inline-block;
+  color: rgba(17, 75, 130, 1);
+  background-color: transparent;
+  padding: 10px;
+  text-transform: uppercase;
+  float: right;
 }
 
 .top .icon {
   display: none;
 }
 
-/* Dropdown container - needed to position the dropdown content */
 .dropdown {
-  float: left;
+  float: right;
   overflow: hidden;
 }
 
-/* Style the dropdown button to fit inside the top */
 .dropdown .dropbtn {
   font-size: 17px;
   border: none;
@@ -143,99 +99,38 @@ text-align: right;
   color: rgba(17, 75, 130, 1);
   background-color: transparent;
   padding: 10px;
-  text-align: right;
+  text-align: left;
 }
 
-/* Style the dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white
+  background-color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-/* Style the links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: black;
-  padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+
+  font-family: Work Sans;
+  font-weight: 450;
+  text-transform: uppercase;
+  color: rgba(17, 75, 130, 1);
+  background-color: transparent;
+  padding: 10px;
 }
 
-/* Add a dark background on top links and the dropdown button on hover */
 .top a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
+  color: rgba(17, 75, 130, 0.8) ;
 }
 
-/* Add a grey background to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the top (.icon) */
-@media screen and (max-width: 600px) {
-  .top a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .top a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-/* The "responsive" class is added to the top with JavaScript when the user clicks on the icon. This class makes the top look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .top.responsive {position: relative;}
-  .top.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .top.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .top.responsive .dropdown {float: none;}
-  .top.responsive .dropdown-content {position: relative;}
-  .top.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .top a:not(:first-child) {display: none;}
-  .top a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .top.responsive {position: relative;}
-  .top.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .top.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
 }
 
 /* PAGE TITLE */

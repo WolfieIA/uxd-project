@@ -12,23 +12,49 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   </head>
   <body>
-    <div class='top' id="top">
+    <div class="topnav>"
         <a href="#" class="logo"><img src="./Images/hotel_logo.svg" height="100px"></a>
-        <div class="topnav" id="myTopnav">
-          <a href="#home" class="active">Home</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
+        <div class="top" id="navbar">
           <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
+            <button class="dropbtn">rooms</button>
             <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href="#">classic</a>
+              <a href="#">deluxe</a>
+              <a href="#">suite</a>
+              <a href="#">premier</a>
             </div>
           </div>
-          <a href="#about">About</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
+          <div class="dropdown">
+            <button class="dropbtn">facilities</button>
+            <div class="dropdown-content">
+              <a href="#">swimming pool</a>
+              <a href="#">spa</a>
+              <a href="#">gym</a>
+            </div>
+          </div>
+          <a href="#">events</a>
+          <div class="dropdown">
+            <button class="dropbtn">dining</button>
+            <div class="dropdown-content">
+              <a href="#">menu</a>
+              <a href="#">reservation</a>
+            </div>
+          </div>
+          <a href="Contact Us.html">contact us</a>
+          <a href="javascript:void(0);" class="icon" onclick="burger()">&#9776;</a>
+          <script type="text/javascript">
+          function burger() {
+            var x = document.getElementById("navbar");
+            if (x.className === "top") {
+              x.className += " responsive";
+            }
+            else {
+              x.className = "top";
+            }
+          }
+          </script>
+        </div>
+      </div>
       <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/tableshot1.jpg);">
         <div class="title">
           <h1>Page Name</h1>
