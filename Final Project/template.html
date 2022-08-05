@@ -12,40 +12,23 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   </head>
   <body>
-    <div id="top">
+    <div class='top' id="top">
         <a href="#" class="logo"><img src="./Images/hotel_logo.svg" height="100px"></a>
-      <div class="navbar">
-      <nav>
+        <div class="topnav" id="myTopnav">
+          <a href="#home" class="active">Home</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
           <div class="dropdown">
-            <button type="button" name="button">rooms</button>
-              <div class="dropdown-content">
-                <a href="#">classic</a>
-                <a href="#">deluxe</a>
-                <a href="#">suite</a>
-                <a href="#">premier</a>
-              </div>
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
             </div>
-          <div class="dropdown">
-            <button type="button" name="button">facilities</button>
-              <div class="dropdown-content">
-                <a href="#">swimming pool</a>
-                <a href="#">spa</a>
-                <a href="#">gym</a>
-              </div>
-            </div>
-          <a href="#">events</a>
-          <div class="dropdown">
-            <button type="button" name="button">dining</button>
-              <div class="dropdown-content">
-                <a href="#">breakfast menu</a>
-                <a href="#">reservation</a>
-              </div>
           </div>
-          <a href="#">contact us</a>
-      </nav>
-      </div>
-    </div>
-
+          <a href="#about">About</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
       <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/tableshot1.jpg);">
         <div class="title">
           <h1>Page Name</h1>
