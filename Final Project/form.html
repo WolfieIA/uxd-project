@@ -248,15 +248,7 @@ var form3 = document.getElementById("type3");
 var limit = document.getElementsByClassName("timeslot");
 var i = document. querySelector("checkbox");
 var r = 0;
-var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0');
-        var yyyy = today.getFullYear();
 
-        today = yyyy + '-' + mm + '-' + dd;
-        $('#date_picker1').attr('min',today);
-        $('#date_picker2').attr('min',today);
-        $('#date_picker3').attr('min',today);
 function swimmingpoolForm() {
   form1.style.display = "block";
   form2.style.display = "none";
