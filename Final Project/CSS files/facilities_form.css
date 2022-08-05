@@ -1,6 +1,6 @@
 
 body {
-  background-image: url(./event_photos/texture1.jpg);
+  background-image: url(./Images/texture1.jpg);
 }
 
 form {
@@ -36,6 +36,7 @@ fieldset {
 }
 
 select {
+
   margin: 3vh 2vw;
   padding: 10px;
   border: none;
@@ -178,7 +179,11 @@ button:hover {
   display: none;
   position: absolute;
 }
+.choice{
 
+  position: relative;
+
+}
 /* time slot*/
 .room {
   display: inline-block;
