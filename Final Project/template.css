@@ -1,154 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
 
 h1 {
-font-family: Libre Baskerville;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-font-weight: 500;
-margin: 0;
-font-size: 36px;
+  font-family: Libre Baskerville;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  font-size: 36px;
 }
 
 h2 {
-font-family: Libre Baskerville;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-font-weight: 500;
-margin: 0;
-font-size: 28px;
+  font-family: Libre Baskerville;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  font-size: 28px;
 }
 
 h3 {
-font-family: Libre Baskerville;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-font-weight: 500;
-margin: 0;
-font-size: 20px;
+  font-family: Libre Baskerville;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  font-size: 20px;
 }
 
 p {
-font-family: Work Sans;
-word-break: break-word;
-font-size: 18px;
+  font-family: Work Sans;
+  word-break: break-word;
+  font-size: 18px;
 }
 
 html,body {
-margin:0;
-padding:0;
-overflow-x: hidden;
+  margin:0;
+  padding:0;
+  overflow-x: hidden;
 }
 
 /*NAVIGATION BAR*/
 .navbar {
-font-family: Work Sans;
-font-weight: 450;
-font-size: 17px;
-display: inline-block;
-justify-self: center;
-margin-top: auto;
-margin-bottom: auto;
-align-items: center;
-align-self: right;
-float: right;
+  font-family: Work Sans;
+  font-weight: 450;
+  font-size: 17px;
+  display: inline-block;
+  justify-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
+  align-self: right;
+  float: right;
 }
 
 .navbar a {
-position: relative;
-color: rgba(12, 105, 118, 1);
-text-decoration: none;
-padding-bottom: 10px;
-text-decoration: none;
-text-transform: uppercase;
-list-style: none;
-color: rgba(12, 105, 118, 1);
-display: inline;
+  position: relative;
+  color: rgba(12, 105, 118, 1);
+  text-decoration: none;
+  padding-bottom: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+  color: rgba(12, 105, 118, 1);
+  display: inline;
 }
 
 .navbar a:hover {
-color: rgba(12, 105, 118, 0.8);
+  color: rgba(12, 105, 118, 0.8);
 }
 
 .navbar a::before {
-content: "";
-position: absolute;
-display: block;
-width: 100%;
-height: 2px;
-bottom: 0.5px;
-left: 0;
-background-color: rgba(12, 105, 118, 1);
-transform: scaleX(0);
-transition: transform 0.3s ease;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0.5px;
+  left: 0;
+  background-color: rgba(12, 105, 118, 1);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .navbar a:hover::before {
-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .navbar button {
-font-family: Work Sans;
-font-weight: 450;
-font-size: 1em;
-display: inline-block;
-height: 50%;
-text-decoration: none;
-text-transform: uppercase;
-list-style: none;
-color: rgba(12, 105, 118, 1);
-border: none;
-background-color: transparent;
-padding: 10px;
-text-align: right;
+  font-family: Work Sans;
+  font-weight: 450;
+  font-size: 1em;
+  display: inline-block;
+  height: 50%;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+  color: rgba(12, 105, 118, 1);
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  text-align: right;
 }
 
 .dropdown {
-position: relative;
-display: inline-block;
-padding: 10px;
-align-self: center;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  align-self: center;
 }
 
 .dropdown-content {
-position: relative;
-display: none;
-position: absolute;
-z-index: 1;
-box-shadow: 1px 1px 5px black;
-align-self: center;
+  position: relative;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 1px 1px 5px black;
+  align-self: center;
 }
 
 .dropdown-content a {
-display: block;
-background-color: white;
-padding: 15px;
-text-transform: uppercase;
-align-self: center;
+  display: block;
+  background-color: white;
+  padding: 15px;
+  text-transform: uppercase;
+  align-self: center;
 }
 
 .dropdown:hover .dropdown-content {
-display: block;
-align-self: center;
+  display: block;
+  align-self: center;
 }
 
 .logo {
-align-items: center;
-justify-self: center;
-display: inline-block;
-height: inherit;
+  align-items: center;
+  justify-self: center;
+  display: inline-block;
+  height: inherit;
+  float: left;
 }
 
 .top {
-display: grid;
-grid-template-columns: 1fr 3fr;
-grid-template-rows: 1fr;
-row-gap: 10px;
-align-content: center;
-padding-top: 10px;
-padding-bottom: 10px;
-justify-content: center;
-width: 90%;
-margin: auto;
+  align-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  width: 90%;
+}
+
+#top {
+  height: 120px;
+  background-color: white;
 }
 
 /* PAGE TITLE */
