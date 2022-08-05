@@ -172,3 +172,48 @@ button:hover {
 
 .button {
   margin: 0 0 0 300px;
+}
+
+/* time slot*/
+.room {
+  display: inline-block;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.room input {
+  display: none;
+
+}
+
+.room label {
+  font-family: sans-serif;
+  display: block;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+  width: 70px;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.room input:checked + label {
+  background-color: green;
+  border-color: green;
+  color: white;
+}
+.room input:checked + label:hover{
+  background-color: green;
+  border-color: green;
+  color: white;
+}
+.timeslot{
+  border: 1px solid black;
+  width: 65%;
+  margin-left:  auto;
+  margin-right: auto;
+  background-color: white;
+  padding-left: 15px;
+}

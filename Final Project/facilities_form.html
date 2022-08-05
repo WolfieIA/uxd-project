@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Event Venue Booking</title>
-    <link rel="stylesheet" href="facilities_form.css">
+    <link rel="stylesheet" href="./CSS files/facilities_form.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -25,9 +25,59 @@
         </div>
 
         <div class="form_section">
-          <h2>Date</h2>
+          <h2>Date & booking</h2>
           <label for="booking">date of booking:</label>
           <input type="date" id="date_picker1" name="booking" /required>
+          <div class="timeslot" >
+            <div class="room">
+              <input type="checkbox" id="nine" name="timeslot" value="nine"/>
+              <label for="nine">9am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="ten" name="timeslot" value="ten"/>
+              <label for="ten">10am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="eleven" name="timeslot" value="eleven"/>
+              <label for="eleven">11am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="twelve" name="timeslot" value="12"/>
+              <label for="twelve">12pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="one" name="timeslot" value="1pm"/>
+              <label for="one">1pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="two" name="timeslot" value="2"/>
+              <label for="two">2pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="three" name="timeslot" value="3"/>
+              <label for="three">3pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="four" name="timeslot" value="4"/>
+              <label for="four">4pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="five" name="timeslot" value="5"/>
+              <label for="five">5pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="six" name="timeslot" value="6"/>
+              <label for="six">6pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="seven" name="timeslot" value="7"/>
+              <label for="seven">7pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="eight" name="timeslot" value="8"/>
+              <label for="eight">8pm</label>
+            </div>
+          </div>
           <script type="text/javascript">
             var today = new Date();
                     var dd = String(today.getDate()).padStart(2, '0');
