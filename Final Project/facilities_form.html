@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Event Venue Booking</title>
+    <link rel="stylesheet" href="facilities_form.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <h1>Facility Form</h1>
+      <div class="form_section">
+        <h2>Type of facility</h2>
+
+            <select class="event_type" name="event_type" required>
+              <option value="" selected hidden disabled class="required">Type of Event*</option>
+              <option value="" id="choice1"  onclick="swimmingpoolForm()">Swimming Pool</option>
+              <option value="" id="choice2" onclick="GymForm()">Gym Studio</option>
+              <option value="" id="choice3" onclick="SpaForm()">Spa & Relaxing</option>
+            </select>
+
+        </div>
+
+        <div class="form_section">
+          <h2>Date</h2>
+          <label for="booking">date of booking:</label>
+          <input type="date" id="date_picker1" name="booking" /required>
+          <script type="text/javascript">
+            var today = new Date();
+                    var dd = String(today.getDate()).padStart(2, '0');
+                    var mm = String(today.getMonth() + 1).padStart(2, '0');
+                    var yyyy = today.getFullYear();
+
+                    today = yyyy + '-' + mm + '-' + dd;
+                    $('#date_picker1').attr('min',today);
+          </script>
+          </div>
+          <div class="form_section contact">
+            <h2>Contact Information</h2>
+            <input type="text" name="name" placeholder="First name*" required>
+            <input type="text" name="name" placeholder="Last name*" required><br>
+            <input type="tel" name="name" placeholder="Phone Number*" required>
+            <input type="email" name="" placeholder="Email*" required><br><br><br>
+            <label for="">Are you a business*</label>
+            <label for="bizboolean">Yes</label>
+            <input type="radio" name="bizboolean" value="Yes" required id="amBiz" checked>
+            <label for="bizboolean">No</label>
+            <input type="radio" name="bizboolean" value="No" required id="notBiz"><br><br><br>
+            <div id="bizinfo">
+            <div class="">
+              <input type="text" name="company_name" placeholder="Company name*" required>
+              <input type="text" name="company_address" placeholder="Company Address*" required>
+              <input type="text" name="job_title" placeholder="Job Title*" required>
+              <script type="text/javascript">
+                $('#amBiz').change(function() {
+                    if(this.checked) {
+                        $('#bizinfo').show();
+                        $('#bizinfo').attr("required", true);
+                    }
+                });
+                $('#notBiz').change(function() {
+                    if(this.checked) {
+                        $('#bizinfo').hide();
+                        $('#bizinfo').attr("required", false);
+                    }
+                });
+              </script>
+            </div>
+          </div><br><br>
+        <div class="button">
+          <button type="button" name="button">submit</button>
+        </div>
+    </form>
+  </body>
+</html>
