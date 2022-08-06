@@ -197,9 +197,11 @@ color: rgba(17, 75, 130, 0.8);
     text-align: left;
   }
 
+  .top#navbar{
+    margin-top: 0;
+    margin-right: -50px;
+  }
 }
-
-
 
 /* PAGE TITLE */
 .pagetitle {
@@ -291,7 +293,7 @@ border: none;
 }
 
 
-.booking-form-bar input[type=button] {
+.booking-form-bar input[type=submit] {
 text-transform: uppercase;
 padding: 12px 10px 12px 10px;
 font-family: Work Sans;
@@ -307,7 +309,7 @@ font-weight: 520;
 font-size: 13px;
 }
 
-.booking-form-bar input[type=button]:hover {
+.booking-form-bar input[type=submit]:hover {
 color: white;
 font-weight: 520;
 border: rgba(228, 99, 27, 1);
@@ -376,7 +378,7 @@ color: rgba(17, 75, 130, 1);
 
 .bookingGrid {
 display: grid;
-grid-template-columns: 1fr 1.5fr;
+grid-template-columns: 1fr 1fr;
 grid-template-rows: 350px;
 column-gap: 30px;
 width: 65vw;
@@ -453,8 +455,8 @@ margin: 0;
 }
 
 .facilityInfo i {
-  padding: 0 5px;
-  margin-bottom: 10px;
+  margin: 5px 2.5px;
+  font-size: 13px;
 }
 
 #icons {

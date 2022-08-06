@@ -147,9 +147,27 @@ color: rgba(17, 75, 130, 0.8);
   }
 }
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the top (.icon) */
+@media screen and (max-width: 800px) {
+  .top a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .top a.icon {
+    float: right;
+    display: block;
+  }
+}
+
 /* The "responsive" class is added to the top with JavaScript when the user clicks on the icon. This class makes the top look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 800px) {
-  .top.responsive {position: relative;}
+  .top.responsive {
+    position: relative;
+    background-color: white;
+  }
   .top.responsive a.icon {
     position: absolute;
     right: 0;
@@ -160,13 +178,13 @@ color: rgba(17, 75, 130, 0.8);
     float: none;
     display: block;
     text-align: left;
-    margin: 0;
+    background-color: white;
   }
   .top.responsive .dropdown {float: none;}
   .top.responsive .dropdown-content {position: relative;}
   .top.responsive .dropdown .dropbtn {
     display: block;
-    width: 99.9vw;
+    width: 90vw;
     text-align: left;
     margin: 0;
   }
@@ -181,22 +199,22 @@ color: rgba(17, 75, 130, 0.8);
 }
 
 @media screen and (max-width: 800px) {
-  .top.responsive {position: relative;}
+  .top.responsive {
+    position: relative;
+    margin-top: 5px;
+    margin-right: -60px;
+    background-color: white;
+  }
   .top.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
-    margin: 0;
   }
   .top.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
-
-}
-
-
 
 /* PAGE TITLE */
 .pagetitle {
@@ -231,7 +249,7 @@ text-align: center;
 display: grid;
 grid-template-rows: 1fr 1fr;
 position: absolute;
-top: 50%;
+top: 45%;
 left: 50%;
 transform: translate(-50%, -50%);
 }
@@ -243,10 +261,10 @@ display: block;
 position: absolute;
 padding: 15px 10px;
 background-color: rgba(255, 255, 255, 0.9);
-width: 600px;
+min-width: 600px;
 align-items: center;
 text-align: center;
-top: 72.5%;
+top: 65%;
 left: 50%;
 transform: translate(-50%, -50%);
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
@@ -255,12 +273,12 @@ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 .booking-form-bar select {
 font-family: 'Work Sans', FontAwesome;
 text-transform: uppercase;
-font-size: 13px;
+font-size: 10px;
 margin: 5px 2px 2px 5px;
-padding: 15px 15px 15px 10px;
+padding: 10px 10px 10px 5px;
 -webkit-appearance: none;
 background-color: transparent;
-width: 176px;
+width: 100px;
 appearance: none;
 border: none;
 border-bottom: 1px solid black;
@@ -269,12 +287,12 @@ border-bottom: 1px solid black;
 .booking-form-bar input[type=text] {
 font-family: 'Work Sans', FontAwesome;
 text-transform: uppercase;
-font-size: 13px;
+font-size: 10px;
 margin: 5px 2px 2px 5px;
-padding: 15px 15px 15px 10px;
+padding: 10px 10px 10px 5px;
 -webkit-appearance: none;
 background-color: transparent;
-width: 185px;
+width: 100px;
 appearance: none;
 border: none;
 border-bottom: 1px solid black;
@@ -288,20 +306,20 @@ border: none;
 }
 
 
-.booking-form-bar input[type=button] {
+.booking-form-bar input[type=submit] {
 text-transform: uppercase;
 padding: 12px 10px 12px 10px;
 font-family: Work Sans;
 color: rgba(228, 99, 27, 1);
 border: 2px solid rgba(228, 99, 27, 1);
 background: transparent;
-width: 190px;
+width: 160px;
 letter-spacing: 0.1em;
 text-transform: uppercase;
 text-align: center;
 transform: 0.3s ease-in-out;
 font-weight: 520;
-font-size: 13px;
+font-size: 10px;
 }
 
 .booking-form-bar input[type=button]:hover {
