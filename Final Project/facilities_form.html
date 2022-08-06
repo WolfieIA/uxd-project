@@ -10,28 +10,31 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   </head>
   <body>
-    <form class="" action="index.html" method="post">
+    <form  action="index.html" method="post">
       <div class="choice">
       <h1>Facility Form</h1>
       <div class="form_section">
         <h2>Type of facility</h2>
 
-            <select class="event_type" name="event_type" required>
+            <!-- <select class="event_type" name="event_type" required>
               <option value="" selected hidden disabled class="required">Type of Event*</option>
               <option value="" id="choice1"  onclick="swimmingpoolForm()">Swimming Pool</option>
               <option value="" id="choice2" onclick="GymForm()">Gym Studio</option>
               <option value="" id="choice3" onclick="SpaForm()">Spa & Relaxing</option>
-            </select>
-
+            </select> -->
+            <div class="btn">
+              <button id="choice1"  onclick="swimmingpoolForm()">swimming pool</button>
+              <button id="choice2" onclick="GymForm()">gym studio</button>
+              <button id="choice3" onclick="SpaForm()" >Spa & Relaxing</button>
+            </div>
         </div>
         <div class="type" id="type1">
-
 
         <div class="form_section" >
           <img src="./images/swimming.jfif">
           <h2>Date & booking</h2>
-          <label for="booking">date of booking:</label>
-          <input type="date" id="date_picker1" name="booking" /required>
+          <label for="date_picker1">date of booking:</label>
+          <input type="date" id="date_picker1" name="date_picker1" /required>
           <div class="timeslot" >
             <div class="room">
               <input type="checkbox" id="nine" name="timeslot" value="nine"/>
@@ -82,6 +85,7 @@
               <label for="eight">8pm</label>
             </div>
           </div>
+          <p id="time"> time:</p>
           <script type="text/javascript">
             var today = new Date();
                     var dd = String(today.getDate()).padStart(2, '0');
@@ -90,8 +94,27 @@
 
                     today = yyyy + '-' + mm + '-' + dd;
                     $('#date_picker1').attr('min',today);
+
+          var nine = document.getElementById("nine");
+          if (document.getElementById("nine").checked){
+            start = parlseInt(9);
+            end = parlseInt(nine)+1;
+            let time = document.getElementById("time").innerHTML = (start+1+"-"+end+"pm");
+          }
+
+
           </script>
           </div>
+          <div class="form_section contact">
+            <h2>Contact Information</h2>
+            <input type="text" name="name" placeholder="First name*" required>
+            <input type="text" name="name" placeholder="Last name*" required><br>
+            <input type="tel" name="name" placeholder="Phone Number*" required>
+
+        <div class="button">
+          <button type="button" name="button">submit</button>
+        </div>
+      </div>
         </div>
         <div class="type" id="type2">
 
@@ -99,8 +122,8 @@
           <div class="form_section" >
             <img src="./images/gym.jpg">
             <h2>Date & booking</h2>
-            <label for="booking">date of booking:</label>
-            <input type="date" id="date_picker2" name="booking" /required>
+            <label for="date_picker2">date of booking:</label>
+            <input type="date" id="date_picker2" name="date_picker2" /required>
             <div class="timeslot" >
               <div class="room">
                 <input type="checkbox" id="nine" name="timeslot" value="nine"/>
@@ -160,16 +183,24 @@
                       $('#date_picker2').attr('min',today);
             </script>
             </div>
+            <div class="form_section contact">
+              <h2>Contact Information</h2>
+              <!-- <input type="text" name="fname" placeholder="First name*" required>
+              <input type="text" name="lname" placeholder="Last name*" required><br>
+              <input type="tel" name="ph" placeholder="Phone Number*" required> -->
+
+          <div class="button">
+            <button type="button" name="button">submit</button>
+          </div>
+        </div>
           </div>
           <div class="type" id="type3">
-
-
 
             <div class="form_section" >
               <img src="./images/spa.jpg">
               <h2>Date & booking</h2>
-              <label for="booking">date of booking:</label>
-              <input type="date" id="date_picker3" name="booking" /required>
+              <label for="date_picker3">date of booking:</label>
+              <input type="date" id="date_picker3" name="date_picker3" /required>
               <div class="timeslot" >
                 <div class="room">
                   <input type="checkbox" id="nine" name="timeslot" value="nine"/>
@@ -230,17 +261,17 @@
                         $('#date_picker3').attr('min',today);
               </script>
               </div>
-              </div>
-          <div class="form_section contact">
-            <h2>Contact Information</h2>
-            <input type="text" name="name" placeholder="First name*" required>
-            <input type="text" name="name" placeholder="Last name*" required><br>
-            <input type="tel" name="name" placeholder="Phone Number*" required>
+              <!-- <div class="form_section contact">
+                <h2>Contact Information</h2>
+                <input type="text" name="name" placeholder="First name*" required>
+                <input type="text" name="name" placeholder="Last name*" required><br>
+                <input type="tel" name="name" placeholder="Phone Number*" required>
 
-        <div class="button">
-          <button type="button" name="button">submit</button>
-        </div>
-      </div>
+            <div class="button">
+              <button type="button" name="button">submit</button>
+            </div>
+          </div> -->
+              </div>
     </form>
     <script>
 

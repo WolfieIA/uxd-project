@@ -194,7 +194,9 @@ button:hover {
   display: none;
 
 }
-
+#tpye3{
+  display: block;
+}
 .room label {
   font-family: sans-serif;
   display: block;

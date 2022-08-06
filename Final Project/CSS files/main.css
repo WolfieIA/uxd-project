@@ -147,7 +147,6 @@ p{
 }
 .left {
   position: absolute;
-  top: 52.5%;
   left: 20%;
   transform: translate(-50%, -50%);
   margin-top: 80px;
@@ -156,7 +155,6 @@ p{
 }
 .centered {
   position: absolute;
-  top: 52.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 80px;
@@ -165,7 +163,6 @@ p{
 }
 .right {
   position: absolute;
-  top: 52.5%;
   left: 80%;
   transform: translate(-50%, -50%);
   margin-top: 80px;
@@ -179,14 +176,15 @@ p{
   position: relative;
   width: 50%;
   margin-left: auto;
-    margin-top:29%;
-    border: 2px solid orange;
+    margin-top:19%;
+    border: 2px solid rgba(12, 105, 118, 1);
+
     padding: 40px;
     width: 350px;
     height: 300px;
     background-color: white;
     position: absolute;
-    top: 31%;
+
     left: 20%;
     transform: translate(-50%, -50%);
 }
@@ -194,14 +192,14 @@ p{
   position: relative;
   width: 50%;
   margin-left: auto;
-  margin-top:29%;
-  border: 2px solid orange;
+  margin-top: 19%;
+  border: 2px solid rgba(12, 105, 118, 1);
   padding: 40px;
   width: 350px;
   height: 300px;
   background-color: white;
   position: absolute;
-  top: 31%;
+
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -209,14 +207,14 @@ p{
   position: relative;
   width: 50%;
   margin-left: auto;
-  margin-top:29%;
-  border: 2px solid orange;
+  margin-top:19%;
+  border: 2px solid rgba(12, 105, 118, 1);
   padding: 40px;
   width: 350px;
   height: 300px;
   background-color: white;
   position: absolute;
-  top: 31%;
+
   left: 80%;
   transform: translate(-50%, -50%);
 }
@@ -228,12 +226,12 @@ p{
 }
 .overlay {
   position: absolute;
-  top: 0;
+  top: 40px;
   bottom: 0;
-  left: 0;
+  left: 40px;
   right: 0;
-  height: 100%;
-  width: 100%;
+  height: 79%;
+  width: 82%;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
@@ -282,6 +280,378 @@ p{
 }
 h3{
   color: orange;
+}
+
+
+/* PAGE TITLE */
+.pagetitle {
+width: 100vw;
+height: 65vh;
+background-position: center;
+background-size: cover;
+}
+
+.title h1 {
+ width: 100%;
+ margin: auto;
+ color: rgba(255, 255, 255, 1);
+ text-align: center;
+ font-size: 3em;
+ text-shadow: 1px 1px 5px black;
+ text-align: center;
+ letter-spacing: 0.2em;
+}
+
+.title p {
+  width: 100%;
+  margin: auto;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 5px black;
+  text-align: center;
+}
+
+.title {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*ROOM BOOKING FORM AT THE TOP OF THE PAGE*/
+
+.booking-form-bar {
+  display: block;
+  position: absolute;
+  padding: 15px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 980px;
+  align-items: center;
+  text-align: center;
+  top: 72.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.booking-form-bar select {
+  font-family: 'Work Sans', FontAwesome;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin: 5px 2px 2px 5px;
+  padding: 15px 15px 15px 10px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 176px;
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.booking-form-bar input[type=text] {
+  font-family: 'Work Sans', FontAwesome;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin: 5px 2px 2px 5px;
+  padding: 15px 15px 15px 10px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 185px;
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.booking-form-bar input[type=text]:focus {
+  outline-color: rgba(228, 99, 27, 1);
+  outline-style: solid;
+  outline-width: 2px;
+  border: none;
+}
+
+
+.booking-form-bar input[type=button] {
+  text-transform: uppercase;
+  padding: 12px 10px 12px 10px;
+  font-family: Work Sans;
+  color: rgba(228, 99, 27, 1);
+  border: 2px solid rgba(228, 99, 27, 1);
+  background: transparent;
+  width: 190px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  transform: 0.3s ease-in-out;
+  font-weight: 520;
+  font-size: 13px;
+}
+
+.booking-form-bar input[type=button]:hover {
+  color: white;
+  font-weight: 520;
+  border: rgba(228, 99, 27, 1);
+  background: rgba(228, 99, 27, 1);
+  cursor: pointer;
+}
+
+.booking-form-bar select:focus {
+  outline-color: rgba(228, 99, 27, 1);
+  outline-style: solid;
+  outline-width: 2px;
+  border: none;
+}
+
+
+::placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.booking-form-bar option {
+  padding: 10px 10px 10px 10px;
+}
+
+.pagedesc {
+  text-align: center;
+  margin: 50px auto 10px auto;
+}
+
+.pagedesc h1 {
+  font-family: Libre Baskerville;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+
+.pagedesc p {
+  width: 50%;
+  margin: auto;
+  font-style: italic;
+}
+
+.category {
+  margin: 20vh auto 20vh auto;
+}
+
+.category h2 {
+  display: flex;
+	width: 80%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  margin: auto;
+  font-weight: bold;
+
+}
+
+.category h2:after {
+  content: '';
+	border-top: 2px solid;
+	margin: auto auto auto 1vw;
+  padding: auto;
+	flex: 1 0 20px;
+	color: rgba(12, 105, 118, 1);
+}
+
+
+
+.return{
+  clear: both;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid black;
+  width: 20%;
+  height: 30px;
+  border-radius: 20px;
+  margin: 20px 30px 30px 30px;
+}
+
+.category {
+  margin: 100px auto 20px auto;
+}
+
+.category h2 {
+  display: flex;
+	width: 80%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  margin: auto;
+  font-weight: bold;
+
+}
+
+.category h2:after {
+  content: '';
+	border-top: 2px solid;
+	margin: auto auto auto 1vw;
+  padding: auto;
+	flex: 1 0 20px;
+	color: rgba(12, 105, 118, 1);
+}
+.bookingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px;
+  column-gap: 2vw;
+  margin: auto;
+  width: 65vw;
+  overflow: hidden;
+  margin: 5vh auto 5vh auto;
+}
+
+.facilityPic {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+  object-fit: cover;
+  align-self: center;
+  justify-self: center;
+}
+
+.facilityInfo {
+  width: auto;
+  align-self: center;
+  justify-self: center;
+}
+
+.facilityInfo button {
+  text-transform: uppercase;
+  padding: 10px 8px;
+  font-family: Work Sans;
+  color: rgba(228, 99, 27, 1);
+  border: 2px solid rgba(228, 99, 27, 1);
+  background: transparent;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  transform: 0.12s ease-in-out;
+  font-weight: 520;
+  font-size: 14px;
+}
+
+.facilityInfo button:hover {
+  color: white;
+  background-color: rgba(228, 99, 27, 1);
+  border-color: rgba(228, 99, 27, 1);
+  cursor: pointer;
+}
+
+.facilityInfo hr {
+  width: 4vw;
+  border: 1px solid rgba(12, 105, 118, 1);
+  margin-right: 100%;
+  background-color: rgba(12, 105, 118, 1);
+  overflow-x: visible;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.facilityInfo a {
+  text-decoration: none;
+  color: rgba(12, 105, 118, 1);
+  padding-bottom: 5px;
+  font-family: Work Sans;
+  margin-bottom: 40px;
+  font-size: 2vh;
+}
+
+.facilityInfo p {
+  font-size: 15px;
+}
+
+.facilityInfo h3 {
+  font-size: 20px;
+}
+
+.photogrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 30px;
+  row-gap: 10px;
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+  margin: 30px auto 30px auto;
+}
+
+.photogrid img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+  transition-duration: 0.3s ease-in-out;
+  object-fit: contain;
+}
+
+.photogrid img:hover {
+
+}
+
+/*footer*/
+.footer{
+	background-color: #152238;
+    padding: 80px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: lightblue;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
 }
 @media screen and (max-width: 800px) {
   body{
