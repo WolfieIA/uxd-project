@@ -21,21 +21,41 @@
 </head>
 <body style="">
 
-<div class="top">
-    <a href="#" class="logo"><img src="Hotel_logo.jpeg" height="100px"></a>
-  <div class="navbar">
-  <nav>
-    <ul>
-      <li><a href="Victors_roomselect.html">rooms</a></li>
-      <li><a href="#">facilities</a></li>
-      <li><a href="#">events</a></li>
-      <li><a href="#">promotions</a></li>
-      <li><a href="#">dining</a></li>
-      <li><a href="#"> contact us</a></li>
-     </ul>
-  </nav>
+  <div class="top">
+      <a href="#" class="logo"><img src="hotel_logo.svg" height="100px"></a>
+    <div class="navbar">
+    <nav>
+      <ul>
+        <div class="dropdown">
+          <button type="button" name="button">rooms</button>
+            <div class="dropdown-content">
+              <a href="#">classic</a>
+              <a href="#">deluxe</a>
+              <a href="#">suite</a>
+            </div>
+          </div>
+        <div class="dropdown">
+          <button type="button" name="button">facilities</button>
+            <div class="dropdown-content">
+              <a href="#">swimming pool</a>
+              <a href="#">spa</a>
+              <a href="#">gym</a>
+            </div>
+          </div>
+        <li><a href="#">events</a></li>
+        <div class="dropdown">
+          <button type="button" name="button">dining</button>
+            <div class="dropdown-content">
+              <a href="#">breakfast menu</a>
+              <a href="#">dinner menu</a>
+              <a href="#">reservation</a>
+            </div>
+          </div>
+        <li><a href="#"> contact us</a></li>
+       </ul>
+    </nav>
+    </div>
   </div>
-</div>
 
   <div class="pagetitle_event">
     <div class="title">
@@ -162,7 +182,7 @@
       <p>2,169sqf | 201sqm | City view | Club access<br>
         Formerly the Crown Jewel of The Beach Club, the Presidential Suite is beautifully appointed and comes
          with a baby grand piano and a private elevator for discreet access. The living and dining rooms extend out to a spectacular
-         glass-enclosed verandah graced by 20-feet Doric columns. A private study adjoins the handsomely furnished bedroom.
+         glass-enclosed verandah graced by 20-feet Doric columns.
         </p>
       <button type="button" name="event-booking" onclick="document.location='events_form.html'">Book Now</button>
     </div>
