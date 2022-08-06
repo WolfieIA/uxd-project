@@ -95,12 +95,17 @@ margin-bottom: 80px;
   letter-spacing: 5px;
   text-shadow: 2px 2px black;
 }
-*{margin: 0; padding: 0; }
-.subheading{color: white;
-  position: absolute; top: 49rem;
+* {
+  margin: 0;
+  padding: 0;
+}
+.subheading {
+  color: white;
+  position: absolute;
+  top: 49rem;
   right:-10%;
   width: 100%;
-   ext-align: center;
+  text-align: center;
  }
 .subheading{
   font-family:Raleway;
