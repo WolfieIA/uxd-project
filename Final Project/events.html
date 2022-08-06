@@ -4,47 +4,50 @@
     <meta charset="utf-8">
     <title>Events</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="daterangepicker.css">
-    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="./CSS files/daterangepicker.css">
+    <link rel="stylesheet" href="./CSS files/template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="./Javascript Files/navbar.js"></script>
   </head>
   <body>
-    <div class="top">
-        <a href="#" class="logo"><img src="hotel_logo.svg" height="100px"></a>
-      <div class="navbar">
-      <nav>
-          <div class="dropdown">
-            <button type="button" name="button">rooms</button>
-              <div class="dropdown-content">
-                <a href="#">classic</a>
-                <a href="#">deluxe</a>
-                <a href="#">suite</a>
-                <a href="#">premier</a>
-              </div>
-            </div>
-          <div class="dropdown">
-            <button type="button" name="button">facilities</button>
-              <div class="dropdown-content">
-                <a href="#">swimming pool</a>
-                <a href="#">spa</a>
-                <a href="#">gym</a>
-              </div>
-            </div>
-          <a href="#">events</a>
-          <div class="dropdown">
-            <button type="button" name="button">dining</button>
-              <div class="dropdown-content">
-                <a href="#">breakfast menu</a>
-                <a href="#">reservation</a>
-              </div>
-          </div>
-          <a href="#">contact us</a>
-      </nav>
-      </div>
+    <section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!">Logo</a>
     </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li><a href="#!">rooms</a>
+          <ul class="nav-dropdown">
+            <li><a href="#!">Classic</a></li>
+            <li><a href="#!">Deluxe</a></li>
+            <li><a href="#!">Suite</a></li>
+            <li><a href="#!">Premiere</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">Facilities</a>
+          <ul class="nav-dropdown">
+            <li><a href="#!">Swimming Pool</a></li>
+            <li><a href="#!">Massage Spa</a></li>
+            <li><a href="#!">Gym</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">Events</a></li>
+        <li><a href="#!">Facilities</a>
+          <ul class="nav-dropdown">
+            <li><a href="#!">Dining</a></li>
+            <li><a href="#!">Reservation</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
 
       <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./event_photos/tableshot1.jpg);">
         <div class="title">

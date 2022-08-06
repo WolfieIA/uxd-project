@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Event Venue Booking</title>
-    <link rel="stylesheet" href="facilities_form.css">
+    <link rel="stylesheet" href="./CSS files/facilities_form.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -11,6 +11,7 @@
   </head>
   <body>
     <form class="" action="index.html" method="post">
+      <div class="choice">
       <h1>Facility Form</h1>
       <div class="form_section">
         <h2>Type of facility</h2>
@@ -23,11 +24,64 @@
             </select>
 
         </div>
+        <div class="type" id="type1">
 
-        <div class="form_section">
-          <h2>Date</h2>
+
+        <div class="form_section" >
+          <img src="./images/swimming.jfif">
+          <h2>Date & booking</h2>
           <label for="booking">date of booking:</label>
           <input type="date" id="date_picker1" name="booking" /required>
+          <div class="timeslot" >
+            <div class="room">
+              <input type="checkbox" id="nine" name="timeslot" value="nine"/>
+              <label for="nine">9am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="ten" name="timeslot" value="ten"/>
+              <label for="ten">10am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="eleven" name="timeslot" value="eleven"/>
+              <label for="eleven">11am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="twelve" name="timeslot" value="12"/>
+              <label for="twelve">12pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="one" name="timeslot" value="1pm"/>
+              <label for="one">1pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="two" name="timeslot" value="2"/>
+              <label for="two">2pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="three" name="timeslot" value="3"/>
+              <label for="three">3pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="four" name="timeslot" value="4"/>
+              <label for="four">4pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="five" name="timeslot" value="5"/>
+              <label for="five">5pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="six" name="timeslot" value="6"/>
+              <label for="six">6pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="seven" name="timeslot" value="7"/>
+              <label for="seven">7pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="eight" name="timeslot" value="8"/>
+              <label for="eight">8pm</label>
+            </div>
+          </div>
           <script type="text/javascript">
             var today = new Date();
                     var dd = String(today.getDate()).padStart(2, '0');
@@ -38,41 +92,224 @@
                     $('#date_picker1').attr('min',today);
           </script>
           </div>
+        </div>
+        <div class="type" id="type2">
+
+
+          <div class="form_section" >
+            <img src="./images/gym.jpg">
+            <h2>Date & booking</h2>
+            <label for="booking">date of booking:</label>
+            <input type="date" id="date_picker2" name="booking" /required>
+            <div class="timeslot" >
+              <div class="room">
+                <input type="checkbox" id="nine" name="timeslot" value="nine"/>
+                <label for="nine">9am</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="ten" name="timeslot" value="ten"/>
+                <label for="ten">10am</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="eleven" name="timeslot" value="eleven"/>
+                <label for="eleven">11am</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="twelve" name="timeslot" value="12"/>
+                <label for="twelve">12pm</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="one" name="timeslot" value="1pm"/>
+                <label for="one">1pm</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="two" name="timeslot" value="2"/>
+                <label for="two">2pm</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="three" name="timeslot" value="3"/>
+                <label for="three">3pm</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="four" name="timeslot" value="4"/>
+                <label for="four">4pm</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="five" name="timeslot" value="5"/>
+                <label for="five">5pm</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="six" name="timeslot" value="6"/>
+                <label for="six">6pm</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="seven" name="timeslot" value="7"/>
+                <label for="seven">7pm</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="eight" name="timeslot" value="8"/>
+                <label for="eight">8pm</label>
+              </div>
+            </div>
+            <script type="text/javascript">
+              var today = new Date();
+                      var dd = String(today.getDate()).padStart(2, '0');
+                      var mm = String(today.getMonth() + 1).padStart(2, '0');
+                      var yyyy = today.getFullYear();
+                      today = yyyy + '-' + mm + '-' + dd;
+                      $('#date_picker2').attr('min',today);
+            </script>
+            </div>
+          </div>
+          <div class="type" id="type3">
+
+
+
+            <div class="form_section" >
+              <img src="./images/spa.jpg">
+              <h2>Date & booking</h2>
+              <label for="booking">date of booking:</label>
+              <input type="date" id="date_picker3" name="booking" /required>
+              <div class="timeslot" >
+                <div class="room">
+                  <input type="checkbox" id="nine" name="timeslot" value="nine"/>
+                  <label for="nine">9am</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="ten" name="timeslot" value="ten"/>
+                  <label for="ten">10am</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="eleven" name="timeslot" value="eleven"/>
+                  <label for="eleven">11am</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="twelve" name="timeslot" value="12"/>
+                  <label for="twelve">12pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="one" name="timeslot" value="1pm"/>
+                  <label for="one">1pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="two" name="timeslot" value="2"/>
+                  <label for="two">2pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="three" name="timeslot" value="3"/>
+                  <label for="three">3pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="four" name="timeslot" value="4"/>
+                  <label for="four">4pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="five" name="timeslot" value="5"/>
+                  <label for="five">5pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="six" name="timeslot" value="6"/>
+                  <label for="six">6pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="seven" name="timeslot" value="7"/>
+                  <label for="seven">7pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" id="eight" name="timeslot" value="8"/>
+                  <label for="eight">8pm</label>
+                </div>
+              </div>
+              <script type="text/javascript">
+                var today = new Date();
+                        var dd = String(today.getDate()).padStart(2, '0');
+                        var mm = String(today.getMonth() + 1).padStart(2, '0');
+                        var yyyy = today.getFullYear();
+
+                        today = yyyy + '-' + mm + '-' + dd;
+                        $('#date_picker3').attr('min',today);
+              </script>
+              </div>
+              </div>
           <div class="form_section contact">
             <h2>Contact Information</h2>
             <input type="text" name="name" placeholder="First name*" required>
             <input type="text" name="name" placeholder="Last name*" required><br>
             <input type="tel" name="name" placeholder="Phone Number*" required>
-            <input type="email" name="" placeholder="Email*" required><br><br><br>
-            <label for="">Are you a business*</label>
-            <label for="bizboolean">Yes</label>
-            <input type="radio" name="bizboolean" value="Yes" required id="amBiz" checked>
-            <label for="bizboolean">No</label>
-            <input type="radio" name="bizboolean" value="No" required id="notBiz"><br><br><br>
-            <div id="bizinfo">
-            <div class="">
-              <input type="text" name="company_name" placeholder="Company name*" required>
-              <input type="text" name="company_address" placeholder="Company Address*" required>
-              <input type="text" name="job_title" placeholder="Job Title*" required>
-              <script type="text/javascript">
-                $('#amBiz').change(function() {
-                    if(this.checked) {
-                        $('#bizinfo').show();
-                        $('#bizinfo').attr("required", true);
-                    }
-                });
-                $('#notBiz').change(function() {
-                    if(this.checked) {
-                        $('#bizinfo').hide();
-                        $('#bizinfo').attr("required", false);
-                    }
-                });
-              </script>
-            </div>
-          </div><br><br>
+
         <div class="button">
           <button type="button" name="button">submit</button>
         </div>
+      </div>
     </form>
+    <script>
+
+    var btn1 = document.getElementById("choice1");
+    var btn2 = document.getElementById("choice2");
+    var btn3 = document.getElementById("choice3");
+    var form1 = document.getElementById("type1");
+    var form2 = document.getElementById("type2");
+    var form3 = document.getElementById("type3");
+    var limit = document.getElementsByClassName("timeslot");
+    var i = document. querySelector("checkbox");
+    var r = 0;
+
+
+    function swimmingpoolForm() {
+      form1.style.display = "block";
+      form2.style.display = "none";
+      form3.style.display = "none";
+      btn1.style.color = "red";
+      btn2.style.color = "#fff";
+      btn3.style.color = "black";
+      if (limit.checked){
+        alert("error");
+      }
+    }
+    function GymForm(){
+      form1.style.display = "none";
+      form2.style.display = "block";
+      form3.style.display = "none";
+      btn1.style.color = "#fff";
+      btn2.style.color = "red";
+      btn3.style.color = "#fff";
+    }
+    function SpaForm(){
+      form1.style.display = "none";
+      form2.style.display = "none";
+      form3.style.display = "block";
+      btn1.style.color = "#000";
+      btn2.style.color = "#fff";
+      btn3.style.color = "#fff";
+    }
+    function validation(){
+      var valid = 0;
+      while (valid<2){
+        if (document.getElementById("nine").checked){
+          valid ++;
+        }
+        else if (document.getElementById("ten").checked){
+          valid ++;
+        }
+        else if (document.getElementById("eleven").checked){
+          valid ++;
+        }
+
+      }
+
+      if(valid == 0){
+        alert("input value");
+        return false;
+      }
+      else if(valid > 2){
+        alert("only max 2 hours of booking is allowed")
+        return false;
+      }
+      else {
+        alert("successful");
+      }
+    }
+
+    </script>
   </body>
 </html>
