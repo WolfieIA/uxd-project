@@ -73,7 +73,7 @@ margin-bottom: 80px;
   position: absolute;
   top: 47%;
   right:10%;
-  height:55%;
+  height:65%;
   width: 40%;
   opacity: 1;
   text-align: left;
@@ -302,6 +302,7 @@ margin: 0;
 }
 .footer{
   background-color: rgba(17, 75, 130, 1);
+  background-color:#152238;
   padding: 80px 0;
   font-family: work sans;
 
