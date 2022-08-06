@@ -262,7 +262,7 @@ font-size:25px;
 
 .pagedesc {
 text-align: center;
-margin: 50px auto 10px auto;
+margin: 50px auto;
 }
 
 .pagedesc h1 {
@@ -277,18 +277,12 @@ margin: 0;
   font-family: Work Sans;
   word-break: break-word;
   font-size: 18px;
+  margin: 10px 80px;
 }
 
 
-body{
-	line-height: 1.5;
-	font-family: 'Poppins', sans-serif;
-}
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-}
+
+/*FOOTER*/
 .containerA{
 	max-width: 1170px;
 	margin:auto;
@@ -297,12 +291,14 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 }
-ul{
+.footer ul{
 	list-style: none;
 }
 .footer{
-	background-color: #152238;
-    padding: 80px 0;
+  background-color: rgba(17, 75, 130, 1);
+  padding: 80px 0;
+  font-family: work sans;
+
 }
 .footer-col{
    width: 25%;
@@ -311,17 +307,18 @@ ul{
 .footer-col h4{
 	font-size: 18px;
 	color: #ffffff;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	margin-bottom: 35px;
 	font-weight: 500;
 	position: relative;
+  font-family: work sans;
 }
 .footer-col h4::before{
 	content: '';
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #e91e63;
+  background-color: rgba(228, 99, 27, 1);
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
@@ -331,13 +328,13 @@ ul{
 }
 .footer-col ul li a{
 	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
+	text-transform: uppercase;
+	color: white;
 	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
+	font-weight: 400;
 	display: block;
 	transition: all 0.3s ease;
+  font-family: work sans;
 }
 .footer-col ul li a:hover{
 	color: lightblue;
@@ -360,7 +357,6 @@ ul{
 	background-color: #ffffff;
 }
 
-/*responsive*/
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
@@ -429,11 +425,13 @@ ul{
 
 .slider .slide .info h2{
   font-size: 2em;
-  font-weight: 800;
+  font-weight: 550;
+  font-family: libre Baskerville;
 }
 
 .slider .slide .info p{
   font-size: 1em;
+  font-family: work sans;
   font-weight: 400;
 }
 
@@ -487,7 +485,7 @@ ul{
 }
 
 .navigation-visibility .slide-icon.active{
-  background: #4285F4;
+  background: rgba(228, 99, 27, 1);
 }
 
 @media (max-width: 900px){
