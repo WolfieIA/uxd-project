@@ -135,29 +135,41 @@ input[type=submit]:hover {
   transform: translateY(4px) translateX(4px);
   box-shadow: #094c55 0px 0px 0px;  }
 }
+
 .form-btn{
 margin-top: 0;
 cursor: pointer;
 }
 .btn-purple{
-background-color:#1197cc;
-box-shadow: #094c66 4px 4px 0px;
-border-radius: 8px;
-padding: 5px;
-font-size: 20px;
-transition: transform 200ms, box-shadow 200ms;
-font-family:Raleway;
+  text-transform: uppercase;
+  padding: 10px 5px 10px 5px;
+  font-family: Work Sans;
+  color: rgba(228, 99, 27, 1);
+  background: none;
+  border: 2px solid rgba(228, 99, 27, 1);
+  width: 40%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 520;
+  font-size: 2vh;
+  transition: 0.12s ease-in-out;
+  align: center;
+  float: none;
 }
-
 .btn-purple:active{
 transform: translateY(4px) translateX(4px);
 box-shadow: #094c55 0px 0px 0px;
 
 }
-
 .btn-purple:hover{
-background-color: #0C6976;
+  color: white;
+  background-color: rgba(228, 99, 27, 1);
+  border-color: rgba(228, 99, 27, 1);
+  cursor: pointer;
 }
+
+
 
 
 

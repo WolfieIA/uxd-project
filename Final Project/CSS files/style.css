@@ -212,13 +212,13 @@ border: none;
 .form-btn{
 margin-top: 0;
 cursor: pointer;
+background-color: white;
 }
 .btn-purple{
   text-transform: uppercase;
   padding: 10px 5px 10px 5px;
   font-family: Work Sans;
   color: rgba(228, 99, 27, 1);
-  background: none;
   border: 2px solid rgba(228, 99, 27, 1);
   width: 40%;
   letter-spacing: 0.1em;
@@ -230,13 +230,18 @@ cursor: pointer;
   align: center;
   float: none;
 }
+.btn-purple:active{
+transform: translateY(4px) translateX(4px);
+box-shadow: #094c55 0px 0px 0px;
 
+}
 .btn-purple:hover{
   color: white;
   background-color: rgba(228, 99, 27, 1);
   border-color: rgba(228, 99, 27, 1);
   cursor: pointer;
 }
+
 
 .leaves{
   position: relative;
