@@ -37,11 +37,104 @@
       <li><a href="#" class="standby" >CONTACT US<i class="fa fa-caret-down"></i></a></li>
 </nav>
 </header>
-<div class="darken">
-<img src="./Images/background.png" class="cover">
+
+<div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(background.png);">
+  <div class="title">
+    <h1>Page Name</h1>
+    <p>A sentence to summarise page</p>
+  </div>
 </div>
-<h1 >FACILITIES</h1>
-<h2 class="type">TYPE OF FACILITIES<h2>
+
+<div class="booking-form-bar">
+  <form class="" action="index.html" method="post">
+      <select name="adults" id="adults"  required>
+            <option value="" disabled selected hidden>&#xf007;&nbsp;&nbsp;&nbsp;&nbsp;No. of Adults</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+      </select>
+      <script>
+      $("#adults").change(function(){
+              var $this = $( this );
+              $this.find( "option:first" ).text($this.val() + ' adults').val( $this.val() ).prop('selected',true, );
+          } )
+      </script>
+      <select name="children" id="children" required>
+            <option value="" disabled selected hidden>&#xe4e1;&nbsp;&nbsp;&nbsp;&nbsp;No. of Children</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+      </select>
+      <script type="text/javascript">
+      $("#children").change(function(){
+              var $this = $(this);
+              $this.find("option:first").text($this.val() + ' children').val( $this.val() ).prop('selected',true);
+          } )
+      </script>
+
+      <select name="rooms" id="rooms" required>
+          <option value="" disabled selected hidden>&#xf236;&nbsp;&nbsp;&nbsp;&nbsp;No. of Rooms</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+      </select>
+      <script>
+      $( "#rooms" ).change(function(){
+              var $this = $( this );
+              $this.find( "option:first" ).text($this.val() + ' rooms').val( $this.val() ).prop('selected',true);
+          } )
+      </script>
+      <input type="text" name="stayrange" placeholder="Duration of stay" required>
+      <script type="text/javascript">
+      $(function() {
+
+      $('input[name="stayrange"]').daterangepicker({
+          autoUpdateInput: false,
+          locale: {
+              cancelLabel: 'Clear'
+          }
+      });
+
+      $('input[name="stayrange"]').daterangepicker({ locale: {
+        format: 'DD/MM/YYYY' ,
+        "applyLabel": "Select",
+        "firstDay": 1
+      } });
+
+      $('input[name="stayrange"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+      });
+
+      $('input[name="stayrange"]').on('cancel.daterangepicker', function(ev, picker) {
+          $(this).val('');
+      });
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10){ dd='0'+dd }
+        if(mm<10){ mm='0'+mm }
+        var today = dd+'/'+mm+'/'+yyyy;
+        $('input[name="daterange"]').daterangepicker({
+        minDate:today
+        });
+      });
+      </script>
+
+    <input type="button" name="room-available" value="rates & availability" size="100px">
+  </form>
+</div>
+
+
+  <div class="category">
+  <h2>Facility Gallery</h2>
+</div>
+
 
   <p class="left">Swimming pool</p>
   <div class="container">
