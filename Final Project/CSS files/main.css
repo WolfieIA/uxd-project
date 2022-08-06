@@ -142,8 +142,9 @@ top: 31%;
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-p{
-  background-color: 000;
+.overlay p{
+  background-color: #000;
+
 }
 .left {
   position: absolute;
@@ -234,7 +235,7 @@ p{
   width: 82%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: black;
 }
 
 .container:hover .overlay {
