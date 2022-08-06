@@ -16,16 +16,19 @@
       <div class="form_section">
         <h2>Type of facility</h2>
 
-            <select class="event_type" name="event_type" required>
+            <!-- <select class="event_type" name="event_type" required>
               <option value="" selected hidden disabled class="required">Type of Event*</option>
               <option value="" id="choice1"  onclick="swimmingpoolForm()">Swimming Pool</option>
               <option value="" id="choice2" onclick="GymForm()">Gym Studio</option>
               <option value="" id="choice3" onclick="SpaForm()">Spa & Relaxing</option>
-            </select>
-
+            </select> -->
+            <div class="btn">
+              <button id="choice1"  onclick="swimmingpoolForm()">swimming pool</button>
+              <button id="choice2" onclick="GymForm()">gym studio</button>
+              <button id="choice3" onclick="SpaForm()" >Spa & Relaxing</button>
+            </div>
         </div>
         <div class="type" id="type1">
-
 
         <div class="form_section" >
           <img src="./images/swimming.jfif">
@@ -82,6 +85,7 @@
               <label for="eight">8pm</label>
             </div>
           </div>
+          <p id="time"> time:</p>
           <script type="text/javascript">
             var today = new Date();
                     var dd = String(today.getDate()).padStart(2, '0');
@@ -90,6 +94,12 @@
 
                     today = yyyy + '-' + mm + '-' + dd;
                     $('#date_picker1').attr('min',today);
+
+          var nine = document.getElementById("nine");
+          if (nine.checked){
+            total = parlseInt(nime)+1;
+            document.getElementById("time").innerHTML = total;
+          }
           </script>
           </div>
         </div>
@@ -162,8 +172,6 @@
             </div>
           </div>
           <div class="type" id="type3">
-
-
 
             <div class="form_section" >
               <img src="./images/spa.jpg">
