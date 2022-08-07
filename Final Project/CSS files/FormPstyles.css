@@ -69,3 +69,9 @@ section{
   font-family: work Sans;
   font-size: 30px;
 }
+
+.underwater{
+  float: right;
+  width:30%;
+  padding: 30px 10px 10px 10px;
+}
