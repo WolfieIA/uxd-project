@@ -363,6 +363,7 @@ body{
 ul{
 	list-style: none;
 }
+/*FOOTER*/
 .containerA{
 	max-width: 1170px;
 	margin:auto;
@@ -450,19 +451,6 @@ ul{
 }
 }
 
-
-/*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
-}
 
 
 .textt{
