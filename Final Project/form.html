@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"name="viewport" content="width=device-width, initial-scale=1">
+<title>facilities Form</title>
+<link rel="stylesheet" href="form.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#icon').click(function(){
+        $('ul').toggleclass('show');
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="logo.jpeg" class="logo">
+      <ul>
+        <li><a href="#" class="standby">ABOUT US<i class="fa fa-caret-down"></i></a></li>
+        <li><a href="#" class="standby">ROOMS<i class="fa fa-caret-down"></i></a></li>
+        <div class="dropdown">
+          <li><a href="#" class="active">FACILITY<i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <a href="#" onclick="currentSlide(1)">SWIMMING POOL</a>
+              <a href="#" onclick="currentSlide(2)">GYM STUDIO</a>
+              <a href="#" onclick="currentSlide(3)">SPA & RELAXING</a>
+            </div>
+          </li>
+        <li><a href="#" class="standby" >EVENTS<i class="fa fa-caret-down"></i></a></li>
+        <li><a href="#" class="standby" >PROMOTION<i class="fa fa-caret-down"></i></a></li>
+        <li><a href="#" class="standby" >CONTACT US<i class="fa fa-caret-down"></i></a></li>
+      </ul>
+        <label id="icon">
+          <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+  </header>
+
+
+
+  <img src="logo.jpeg" class="logo1">
+ <h1>FACILITY FORM</h1>
+<div class="choice">
+  <div class="btn">
+    <button id="choice1"  onclick="swimmingpoolForm()">swimming pool</button>
+    <button id="choice2" onclick="GymForm()">gym studio</button>
+    <button id="choice3" onclick="SpaForm()" >Spa & Relaxing</button>
+  </div>
+<div class="type" id="type1">
+    <div class="border" >
+      <img src="swimming.jfif" height="400px"  class="center">
+      <p>venue: Swimming Pool loacated near Blk A</p>
+      <P>time: 9am - 9pm</p>
+        <form action="Formcompleted.html"  onsubmit="return validation()">
+
+          <label for="Name" class="textalign">Name:</label>
+          <input type="text" id="Name" name="Name" placeholder="Your name.." required/>
+
+          <label for="contact">contact number:</label>
+          <input type="contact" id="contact" name="contact" placeholder="phone number" title="8 digit" pattern="\d{8}" required>
+          <br>
+          <label for="people" class="textalign">No. of people</label>
+          <input type="number" id="people" name="people" placeholder="no. of people" min="1" max="10" required/>
+
+          <label for="booking">date of booking:</label>
+          <input type="date" id="date_picker1" name="booking" /required>
+          <br><br>
+          <label class="textalign1">select timing</label>
+
+          <br><div class="timeslot" >
+            <div class="room">
+              <input type="checkbox" id="nine" name="timeslot" value="nine"/>
+              <label for="nine">9am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="ten" name="timeslot" value="ten"/>
+              <label for="ten">10am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="eleven" name="timeslot" value="eleven"/>
+              <label for="eleven">11am</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="twelve" name="timeslot" value="12"/>
+              <label for="twelve">12pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="one" name="timeslot" value="1pm"/>
+              <label for="one">1pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="two" name="timeslot" value="2"/>
+              <label for="two">2pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="three" name="timeslot" value="3"/>
+              <label for="three">3pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="four" name="timeslot" value="4"/>
+              <label for="four">4pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="five" name="timeslot" value="5"/>
+              <label for="five">5pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="six" name="timeslot" value="6"/>
+              <label for="six">6pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="seven" name="timeslot" value="7"/>
+              <label for="seven">7pm</label>
+            </div>
+            <div class="room">
+              <input type="checkbox" id="eight" name="timeslot" value="8"/>
+              <label for="eight">8pm</label>
+            </div>
+          </div>
+          <p>*1 Hour for each slot</p>
+          <input type="submit" value="Submit1" >
+        </form>
+      </div>
+  </div>
+    <div class="type" id="type2">
+      <div class="border">
+        <img src="gym.png" height="400px"  class="center">
+        <form action="Formcompleted.html">
+        <label for="Name" class="textalign">Name:</label>
+        <input type="text" id="Name" name="Name" placeholder="Your name.." required/>
+
+        <label for="contact">contact number:</label>
+        <input type="contact" id="contact" name="contact" placeholder="phone number" title="8 digit" pattern="\d{8}" required>
+
+        <br>
+        <label for="booking" class="booking2">date of booking:</label>
+        <input type="date" id="date_picker2" name="booking" /required>
+
+        <br><div class="timeslot">
+          <div class="room">
+            <input type="checkbox" id="30min" name="timeslot" value="30min"/>
+            <label for="30min">9am-10.30am</label>
+          </div>
+          <div class="room">
+            <input type="checkbox" id="30min2" name="timeslot" value="30min2"/>
+            <label for="30min2">10.30am-12pm</label>
+          </div>
+          <div class="room">
+            <input type="checkbox" id="30min3" name="timeslot" value="30min3"/>
+            <label for="30min3">12pm-1.30pm</label>
+          </div>
+          <div class="room">
+            <input type="checkbox" id="30min4" name="timeslot" value="30min4"/>
+            <label for="30min4">1.30pm-3pm</label>
+          </div>
+          <div class="room">
+            <input type="checkbox" id="30min5" name="timeslot" value="30min5"/>
+            <label for="30min5">3pm-4.30pm</label>
+          </div>
+          <div class="room">
+            <input type="checkbox" id="30min6" name="timeslot" value="30min6"/>
+            <label for="30min6">4.30pm-6pm</label>
+          </div>
+          <div class="room">
+            <input type="checkbox" id="30min7" name="timeslot" value="30min7"/>
+            <label for="30min7">6pm-7.30pm</label>
+          </div>
+          <div class="room">
+            <input type="checkbox" id="30min8" name="timeslot" value="30min8"/>
+            <label for="30min8">7.30pm-9pm</label>
+          </div>
+        </div>
+        <input type="submit" value="Submit" >
+      </form>
+      </div>
+    </div>
+    <div class="type" id="type3">
+      <div class="border">
+        <img src="spa.jpg" height="400px"  class="center">
+        <form >
+          <p>venue: Spa & Relaxing</p>
+          <P>time: 10am - 8pm</p>
+            <label for="Name" class="textalign">Name:</label>
+            <input type="text" id="Name" name="Name" placeholder="Your name.." required/>
+
+            <label for="contact">contact number:</label>
+            <input type="contact" id="contact" name="contact" placeholder="phone number" title="8 digit" pattern="\d{8}" required>
+
+            <label for="massage" class="textalign">type of massage:</label>
+            <input type="text" id="massage" name="massage" placeholder="Your name.." required/>
+
+            <label for="booking">date of booking:</label>
+            <input type="date" id="date_picker3" name="booking" /required>
+
+            <br><div class="timeslot">
+              <div class="room">
+                <input type="checkbox" id="nine" name="nine" value="nine"/>
+                <label for="nine">9am</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="ten" name="ten" value="ten"/>
+                <label for="ten">9.30am</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="11" name="timeslot" value="3"/>
+                <label for="11">10am</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="12" name="timeslot" value="12"/>
+                <label for="12">10.30am</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="1pm" name="timeslot" value="1pm"/>
+                <label for="1pm">11am</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="2" name="timeslot" value="2"/>
+                <label for="2">11.30am</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="3" name="timeslot" value="3"/>
+                <label for="3">12pm</label>
+              </div>
+              <div class="room">
+                <input type="checkbox" id="4" name="timeslot" value="4"/>
+                <label for="4">12.30pm</label>
+              </div>
+            </div>
+            <input type="submit" value="Submit" >
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="linkpage.js">
+  </script>
+<script>
+
+var btn1 = document.getElementById("choice1");
+var btn2 = document.getElementById("choice2");
+var btn3 = document.getElementById("choice3");
+var form1 = document.getElementById("type1");
+var form2 = document.getElementById("type2");
+var form3 = document.getElementById("type3");
+var limit = document.getElementsByClassName("timeslot");
+var i = document. querySelector("checkbox");
+var r = 0;
+
+function swimmingpoolForm() {
+  form1.style.display = "block";
+  form2.style.display = "none";
+  form3.style.display = "none";
+  btn1.style.color = "red";
+  btn2.style.color = "#fff";
+  btn3.style.color = "black";
+  if (limit.checked){
+    alert("error");
+  }
+}
+function GymForm(){
+  form1.style.display = "none";
+  form2.style.display = "block";
+  form3.style.display = "none";
+  btn1.style.color = "#fff";
+  btn2.style.color = "red";
+  btn3.style.color = "#fff";
+}
+function SpaForm(){
+  form1.style.display = "none";
+  form2.style.display = "none";
+  form3.style.display = "block";
+  btn1.style.color = "#000";
+  btn2.style.color = "#fff";
+  btn3.style.color = "#fff";
+}
+function validation(){
+  var valid = 0;
+  while (valid<2){
+    if (document.getElementById("nine").checked){
+      valid ++;
+    }
+    else if (document.getElementById("ten").checked){
+      valid ++;
+    }
+    else if (document.getElementById("eleven").checked){
+      valid ++;
+    }
+
+  }
+
+  if(valid == 0){
+    alert("input value");
+    return false;
+  }
+  else if(valid > 2){
+    alert("only max 2 hours of booking is allowed")
+    return false;
+  }
+  else {
+    alert("successful");
+  }
+}
+
+</script>
+</body>

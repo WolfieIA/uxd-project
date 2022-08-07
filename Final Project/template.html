@@ -12,40 +12,49 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   </head>
   <body>
-    <div id="top">
+    <div class="topnav>"
         <a href="#" class="logo"><img src="./Images/hotel_logo.svg" height="100px"></a>
-      <div class="navbar">
-      <nav>
+        <div class="top" id="navbar">
           <div class="dropdown">
-            <button type="button" name="button">rooms</button>
-              <div class="dropdown-content">
-                <a href="#">classic</a>
-                <a href="#">deluxe</a>
-                <a href="#">suite</a>
-                <a href="#">premier</a>
-              </div>
+            <button class="dropbtn">rooms</button>
+            <div class="dropdown-content">
+              <a href="#">classic</a>
+              <a href="#">deluxe</a>
+              <a href="#">suite</a>
+              <a href="#">premier</a>
             </div>
-          <div class="dropdown">
-            <button type="button" name="button">facilities</button>
-              <div class="dropdown-content">
-                <a href="#">swimming pool</a>
-                <a href="#">spa</a>
-                <a href="#">gym</a>
-              </div>
-            </div>
-          <a href="#">events</a>
-          <div class="dropdown">
-            <button type="button" name="button">dining</button>
-              <div class="dropdown-content">
-                <a href="#">breakfast menu</a>
-                <a href="#">reservation</a>
-              </div>
           </div>
-          <a href="#">contact us</a>
-      </nav>
+          <div class="dropdown">
+            <button class="dropbtn">facilities</button>
+            <div class="dropdown-content">
+              <a href="#">swimming pool</a>
+              <a href="#">spa</a>
+              <a href="#">gym</a>
+            </div>
+          </div>
+          <a href="events.html">events</a>
+          <div class="dropdown">
+            <button class="dropbtn">dining</button>
+            <div class="dropdown-content">
+              <a href="#">menu</a>
+              <a href="#">reservation</a>
+            </div>
+          </div>
+          <a href="Contact Us.html">contact us</a>
+          <a href="javascript:void(0);" class="icon" onclick="burger()">&#9776;</a>
+          <script type="text/javascript">
+          function burger() {
+            var x = document.getElementById("navbar");
+            if (x.className === "top") {
+              x.className += " responsive";
+            }
+            else {
+              x.className = "top";
+            }
+          }
+          </script>
+        </div>
       </div>
-    </div>
-
       <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/tableshot1.jpg);">
         <div class="title">
           <h1>Page Name</h1>
