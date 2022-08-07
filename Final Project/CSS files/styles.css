@@ -468,10 +468,84 @@ ul{
 }
 }
 
-
-
 .textt{
   text-shadow: 1px 1px 1px 1px;
   color: #226A80;
   padding: 30px 100px 5px -10px;
+  font-family: work sans;
+}
+
+.textt p {
+  font-family: work sans, ;
+}
+
+input[type=text]{
+font-family: 'Work Sans', FontAwesome;
+font-size: 13px;
+margin: 5px 10px 15px 5px;
+padding: 15px 15px 15px 10px;
+-webkit-appearance: none;
+background-color: white;
+width: 100%;
+appearance: none;
+border: none;
+box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+input[type=email] {
+font-family: 'Work Sans', FontAwesome;
+font-size: 13px;
+margin: 5px 10px 15px 5px;
+padding: 15px 15px 15px 10px;
+-webkit-appearance: none;
+background-color: white;
+width: 100%;
+appearance: none;
+border: none;
+box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+select {
+font-family: 'Work Sans', FontAwesome;
+text-transform: capitalize;
+font-size: 13px;
+margin: 5px 10px 15px 5px;
+padding: 15px 15px 15px 10px;
+background-color: white;
+width: 100%;
+appearance: none;
+border: none;
+box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+input:focus, select:focus, textarea:focus {
+outline-color: rgba(228, 99, 27, 1);
+outline-style: solid;
+outline-width: 2px;
+border: none;
+}
+
+label {
+  font-family: work sans;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+span {
+  color: red;
+}
+
+textarea {
+  resize: none;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+.gone {
+  visibility: hidden;
+}
+
+::placeholder {
+  font-family: work sans;
+  color: black;
+  text-transform: capitalize;
 }
