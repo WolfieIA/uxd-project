@@ -60,6 +60,10 @@ overflow-x: hidden;
   margin-top: -0.5px;
 }
 
+.nav-title img {
+  margin-left: 60px;
+}
+
 .nav > .nav-btn {
   display: none;
 }
