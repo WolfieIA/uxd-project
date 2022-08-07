@@ -3,7 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-  </head>
+    <link rel="stylesheet" href="./CSS Files/thebooking.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./CSS Files/daterangepicker.css">
+    <link rel="stylesheet" href="./CSS Files/template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>  </head>
   <body>
     <div class="testbox">
   <form>
@@ -16,7 +23,7 @@
       <div class="columns">
         <div class="item">
           <label for="fname">First Name<span>*</span></label>
-          <input id="fname" type="text" name="fname" />
+          <input id="fname" type="text" name="fname"/>
         </div>
         <div class="item">
           <label for="lname"> Last Name<span>*</span></label>
@@ -24,23 +31,21 @@
         </div>
         <div class="item">
           <label for="address">Address<span>*</span></label>
-          <input id="address" type="text" name="address" />
+          <input id="address" type="address" name="address" />
         </div>
         <div class="item">
           <label for="zip">Zip Code<span>*</span></label>
-          <input id="zip" type="text" name="zip" required />
+          <input id="zip" type="number" name="zip" required />
         </div>
+
         <div class="item">
           <label for="city">City<span>*</span></label>
           <input id="city" type="text" name="city" />
         </div>
-        <div class="item">
-          <label for="state">State<span>*</span></label>
-          <input id="state" type="text" name="state" />
-        </div>
+
         <div class="item">
           <label for="eaddress">Email Address<span>*</span></label>
-          <input id="eaddress" type="text" name="eaddress" />
+          <input id="eaddress" type="email" name="eaddress" />
         </div>
         <div class="item">
           <label for="phone">Phone<span>*</span></label>
@@ -80,48 +85,60 @@
           </select>
         </div>
         <div class="item">
-          <p>How many adults are coming?</p>
-          <select>
-            <option value="8" disabled selected>Number of adults</option>
-            <option value="9">1</option>
-            <option value="10">2</option>
-            <option value="11">3</option>
-            <option value="12">4</option>
-            <option value="13">5</option>
+          <select name="adults" id="adults"  required>
+              <option value="" disabled selected hidden>&#xf007;&nbsp;&nbsp;&nbsp;&nbsp;Adults</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
           </select>
+          <script>
+          $("#adults").change(function(){
+                  var $this = $( this );
+                  $this.find( "option:first" ).text($this.val() + ' adults').val( $this.val() ).prop('selected',true, );
+              } )
+          </script>
         </div>
+
         <div class="item">
-          <p>How many children are coming?</p>
-          <select>
-            <option value="14" disabled selected>Number of children</option>
-            <option value="15">0</option>
-            <option value="16">1</option>
-            <option value="17">2</option>
-            <option value="18">3</option>
-            <option value="19">4</option>
-            <option value="19">5</option>
+          <select name="children" id="children" required>
+            <option value="" disabled selected hidden>&#xf1ae;&nbsp;&nbsp;&nbsp;&nbsp;Children</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select>
+          <script type="text/javascript">
+          $("#children").change(function(){
+                  var $this = $(this);
+                  $this.find("option:first").text($this.val() + ' children').val( $this.val() ).prop('selected',true);
+              } )
+          var display = document.getElementById('children')
+          </script>
         </div>
         <div class="item" style=width:100%>
           <label for="room">Number of rooms</label>
           <input id="room" type="number" name="room" />
         </div>
         <div class="item">
-          <p>Room 1 type</p>
           <select>
-            <option value="20" selected></option>
-            <option value="21">Standard</option>
-            <option value="22">Deluxe</option>
-            <option value="23">Suite</option>
+            <option value="" disabled hidden selected>Room 1 type</option>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+            <option value="premier">Premier</option>
           </select>
         </div>
         <div class="item">
-          <p>Room 2 type</p>
           <select>
-            <option value="24" selected></option>
-            <option value="25">Standard</option>
-            <option value="26">Deluxe</option>
-            <option value="27">Suite</option>
+            <option value="" disabled hidden selected>Room 2 type</option>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+            <option value="premier">Premier</option>
           </select>
         </div>
       </div>
