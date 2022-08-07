@@ -4,14 +4,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="./CSS files/styles.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-<div class="topnav" >
-  <a class="active" href="Homepage.html"><img src="./Images/hotel_logo.svg" height="100"></a>
-  <a href="#">Rooms</a>
-  <a href="#">Facilities</a>
-  <a href="#">Events</a>
-  <a href="#">Promotion</a>
-  <a href="Contact Us.html">Contact Us</a>
-</div>
+<div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="Homepage.html"><img src="./Images/hotel_logo.svg" alt="" height="100px"></a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check" onclick="gone()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <script type="text/javascript">
+          function gone(){
+            document.getElementById('title').classList.toggle("gone");
+            document.querySelector('.booking-form-bar').classList.toggle('gone');
+            document.querySelector('.nav-btn').classList.toggle('open');
+          }
+      </script>
+      <div class="nav-links">
+        <a href="roominfo.html">Rooms</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="events.html">Events</a>
+        <a href="menu.html" target="_blank">Dining</a>
+        <a href="Contact Us.html" target="_blank">Contact Us</a>
+      </div>
+      </div>
 
 </head>
 <body>
@@ -154,7 +175,7 @@
           <option value="Kyrgyzstan">Kyrgyzstan</option>
           <option value="Lao">Lao People's Democratic Republic</option>
           <option value="Latvia">Latvia</option>
-          <option value="Lebanon" selected>Lebanon</option>
+          <option value="Lebanon">Lebanon</option>
           <option value="Lesotho">Lesotho</option>
           <option value="Liberia">Liberia</option>
           <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
@@ -224,7 +245,7 @@
           <option value="Senegal">Senegal</option>
           <option value="Seychelles">Seychelles</option>
           <option value="Sierra">Sierra Leone</option>
-          <option value="Singapore">Singapore</option>
+          <option value="Singapore"selected>Singapore</option>
           <option value="Slovakia">Slovakia (Slovak Republic)</option>
           <option value="Slovenia">Slovenia</option>
           <option value="Solomon Islands">Solomon Islands</option>
@@ -343,10 +364,10 @@
         <h4>follow us</h4>
         <div class="social-links">
           <ul>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://sg.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
         </ul>
         </div>
       </div>
