@@ -43,8 +43,8 @@
       </div>
       <div class="pagetitle"  style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/tableshot1.jpg);"></div>
         <div class="title" id='title'>
-          <h1>Page Name</h1>
-          <p>A sentence to summarise page</p>
+          <h1>events</h1>
+          <p>Sharing the best moments with you</p>
         </div>
 
       <div class="booking-form-bar">
@@ -93,7 +93,7 @@
                 } )
             </script>
             <input type="text" name="stayrange" placeholder="Duration of stay" required>
-            <script type="text/javascript">
+            <script type="txt/javascript">
             $(function() {
 
             $('input[name="stayrange"]').daterangepicker({
@@ -106,8 +106,9 @@
             $('input[name="stayrange"]').daterangepicker({ locale: {
               format: 'DD/MM/YYYY' ,
               "applyLabel": "Select",
-              "firstDay": 1
+              "firstDay": 1,
             } });
+
 
             $('input[name="stayrange"]').on('apply.daterangepicker', function(ev, picker) {
                 $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
@@ -127,6 +128,17 @@
                 mm='0'+mm;
               }
               var today = dd+'/'+mm+'/'+yyyy;
+            });
+            </script>
+            <script type="text/javascript">
+            $(function() {
+              $('input[name="stayrange"]').daterangepicker({
+                singleDatePicker: false,
+                showDropdowns: false,
+                minYear: 1901,
+                minDate: new Date(),
+                maxYear: parseInt(moment().format('YYYY'),10)
+              });
             });
             </script>
 
@@ -150,7 +162,6 @@
                 <ul>
                   <li>Area: 322 sqf | 30 sqm</li>
                   <li>Capacity: 30 people</li>
-                  <li>Amenities: <i class="fa-solid fa-wifi"></i><i class="fa-solid fa-snowflake"></i><i class="fa-solid fa-chalkboard"></i></li>
                 </ul>
                  </p>
               <button type="button" name="event-booking" onclick="document.location='events_form.html'">book an appointment</button>
@@ -167,7 +178,6 @@
                   <li>Area: 646 sqf | 60 sqm</li>
                   <li>Capacity: 60</li>
                 </ul>
-                Amenities: <i class="fa-solid fa-wifi"></i><i class="fa-solid fa-snowflake"></i><i class="fa-solid fa-chalkboard"></i>
               </p>
               <button type="button" name="event-booking" onclick="document.location='events_form.html'">book an appointment</button>
             </div>
@@ -186,7 +196,6 @@
                     <li>Area: 1109 sqf | 103 sqm</li>
                     <li>Capacity: 100</li>
                   </ul>
-                  Amenities: <i class="fa-solid fa-wifi"></i><i class="fa-solid fa-snowflake"></i><i class="fa-solid fa-chalkboard"></i><i class="fa-solid fa-microphone-stand"></i>
                 </p>
               <button type="button" name="event-booking" onclick="document.location='events_form.html'">book an appointment</button>
             </div>
