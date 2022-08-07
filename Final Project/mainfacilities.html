@@ -10,32 +10,34 @@
 </head>
 <body >
   <header>
-  <nav >
-      <img src="logo.jpeg" height="100px" width="100px" class="header"></img>
-    <ul>
-  <li><a href="#" class="standby">ABOUT US<i class="fa fa-caret-down"></i></a></li>
-  <div class="dropdown">
-  <li><a href="#" class="standby">ROOMS<i class="fa fa-caret-down"></i></a>
-    <div class="dropdown-content">
-    <a href="#">SWIMMING POOL</a>
-    <a href="#">GYM STUDIO</a>
-    <a href="#">SPA & RELAXING</a>
-  </div>
-</li>
-  </div>
-  <div class="dropdown">
-  <li><a href="#" class="current">FACILITY<i class="fa fa-caret-down"></i></a>
-    <div class="dropdown-content">
-      <a href="facilites.html" onclick="currentSlide(1)">SWIMMING POOL</a>
-      <a href="facilites.html" onclick="currentSlide(2)">GYM STUDIO</a>
-      <a href="facilites.html" onclick="currentSlide(3)">SPA & RELAXING</a>
+    <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <a href="homepage.html"><img src="./Images/sunny_logo.svg" alt="" height="100px"></a>
+      </div>
     </div>
-    <li>
-</div>
-  <li><a href="#" class="standby" >EVENTS<i class="fa fa-caret-down"></i></a></li>
-    <li><a href="#" class="standby" >PROMOTION<i class="fa fa-caret-down"></i></a></li>
-      <li><a href="#" class="standby" >CONTACT US<i class="fa fa-caret-down"></i></a></li>
-</nav>
+    <div class="nav-btn">
+      <label for="nav-check" onclick="gone()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <script type="text/javascript">
+        function gone(){
+          document.getElementById('title').classList.toggle("gone");
+          document.querySelector('.booking-form-bar').classList.toggle('gone');
+          document.querySelector('.nav-btn').classList.toggle('open');
+        }
+    </script>
+    <div class="nav-links">
+      <a href="roominfo.html">Rooms</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="events.html">Events</a>
+      <a href="menu.html">Dining</a>
+      <a href="contact_us.html">Contact Us</a>
+    </div>
 </header>
 
 <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(background.png);">
@@ -230,5 +232,5 @@ closemodel3.addEventListener("click",()=>{
 }
 )
   </script>
-  
+
 </body>
