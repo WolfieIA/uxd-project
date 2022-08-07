@@ -12,42 +12,34 @@
 </head>
 <body>
 
-<header>
-
-  <div class="top">
-      <a href="#" class="logo"><img src="images/logo1.jpeg" height="100px"></a>
-    <div class="navbar">
-        <div class="navbar">
-        <nav>
-          <ul>
-            <div class="dropdown">
-              <button type="button" name="button">rooms</button>
-                <div class="dropdown-content">
-                  <a href="#">classic</a>
-                  <a href="#">deluxe</a>
-                  <a href="#">suite</a>
-                </div>
-              </div>
-            <div class="dropdown">
-              <button type="button" name="button">facilities</button>
-                <div class="dropdown-content">
-                  <a href="#">swimming pool</a>
-                  <a href="#">spa</a>
-                  <a href="#">gym</a>
-                </div>
-              </div>
-            <li><a href="#">events</a></li>
-            <div class="dropdown">
-              <button type="button" name="button">dining</button>
-                <div class="dropdown-content">
-                  <a href="menu.html">menu</a>
-                  <a href="reservation.html">reservation</a>
-                </div>
-              </div>
-            <li><a href="#"> contact us</a></li>
-           </ul>
-        </nav>
+  <body>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="homepage.html"><img src="./Images/sunny_logo.svg" alt="" height="100px"></a>
         </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check" onclick="gone()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <script type="text/javascript">
+          function gone(){
+            document.getElementById('title').classList.toggle("gone");
+            document.querySelector('.btn').classList.toggle('gone');
+            document.querySelector('.nav-btn').classList.toggle('open');
+          }
+      </script>
+      <div class="nav-links">
+        <a href="roominfo.html">Rooms</a>
+        <a href="mainfacilities.html">Facilities</a>
+        <a href="events.html">Events</a>
+        <a href="menu.html">Dining</a>
+        <a href="contact_us.html">Contact Us</a>
       </div>
 
 </header>
