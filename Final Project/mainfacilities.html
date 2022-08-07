@@ -43,9 +43,9 @@
 
 </header>
 
-<div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(background.png);">
+<div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/background.png);">
   <div class="title">
-    <h1>Page Name</h1>
+    <h1>Facility</h1>
     <p>A sentence to summarise page</p>
   </div>
 </div>
@@ -141,23 +141,27 @@
 </div>
 
 
-  <p class="left">Swimming pool</p>
+
   <div class="container">
+    <div class="cate">
+
+    <h3>Swmming Pool</h3>
 
       <img src="./Images/swimming.jfif" class="image">
+ </div>
 
-    </div>
+ <div class="cate">
 
-  <p class="centered">Gym Studio</p>
-  <div class="container2">
+ <h3>Gym Studio</h3>
+
       <img src="./Images/gym.png" class="image">
+ </div>
+ <div class="cate">
 
-  </div>
+ <h3>Spa & Relaxing</h3>
 
-  <p class="right">Spa & Relaxing</p>
-  <div class="container3">
       <img src="./Images/spa.jpg" class="image">
-
+ </div>
   </div>
 
   <div class="slideshow-container">
@@ -181,7 +185,6 @@
 
   </div>
   <div class="mySlides" id="two">
-
     <div class="bookingGrid">
       <img class="facilityPic" src="./Images/gym.png">
       <div class="facilityInfo">
@@ -227,41 +230,72 @@
   <script src="linkpage.js">
   </script>
   <script>
-  const model = document.querySelector("#modal");
-  const model2 = document.querySelector("#modal2");
-  const model3 = document.querySelector("#modal3");
-  const openmodel = document.querySelector(".container");
-  const openmodel2 = document.querySelector(".container2");
-  const openmodel3 = document.querySelector(".container3");
-  const closemodel = document.querySelector(".closebutton");
-  const closemodel2 = document.querySelector(".closebutton2");
-  const closemodel3 = document.querySelector(".closebutton3");
-  const open2 = document.querySelector("#spa");
+//   const model = document.querySelector("#modal");
+//   const model2 = document.querySelector("#modal2");
+//   const model3 = document.querySelector("#modal3");
+//   const openmodel = document.querySelector(".container");
+//   const openmodel2 = document.querySelector(".container2");
+//   const openmodel3 = document.querySelector(".container3");
+//   const closemodel = document.querySelector(".closebutton");
+//   const closemodel2 = document.querySelector(".closebutton2");
+//   const closemodel3 = document.querySelector(".closebutton3");
+//   const open2 = document.querySelector("#spa");
+//
+//   openmodel.addEventListener("click",()=>{
+//     model.showModal();
+//   })
+//
+//
+//   closemodel.addEventListener("click",()=>{
+//     model.close();
+//   }
+// )
+// openmodel2.addEventListener("click",()=>{
+//   model2.showModal();
+// })
+//
+// closemodel2.addEventListener("click",()=>{
+//   model2.close();
+// }
+// )
+// openmodel3.addEventListener("click",()=>{
+//   model3.showModal();
+// })
+// closemodel3.addEventListener("click",()=>{
+//   model3.close();
+// }
+// )
+var slideIndex = 1;
+showSlides(slideIndex);
 
-  openmodel.addEventListener("click",()=>{
-    model.showModal();
-  })
+function plusSlides(n) {
+  showSlides(slideIndex += n)
+}
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-  closemodel.addEventListener("click",()=>{
-    model.close();
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1
   }
-)
-openmodel2.addEventListener("click",()=>{
-  model2.showModal();
-})
+  if (n < 1) {
+    slideIndex = slides.length
+  }
 
-closemodel2.addEventListener("click",()=>{
-  model2.close();
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
-)
-openmodel3.addEventListener("click",()=>{
-  model3.showModal();
-})
-closemodel3.addEventListener("click",()=>{
-  model3.close();
-}
-)
   </script>
 
 </body>
