@@ -175,7 +175,7 @@
 }
 
 .daterangepicker td.available:hover, .daterangepicker th.available:hover {
-  background-color: rgba(12, 105, 118, 0.2);
+  background-color: rgba(17, 75, 130, 0.2);
   border-color: transparent;
   color: inherit;
 }
@@ -192,7 +192,7 @@
 }
 
 .daterangepicker td.in-range {
-  background-color: rgba(12, 105, 118, 0.15);
+  background-color: rgba(17, 75, 130, 0.15);
   border-color: transparent;
   color: #000;
   border-radius: 0;
@@ -211,7 +211,7 @@
 }
 
 .daterangepicker td.active, .daterangepicker td.active:hover {
-  background-color: rgba(12, 105, 118, 0.8);
+  background-color: rgba(17, 75, 130, 0.8);
   border-color: transparent;
   color: #fff;
 }
@@ -317,19 +317,20 @@
 }
 
 .daterangepicker.show-ranges.single.rtl .drp-calendar.left {
-  border-right: 1px solid rgba(12, 105, 118, 1);
+  border-right: 1px solid rgba(17, 75, 130, 1);
 }
 
 .daterangepicker.show-ranges.single.ltr .drp-calendar.left {
-  border-left: 1px solid rgba(12, 105, 118, 1);
+  border-left: 1px solid rgba(17, 75, 130, 1);
 }
 
 .daterangepicker.show-ranges.rtl .drp-calendar.right {
-  border-right: 1px solid rgba(12, 105, 118, 1);
+  border-right: 1px solid rgba(17, 75, 130, 1);
+
 }
 
 .daterangepicker.show-ranges.ltr .drp-calendar.left {
-  border-left: 1px solid rgba(12, 105, 118, 1);
+  border-left: 1px solid rgba(17, 75, 130, 1);
 }
 
 .daterangepicker .ranges {
@@ -360,7 +361,7 @@
 }
 
 .daterangepicker .ranges li.active {
-  background-color: rgba(12, 105, 118, 1);
+  background-color: rgba(17, 75, 130, 1);
   color: #fff;
 }
 

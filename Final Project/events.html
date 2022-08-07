@@ -2,61 +2,55 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Events</title>
+    <title>Page Name</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="daterangepicker.css">
-    <link rel="stylesheet" href="template.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./CSS Files/daterangepicker.css">
+    <link rel="stylesheet" href="./CSS Files/template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   </head>
   <body>
-    <div class="top">
-        <a href="#" class="logo"><img src="hotel_logo.svg" height="100px"></a>
-      <div class="navbar">
-      <nav>
-          <div class="dropdown">
-            <button type="button" name="button">rooms</button>
-              <div class="dropdown-content">
-                <a href="#">classic</a>
-                <a href="#">deluxe</a>
-                <a href="#">suite</a>
-                <a href="#">premier</a>
-              </div>
-            </div>
-          <div class="dropdown">
-            <button type="button" name="button">facilities</button>
-              <div class="dropdown-content">
-                <a href="#">swimming pool</a>
-                <a href="#">spa</a>
-                <a href="#">gym</a>
-              </div>
-            </div>
-          <a href="#">events</a>
-          <div class="dropdown">
-            <button type="button" name="button">dining</button>
-              <div class="dropdown-content">
-                <a href="#">breakfast menu</a>
-                <a href="#">reservation</a>
-              </div>
-          </div>
-          <a href="#">contact us</a>
-      </nav>
-      </div>
-    </div>
-
-      <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./event_photos/tableshot1.jpg);">
-        <div class="title">
-          <h1>Events</h1>
-          <p>Sharing all the best moments with you</p>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="homepage.html"><img src="./Images/sunny_logo.svg" alt="" height="100px"></a>
         </div>
       </div>
+      <div class="nav-btn">
+        <label for="nav-check" onclick="gone()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <script type="text/javascript">
+          function gone(){
+            document.getElementById('title').classList.toggle("gone");
+            document.querySelector('.booking-form-bar').classList.toggle('gone');
+            document.querySelector('.nav-btn').classList.toggle('open');
+          }
+      </script>
+      <div class="nav-links">
+        <a href="roominfo.html">Rooms</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="events.html">Events</a>
+        <a href="menu.html">Dining</a>
+        <a href="contact_us.html">Contact Us</a>
+      </div>
+      </div>
+      <div class="pagetitle"  style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/tableshot1.jpg);"></div>
+        <div class="title" id='title'>
+          <h1>events</h1>
+          <p>Sharing the best moments with you</p>
+        </div>
 
       <div class="booking-form-bar">
         <form class="" action="index.html" method="post">
             <select name="adults" id="adults"  required>
-                  <option value="" disabled selected hidden>&#xf007;&nbsp;&nbsp;&nbsp;&nbsp;No. of Adults</option>
+                <option value="" disabled selected hidden>&#xf007;&nbsp;&nbsp;&nbsp;&nbsp;Adults</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -70,7 +64,7 @@
                 } )
             </script>
             <select name="children" id="children" required>
-                  <option value="" disabled selected hidden>&#xe4e1;&nbsp;&nbsp;&nbsp;&nbsp;No. of Children</option>
+              <option value="" disabled selected hidden>&#xf1ae;&nbsp;&nbsp;&nbsp;&nbsp;Children</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -83,6 +77,7 @@
                     var $this = $(this);
                     $this.find("option:first").text($this.val() + ' children').val( $this.val() ).prop('selected',true);
                 } )
+            var display = document.getElementById('children')
             </script>
 
             <select name="rooms" id="rooms" required>
@@ -98,7 +93,7 @@
                 } )
             </script>
             <input type="text" name="stayrange" placeholder="Duration of stay" required>
-            <script type="text/javascript">
+            <script type="txt/javascript">
             $(function() {
 
             $('input[name="stayrange"]').daterangepicker({
@@ -111,8 +106,9 @@
             $('input[name="stayrange"]').daterangepicker({ locale: {
               format: 'DD/MM/YYYY' ,
               "applyLabel": "Select",
-              "firstDay": 1
+              "firstDay": 1,
             } });
+
 
             $('input[name="stayrange"]').on('apply.daterangepicker', function(ev, picker) {
                 $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
@@ -134,42 +130,56 @@
               var today = dd+'/'+mm+'/'+yyyy;
             });
             </script>
+            <script type="text/javascript">
+            $(function() {
+              $('input[name="stayrange"]').daterangepicker({
+                singleDatePicker: false,
+                showDropdowns: false,
+                minYear: 1901,
+                minDate: new Date(),
+                maxYear: parseInt(moment().format('YYYY'),10)
+              });
+            });
+            </script>
 
-          <input type="button" name="room-available" value="rates & availability" size="100px">
+          <input type="submit" name="room-available" value="rates & availability" size="100px">
         </form>
       </div>
 
       <div class="pagedesc">
-        <h1>Find your next event venue</h1><br>
-        <p>All the best moments, all at one place</p>
+        <h1>A quote or welcoming sentence</h1><br>
+        <p>Guide users aka instructions for them :></p>
       </div>
 
-        <!-- meeting -->
         <div class="category">
           <h2>meeting</h2>
           <div class="bookingGrid">
-            <img class="facilityPic" src="./event_photos/parvus4.jpg">
+            <img class="facilityPic" src="./Images/parvus4.jpg">
             <div class="facilityInfo">
-              <h3>parvus</h3>
+              <h3>Parvus</h3>
               <hr>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+              <p>Our smallest room doesn't compromise on style or capabilities. It's outfitted with advanced audio visual technology and broadband connectivity, so you can hold your video conferences and deal-making meetings with ease.<br>
+                <ul>
+                  <li>Area: 322 sqf | 30 sqm</li>
+                  <li>Capacity: 30 people</li>
+                </ul>
+                 </p>
+              <button type="button" name="event-booking" onclick="document.location='events_form.html'">book an appointment</button>
             </div>
           </div>
 
           <div class="bookingGrid">
-            <img class="facilityPic" src="./event_photos/solitum1.jpg">
+            <img class="facilityPic" src="./Images/solitum1.jpg">
             <div class="facilityInfo">
-              <h3>solitum</h3>
+              <h3>Solitum</h3>
               <hr>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+              <p>This spacious boardroom fits up to 12. Its classic design with technological capabilities such as internet broadband connectivity make it perfect for video conferences and media-rich presentations.<br>
+                <ul>
+                  <li>Area: 646 sqf | 60 sqm</li>
+                  <li>Capacity: 60</li>
+                </ul>
+              </p>
+              <button type="button" name="event-booking" onclick="document.location='events_form.html'">book an appointment</button>
             </div>
           </div>
         </div>
@@ -177,20 +187,22 @@
         <div class="category">
           <h2>indoors</h2>
           <div class="bookingGrid">
-            <img src="./event_photos/tableshot2.jpg" class="facilityPic">
+            <img src="./Images/tableshot2.jpg" class="facilityPic">
             <div class="facilityInfo">
               <h3>comedere</h3>
               <hr>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+              <p>Everything you need for a corporate training session, a public seminar, or even an Annual General Meeting, is available at the Nutmeg room. It's roomy with sophisticated finishes.<br>
+                  <ul>
+                    <li>Area: 1109 sqf | 103 sqm</li>
+                    <li>Capacity: 100</li>
+                  </ul>
+                </p>
+              <button type="button" name="event-booking" onclick="document.location='events_form.html'">book an appointment</button>
             </div>
           </div>
 
             <div class="bookingGrid">
-              <img src="./event_photos/scaena1.jpg" class="facilityPic">
+              <img src="./Images/scaena1.jpg" class="facilityPic">
               <div class="facilityInfo">
                 <h3>scaena</h3>
                 <hr>
@@ -198,7 +210,7 @@
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
                   sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+                <button type="button" name="event-booking" onclick="document.location='events_form.html'">book an appointment</button>
               </div>
             </div>
           </div>
@@ -206,7 +218,7 @@
           <div class="category">
             <h2>outdoors</h2>
             <div class="bookingGrid">
-              <img class="facilityPic" src="./event_photos/wedding.jpg">
+              <img class="facilityPic" src="./Images/wedding.jpg">
               <div class="facilityInfo">
                 <h3>aeternum</h3>
                 <hr>
@@ -214,12 +226,12 @@
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
                   sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button type="button" name="event-booking" onclick="document.location='events_form.html'">request for proposal</button>
+                <button type="button" name="event-booking" onclick="document.location='events_form.html'">book an appointment</button>
               </div>
             </div>
 
             <div class="bookingGrid">
-              <img src="./event_photos/caelum1.jpg" class="facilityPic">
+              <img src="./Images/caelum1.jpg" class="facilityPic">
               <div class="facilityInfo">
                 <h3>caelum</h3>
                 <hr>
@@ -231,58 +243,57 @@
               </div>
             </div>
           </div>
-        <div>
-        <footer class="footer">
-           <div class="containerA">
-            <div class="row">
-              <div class="footer-col">
-                <h4>Sunny Coastal Hotel</h4>
-                <ul>
-                  <li><a href="#">about us</a></li>
-                  <li><a href="#">our services</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>Rooms</h4>
-                <ul>
-                  <li><a href="#">Classic</a></li>
-                  <li><a href="#">Deluxe</a></li>
-                  <li><a href="#">Suite</a></li>
-                  <li><a href="#">Premier</a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>Facilities</h4>
-                <ul>
-                  <li><a href="#">Swimming Pool</a></li>
-                  <li><a href="#">Spa</a></li>
-                  <li><a href="#">Gym</a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>get help</h4>
-                <ul>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Bookings</a></li>
-                  <li><a href="#">Availability</a></li>
-                  <li><a href="#">payment options</a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>follow us</h4>
-                <div class="social-links">
+          <div>
+          <footer class="footer">
+             <div class="containerA">
+              <div class="row">
+                <div class="footer-col">
+                  <h4>Sunny Coastal Hotel</h4>
                   <ul>
-                  <a href="#"><i class="fab fa-facebook"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Rooms</h4>
+                  <ul>
+                    <li><a href="#">Classic</a></li>
+                    <li><a href="#">Deluxe</a></li>
+                    <li><a href="#">Suite</a></li>
+                    <li><a href="#">Premier</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Facilities</h4>
+                  <ul>
+                    <li><a href="#">Gym</a></li>
+                    <li><a href="#">Swimming Pool</a></li>
+                    <li><a href="#">Spa</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>get help</h4>
+                  <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Bookings</a></li>
+                    <li><a href="#">Availability</a></li>
+                    <li><a href="#">payment options</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                    <ul>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-           </div>
-        </footer>
-        </div>
+             </div>
+          </footer>
+          </div>
   </body>
 </html>

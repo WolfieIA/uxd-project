@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./CSS Files/thebooking.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./CSS Files/daterangepicker.css">
+    <link rel="stylesheet" href="./CSS Files/template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>  </head>
+  <body>
+    <div class="testbox">
+  <form>
+    <div class="banner">
+      <h1>Hotel Reservation Form</h1>
+    </div>
+    <br />
+    <fieldset>
+      <legend>Reservation Details</legend>
+      <div class="columns">
+        <div class="item">
+          <label for="fname">First Name<span>*</span></label>
+          <input id="fname" type="text" name="fname"/>
+        </div>
+        <div class="item">
+          <label for="lname"> Last Name<span>*</span></label>
+          <input id="lname" type="text" name="lname" />
+        </div>
+        <div class="item">
+          <label for="address">Address<span>*</span></label>
+          <input id="address" type="address" name="address" />
+        </div>
+        <div class="item">
+          <label for="zip">Zip Code<span>*</span></label>
+          <input id="zip" type="number" name="zip" required />
+        </div>
+
+        <div class="item">
+          <label for="city">City<span>*</span></label>
+          <input id="city" type="text" name="city" />
+        </div>
+
+        <div class="item">
+          <label for="eaddress">Email Address<span>*</span></label>
+          <input id="eaddress" type="email" name="eaddress" />
+        </div>
+        <div class="item">
+          <label for="phone">Phone<span>*</span></label>
+          <input id="phone" type="tel" name="phone" />
+        </div>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>Dates</legend>
+      <div class="columns">
+        <div class="item">
+          <label for="checkindate">Check-in Date <span>*</span></label>
+          <input id="checkindate" type="date" name="checkindate" />
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+          <label for="checkoutdate">Check-out Date <span>*</span></label>
+          <input id="checkoutdate" type="date" name="checkoutdate" />
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+          <p>Check-in Time </p>
+          <select>
+            <option value="" disabled selected>Select time</option>
+            <option value="1">Morning</option>
+            <option value="2">Afternoon</option>
+            <option value="3">Evening</option>
+          </select>
+        </div>
+        <div class="item">
+          <p>Check-out Time </p>
+          <select>
+            <option value="4" disabled selected>Select time</option>
+            <option value="5">Morning</option>
+            <option value="6">Afternoon</option>
+            <option value="7">Evening</option>
+          </select>
+        </div>
+        <div class="item">
+          <select name="adults" id="adults"  required>
+              <option value="" disabled selected hidden>&#xf007;&nbsp;&nbsp;&nbsp;&nbsp;Adults</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+          </select>
+          <script>
+          $("#adults").change(function(){
+                  var $this = $( this );
+                  $this.find( "option:first" ).text($this.val() + ' adults').val( $this.val() ).prop('selected',true, );
+              } )
+          </script>
+        </div>
+
+        <div class="item">
+          <select name="children" id="children" required>
+            <option value="" disabled selected hidden>&#xf1ae;&nbsp;&nbsp;&nbsp;&nbsp;Children</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <script type="text/javascript">
+          $("#children").change(function(){
+                  var $this = $(this);
+                  $this.find("option:first").text($this.val() + ' children').val( $this.val() ).prop('selected',true);
+              } )
+          var display = document.getElementById('children')
+          </script>
+        </div>
+        <div class="item" style=width:100%>
+          <label for="room">Number of rooms</label>
+          <input id="room" type="number" name="room" />
+        </div>
+        <div class="item">
+          <select>
+            <option value="" disabled hidden selected>Room 1 type</option>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+            <option value="premier">Premier</option>
+          </select>
+        </div>
+        <div class="item">
+          <select>
+            <option value="" disabled hidden selected>Room 2 type</option>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+            <option value="premier">Premier</option>
+          </select>
+        </div>
+      </div>
+      <div class="item">
+        <label for="instruction">Special Instructions</label>
+        <textarea id="instruction" rows="3"></textarea>
+      </div>
+    </fieldset>
+    <div class="btn-block">
+      <button type="submit" href="/">Submit</button>
+    </div>
+  </form>
+</div>
+  </body>
+</html>
