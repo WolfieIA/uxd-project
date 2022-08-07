@@ -73,7 +73,7 @@ margin-bottom: 80px;
   position: absolute;
   top: 47%;
   right:10%;
-  height:55%;
+  height:65%;
   width: 40%;
   opacity: 1;
   text-align: left;
@@ -116,7 +116,7 @@ margin-bottom: 80px;
 .container{
   position: absolute;
   top: 3%;
-  right:-20%;
+  right:-27.5%;
   width: 100%;
   text-align: left;
   color: white;
@@ -136,7 +136,6 @@ margin-bottom: 80px;
   display: inline-block;
   font-family:work sans;
   font-size: 20px;
-  text-transform: uppercase;
 }
 .input, .options{
 outline: none;
@@ -213,14 +212,13 @@ border: none;
 .form-btn{
 margin-top: 0;
 cursor: pointer;
-float:none;
+background-color: white;
 }
 .btn-purple{
   text-transform: uppercase;
   padding: 10px 5px 10px 5px;
   font-family: Work Sans;
   color: rgba(228, 99, 27, 1);
-  background: none;
   border: 2px solid rgba(228, 99, 27, 1);
   width: 40%;
   letter-spacing: 0.1em;
@@ -232,13 +230,18 @@ float:none;
   align: center;
   float: none;
 }
+.btn-purple:active{
+transform: translateY(4px) translateX(4px);
+box-shadow: #094c55 0px 0px 0px;
 
+}
 .btn-purple:hover{
   color: white;
   background-color: rgba(228, 99, 27, 1);
   border-color: rgba(228, 99, 27, 1);
   cursor: pointer;
 }
+
 
 .leaves{
   position: relative;
@@ -304,6 +307,7 @@ margin: 0;
 }
 .footer{
   background-color: rgba(17, 75, 130, 1);
+  background-color:#152238;
   padding: 80px 0;
   font-family: work sans;
 
@@ -376,6 +380,8 @@ margin: 0;
     width: 100%;
 }
 }
+
+
 
 
 .Faci{
