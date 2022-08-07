@@ -208,14 +208,14 @@ overflow-x: hidden;
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 30px;
-  left: 5px;
+  top: 56px;
+  left: 30px;
 }
   .nav > .nav-links {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #152238;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -229,19 +229,23 @@ overflow-x: hidden;
   .nav > .nav-links > a {
     display: block;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
     padding-left: 20px;
+    font-size: 25px;
     color: white;
   }
+
+  .nav > .nav-links > a:hover {
+    color: white;
+  }
+
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
   }
+
   .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
-  }
-  .nav > .nav-links > a:hover {
-    color: white;
   }
 }
 
@@ -293,9 +297,9 @@ background-size: cover;
 }
 
 .gone{
-  opacity: 0.2;
-  transition: 0.3 ease-out;
+  visibility: hidden;
 }
+
 
 .gone body {
   overflow: hidden;
