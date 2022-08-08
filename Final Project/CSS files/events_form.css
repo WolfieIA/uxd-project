@@ -5,7 +5,7 @@ body {
 }
 
 form {
-  width: 60%;
+  width: 70%;
   margin: 100px auto;
   position: inherit;
   padding: 30px;
@@ -94,7 +94,7 @@ input[name=event_name] {
 }
 
 input[type=radio] {
-  margin: 10px;
+  margin: 5px;
 }
 
 input[type=radio]:hover {
