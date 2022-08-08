@@ -883,7 +883,7 @@ margin: 0;
 
 @media (max-width: 900px){
   .slider{
-    width: 100%;
+    width: 50%;
   }
 
   .slider .slide .info{
