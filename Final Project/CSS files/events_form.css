@@ -18,7 +18,7 @@ h2 {
   padding: 0.5vh 1vw 0.5vh 1vw;
   letter-spacing: 0.1vw;
   align-items: center;
-  color: rgba(12, 105, 118, 1);
+  color: rgba(17, 75, 130, 1);
 }
 
 h2:after {
@@ -27,7 +27,7 @@ h2:after {
  margin: auto auto auto 1vw;
  padding: auto;
  flex: 1 0 20px;
- color: rgba(12, 105, 118, 1);
+ color: rgba(17, 75, 130, 1);
 }
 
 fieldset {
