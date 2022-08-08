@@ -11,7 +11,7 @@
   </head>
   <body style="background-image: url("./Images/texture1.jpg");">
 
-    <form  action="index.html" method="post">
+
       <div class="choice">
       <h1>Facility Form</h1>
       <div class="form_section">
@@ -29,6 +29,8 @@
               <button id="choice3" onclick="SpaForm()" >Spa & Relaxing</button>
             </div>
         </div>
+
+        <form  action="index.html" method="post">
         <div class="type" id="type1">
 
         <div class="form_section" >
@@ -40,7 +42,7 @@
           <input type="date" id="date_picker1" name="date_picker1" /required>
           <div class="timeslot" >
             <div class="room">
-              <input type="checkbox" id="nine" name="timeslot" value="nine"/>
+              <input type="checkbox" id="nine" name="timeslot" value="nine" onclick="nine_am()"/>
               <label for="nine">9am</label>
             </div>
             <div class="room">
@@ -88,26 +90,23 @@
               <label for="eight">8pm</label>
             </div>
           </div>
-          <div onclick="timing">
+
             <p id="time"> time:</p>
-          </div>
+
 
           <script type="text/javascript">
             var today = new Date();
                     var dd = String(today.getDate()).padStart(2, '0');
                     var mm = String(today.getMonth() + 1).padStart(2, '0');
                     var yyyy = today.getFullYear();
-
                     today = yyyy + '-' + mm + '-' + dd;
                     $('#date_picker1').attr('min',today);
 
           var nine = document.getElementById("nine");
-          function timing(){
-          if (document.getElementById("nine").checked){
-            start = parlseInt(9);
-            end = parlseInt(nine)+1;
-            document.getElementById("time").innerHTML = start+1+"-"+end+"pm";
-          }
+          function nine_am(){
+            var time =
+            document.getElementById("time").innerHTML = start;
+
         }
 
 
@@ -124,6 +123,8 @@
         </div>
       </div>
         </div>
+      </form>
+        <form  action="index.html" method="post">
         <div class="type" id="type2">
 
 
@@ -204,7 +205,8 @@
             <button type="button" name="button">submit</button>
           </div>
         </div>
-          </div>
+      </div></form>
+      <form  action="index.html" method="post">
           <div class="type" id="type3">
 
             <div class="form_section" >
@@ -338,9 +340,7 @@
         else if (document.getElementById("eleven").checked){
           valid ++;
         }
-
       }
-
       if(valid == 0){
         alert("input value");
         return false;
