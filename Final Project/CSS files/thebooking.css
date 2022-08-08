@@ -4,7 +4,7 @@ html,
 body {
   min-height: 100%;
 }
-body,
+
 div,
 form,
 input,
@@ -45,6 +45,7 @@ legend {
   color: black;
   background-color: white;
   text-transform: uppercase;
+  font-weight: 550;
 }
 textarea {
   width: calc(100% - 12px);
@@ -140,21 +141,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: space-between;
 }
-.columns {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.columns div {
-  width: 48%;
-}
-[type="date"]::-webkit-calendar-picker-indicator {
-  right: 1%;
-  z-index: 2;
-  opacity: 0;
-  cursor: pointer;
-}
+
 input[type="radio"],
 input[type="checkbox"] {
   display: none;
@@ -257,7 +244,23 @@ select {
   padding: 10px;
   border: none;
   border-bottom: 1px solid black;
-  font-family: FontAwesome, 'Work Sans';
+  font-family: 'Work Sans', FontAwesome;
+  display: inline;
+  width: 300px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  font-size: 16px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+input[name="stayrange"]{
+  margin: 20px 10px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: 'Work Sans', FontAwesome;
   display: inline;
   width: 300px;
   -webkit-appearance: none;
@@ -266,13 +269,10 @@ select {
   font-size: 2vh;
   text-align: left;
   text-transform: uppercase;
+  margin-right: 5px;
 }
 
 body {
-  width: 70%;
-  margin: auto;
-}
-
-@media (max-width: 800px) {
-
+  width: 80%;
+  margin: 20%;
 }
