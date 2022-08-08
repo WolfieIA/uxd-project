@@ -184,6 +184,11 @@ button:hover {
   position: relative;
 
 }
+.imagefix{
+  width: 400px;
+  height: 350px;
+  border: 1px;
+}
 /* time slot*/
 .room {
   display: inline-block;
