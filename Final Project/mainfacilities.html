@@ -33,7 +33,7 @@
         }
     </script>
     <div class="nav-links">
-      <a href="roominfo.html">Rooms</a>
+      <a href="room.html">Rooms</a>
       <a href="mainfacilities.html">Facilities</a>
       <a href="events.html">Events</a>
       <a href="menu.html">Dining</a>
@@ -295,6 +295,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
   </script>
 
