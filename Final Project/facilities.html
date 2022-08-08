@@ -5,41 +5,47 @@
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 <title>Facilites</title>
 <link rel="stylesheet" href="./CSS files/facilities.css">
-<link rel="stylesheet" href="linkpage.js">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('#icon').click(function(){
-        $('ul').toggleclass('show');
-      });
-    });
-  </script>
+
 </head>
 <body>
-<nav>
-  <img src="logo.jpeg" class="logo">
-  <ul>
-    <li><a href="#" class="standby">ABOUT US<i class="fa fa-caret-down"></i></a></li>
-    <li><a href="#" class="standby">ROOMS<i class="fa fa-caret-down"></i></a></li>
-    <div class="dropdown">
-      <li><a href="#" class="active">FACILITY<i class="fa fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="#" onclick="currentSlide(1)">SWIMMING POOL</a>
-          <a href="#" onclick="currentSlide(2)">GYM STUDIO</a>
-          <a href="#" onclick="currentSlide(3)">SPA & RELAXING</a>
-        </div>
-      </li>
-    <li><a href="#" class="standby" >EVENTS<i class="fa fa-caret-down"></i></a></li>
-    <li><a href="#" class="standby" >PROMOTION<i class="fa fa-caret-down"></i></a></li>
-    <li><a href="#" class="standby" >CONTACT US<i class="fa fa-caret-down"></i></a></li>
-  </ul>
-    <label id="icon">
-      <i class="fas fa-bars"></i>
-    </label>
-</nav>
+  <header>
+    <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <a href="homepage.html"><img src="./Images/sunny_logo.svg" alt="" height="100px"></a>
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check" onclick="gone()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <script type="text/javascript">
+        function gone(){
+          document.getElementById('title').classList.toggle("gone");
+          document.querySelector('.booking-form-bar').classList.toggle('gone');
+          document.querySelector('.nav-btn').classList.toggle('open');
+        }
+    </script>
+    <div class="nav-links">
+      <a href="roominfo.html">Rooms</a>
+      <a href="mainfacilities.html">Facilities</a>
+      <a href="events.html">Events</a>
+      <a href="menu.html">Dining</a>
+      <a href="contact_us.html">Contact Us</a>
+    </div>
+  </div>
+
+</header>
+
 
 
 <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(background.png);">
@@ -149,7 +155,7 @@
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <button type="button" name="event-booking" onclick="one()" >BOOK NOW</button>
+      <button type="button" name="event-booking" onclick="facilities_form.html'" >BOOK NOW</button>
     </div>
   </div>
 
@@ -165,7 +171,7 @@
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <button type="button" name="event-booking" onclick="document.location='form.html'">BOOK NOW</button>
+      <button type="button" name="event-booking" onclick="document.location='facilities_form.html'">BOOK NOW</button>
     </div>
   </div>
 
@@ -180,7 +186,7 @@
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <button type="button" name="event-booking" onclick="document.location='form.html'">BOOK NOW</button>
+      <button type="button" name="event-booking" onclick="document.location='facilites_form.html'">BOOK NOW</button>
     </div>
   </div>
 

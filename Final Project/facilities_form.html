@@ -9,7 +9,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   </head>
-  <body>
+  <body style="background-image: url("./Images/texture1.jpg");">
+
     <form  action="index.html" method="post">
       <div class="choice">
       <h1>Facility Form</h1>
@@ -31,7 +32,9 @@
         <div class="type" id="type1">
 
         <div class="form_section" >
-          <img src="./images/swimming.jfif">
+          <div class="imagefix">
+            <img src="./images/swimming.jfif" width="400px" height="350px">
+          </div>
           <h2>Date & booking</h2>
           <label for="date_picker1">date of booking:</label>
           <input type="date" id="date_picker1" name="date_picker1" /required>
@@ -85,7 +88,10 @@
               <label for="eight">8pm</label>
             </div>
           </div>
-          <p id="time"> time:</p>
+          <div onclick="timing">
+            <p id="time"> time:</p>
+          </div>
+
           <script type="text/javascript">
             var today = new Date();
                     var dd = String(today.getDate()).padStart(2, '0');
@@ -96,20 +102,22 @@
                     $('#date_picker1').attr('min',today);
 
           var nine = document.getElementById("nine");
+          function timing(){
           if (document.getElementById("nine").checked){
             start = parlseInt(9);
             end = parlseInt(nine)+1;
-            document.getElementById("time").innerHTML = (start+1+"-"+end+"pm");
+            document.getElementById("time").innerHTML = start+1+"-"+end+"pm";
           }
+        }
 
 
           </script>
           </div>
           <div class="form_section contact">
             <h2>Contact Information</h2>
-            <input type="text" name="name" placeholder="First name*" required>
-            <input type="text" name="name" placeholder="Last name*" required><br>
-            <input type="tel" name="name" placeholder="Phone Number*" required>
+            <input type="text" name="name1" placeholder="First name*" required>
+            <input type="text" name="name2" placeholder="Last name*" required><br>
+            <input type="tel" name="name3" placeholder="Phone Number*" required>
 
         <div class="button">
           <button type="button" name="button">submit</button>
@@ -120,7 +128,10 @@
 
 
           <div class="form_section" >
-            <img src="./images/gym.jpg">
+
+              <img src="./images/gym.jpg"  width="400px" height="350px" >
+
+
             <h2>Date & booking</h2>
             <label for="date_picker2">date of booking:</label>
             <input type="date" id="date_picker2" name="date_picker2" /required>
@@ -185,9 +196,9 @@
             </div>
             <div class="form_section contact">
               <h2>Contact Information</h2>
-              <!-- <input type="text" name="fname" placeholder="First name*" required>
-              <input type="text" name="lname" placeholder="Last name*" required><br>
-              <input type="tel" name="ph" placeholder="Phone Number*" required> -->
+              <input type="text" name="fname4" placeholder="First name*" required>
+              <input type="text" name="lname5" placeholder="Last name*" required><br>
+              <input type="tel" name="ph" placeholder="Phone Number*" required>
 
           <div class="button">
             <button type="button" name="button">submit</button>
@@ -197,7 +208,9 @@
           <div class="type" id="type3">
 
             <div class="form_section" >
-              <img src="./images/spa.jpg">
+
+              <img src="./images/spa.jpg"  width="400px" height="350px">
+
               <h2>Date & booking</h2>
               <label for="date_picker3">date of booking:</label>
               <input type="date" id="date_picker3" name="date_picker3" /required>
@@ -261,16 +274,16 @@
                         $('#date_picker3').attr('min',today);
               </script>
               </div>
-              <!-- <div class="form_section contact">
+              <div class="form_section contact">
                 <h2>Contact Information</h2>
-                <input type="text" name="name" placeholder="First name*" required>
-                <input type="text" name="name" placeholder="Last name*" required><br>
-                <input type="tel" name="name" placeholder="Phone Number*" required>
+                <input type="text" name="name7" placeholder="First name*" required>
+                <input type="text" name="name8" placeholder="Last name*" required><br>
+                <input type="tel" name="name9" placeholder="Phone Number*" required>
 
             <div class="button">
               <button type="button" name="button">submit</button>
             </div>
-          </div> -->
+          </div>
               </div>
     </form>
     <script>

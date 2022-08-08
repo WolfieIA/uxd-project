@@ -1,7 +1,4 @@
 
-body {
-  background-image: url(./Images/texture1.jpg);
-}
 
 form {
   width: 60%;
@@ -184,6 +181,7 @@ button:hover {
   position: relative;
 
 }
+
 /* time slot*/
 .room {
   display: inline-block;
