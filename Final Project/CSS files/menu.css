@@ -8,6 +8,8 @@
    background-color: white;
    position: relative;
    box-sizing: border-box;
+   font-family: work sans;
+
  }
 
  .nav > .nav-header {
@@ -49,6 +51,7 @@
    text-transform: uppercase;
    position: relative;
    text-decoration: none;
+   font-family: work sans;
  }
 
 
