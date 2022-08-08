@@ -4,12 +4,15 @@
 <head>
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 <title>Facilites</title>
-<link rel="stylesheet" href="./CSS files/main.css">
-
+<link rel="stylesheet" href="./CSS files/facilities.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
 </head>
-<body >
+<body>
   <header>
     <div class="nav">
     <input type="checkbox" id="nav-check">
@@ -43,9 +46,11 @@
 
 </header>
 
-<div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Imagesbackground.png);">
+
+
+<div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(background.png);">
   <div class="title">
-    <h1>Facility</h1>
+    <h1>Page Name</h1>
     <p>A sentence to summarise page</p>
   </div>
 </div>
@@ -135,134 +140,72 @@
   </form>
 </div>
 
-
+<div class="slideshow-container">
   <div class="category">
-  <h2>Facility Gallery</h2>
+  <h2>Category</h2>
+</div>
+<div class="mySlides" >
+
+  <div class="bookingGrid">
+    <img class="facilityPic" src="./Images/swimming.jfif">
+    <div class="facilityInfo">
+      <h3>Swmming Pool</h3>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button type="button" name="event-booking" onclick="facilities_form.html'" >BOOK NOW</button>
+    </div>
+  </div>
+
+</div>
+<div class="mySlides" id="two">
+
+  <div class="bookingGrid">
+    <img class="facilityPic" src="./Images/gym.png">
+    <div class="facilityInfo">
+      <h3>Gym Studio</h3>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button type="button" name="event-booking" onclick="document.location='facilities_form.html'">BOOK NOW</button>
+    </div>
+  </div>
+
+</div>
+<div class="mySlides" id="three">
+  <div class="bookingGrid">
+    <img class="facilityPic" src="./Images/spa.jpg">
+    <div class="facilityInfo">
+      <h3>Spa & Relaxing</h3>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button type="button" name="event-booking" onclick="document.location='facilites_form.html'">BOOK NOW</button>
+    </div>
+  </div>
+
+
+
 </div>
 
-  <div class="container">
-    <div class="cate">
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
 
-    <h3>Swmming Pool</h3>
-
-      <img src="./Images/swimming.jfif" class="image">
- </div>
-
- <div class="cate">
-
- <h3>Gym Studio</h3>
-
-      <img src="./Images/gym.png" class="image">
- </div>
- <div class="cate">
-
- <h3>Spa & Relaxing</h3>
-
-      <img src="./Images/spa.jpg" class="image">
- </div>
-  </div>
-
-  <div class="slideshow-container">
-    <div class="category">
-    <h2>Category</h2>
-  </div>
-  <div class="mySlides" >
-
-    <div class="bookingGrid">
-      <img class="facilityPic" src="./Images/swimming.jfif">
-      <div class="facilityInfo">
-        <h3>Swmming Pool</h3>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button type="button" name="event-booking" onclick="facilities_form.html'" >BOOK NOW</button>
-      </div>
-    </div>
-
-  </div>
-  <div class="mySlides" id="two">
-    <div class="bookingGrid">
-      <img class="facilityPic" src="./Images/gym.png">
-      <div class="facilityInfo">
-        <h3>Gym Studio</h3>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button type="button" name="event-booking" onclick="document.location='facilities_form.html'">BOOK NOW</button>
-      </div>
-    </div>
-
-  </div>
-  <div class="mySlides" id="three">
-    <div class="bookingGrid">
-      <img class="facilityPic" src="./Images/spa.jpg">
-      <div class="facilityInfo">
-        <h3>Spa & Relaxing</h3>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button type="button" name="event-booking" onclick="document.location='facilites_form.html'">BOOK NOW</button>
-      </div>
-    </div>
-
-
-
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-  </div>
-
-  <div class="dot-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
-
-  <script src="linkpage.js">
-  </script>
-  <script>
-//   const model = document.querySelector("#modal");
-//   const model2 = document.querySelector("#modal2");
-//   const model3 = document.querySelector("#modal3");
-//   const openmodel = document.querySelector(".container");
-//   const openmodel2 = document.querySelector(".container2");
-//   const openmodel3 = document.querySelector(".container3");
-//   const closemodel = document.querySelector(".closebutton");
-//   const closemodel2 = document.querySelector(".closebutton2");
-//   const closemodel3 = document.querySelector(".closebutton3");
-//   const open2 = document.querySelector("#spa");
-//
-//   openmodel.addEventListener("click",()=>{
-//     model.showModal();
-//   })
-//
-//
-//   closemodel.addEventListener("click",()=>{
-//     model.close();
-//   }
-// )
-// openmodel2.addEventListener("click",()=>{
-//   model2.showModal();
-// })
-//
-// closemodel2.addEventListener("click",()=>{
-//   model2.close();
-// }
-// )
-// openmodel3.addEventListener("click",()=>{
-//   model3.showModal();
-// })
-// closemodel3.addEventListener("click",()=>{
-//   model3.close();
-// }
-// )
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script src="linkpage.js">
+</script>
+<script>
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -294,6 +237,39 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-  </script>
-
+</script>
 </body>
+
+
+<!---
+<body>
+  <header>
+  <nav >
+      <img src="logo.jpeg" height="100px" width="100px" class="header"></img>
+    <ul>
+  <li><a href="#" class="standby">ABOUT US<i class="fa fa-caret-down"></i></a></li>
+  <div class="dropdown">
+  <li><a href="#" class="standby">ROOMS<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+    <a href="#">SWIMMING POOL</a>
+    <a href="#">GYM STUDIO</a>
+    <a href="#">SPA & RELAXING</a>
+  </div>
+</li>
+  </div>
+  <div class="dropdown">
+  <li><a href="#" class="current">FACILITY<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="#" onclick="currentSlide(1)">SWIMMING POOL</a>
+      <a href="#" onclick="currentSlide(2)">GYM STUDIO</a>
+      <a href="#" onclick="currentSlide(3)">SPA & RELAXING</a>
+    </div>
+    <li>
+</div>
+  <li><a href="#" class="standby" >EVENTS<i class="fa fa-caret-down"></i></a></li>
+  <li><a href="#" class="standby" >PROMOTION<i class="fa fa-caret-down"></i></a></li>
+  <li><a href="#" class="standby" >CONTACT US<i class="fa fa-caret-down"></i></a></li>
+  <label id="icon">
+    <i class="fas fa-bars"></i>
+  </label>
+</nav>
