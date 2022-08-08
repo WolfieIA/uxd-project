@@ -10,7 +10,8 @@
   <meta content="telephone=no" name="format-detection" />
 
   <title>Rooms</title>
-  <link rel="stylesheet" href="./CSS files/Victors_roominfo.css">
+  <link rel="stylesheet" href="./CSS Files/daterangepicker.css">
+  <link rel="stylesheet" href="./CSS Files/template.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -19,23 +20,31 @@
   <script src="/integration/fullerton/public/js/bundle.js?v701a12c4f6fb5d3b8dafec5dc565c6bc"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<body style="">
+<body>
 
-<div class="top">
-    <a href="#" class="logo"><img src="Hotel_logo.jpeg" height="100px"></a>
-  <div class="navbar">
-  <nav>
-    <ul>
-      <li><a href="Victors_roomselect.html">rooms</a></li>
-      <li><a href="#">facilities</a></li>
-      <li><a href="#">events</a></li>
-      <li><a href="#">promotions</a></li>
-      <li><a href="#">dining</a></li>
-      <li><a href="#"> contact us</a></li>
-     </ul>
-  </nav>
-  </div>
-</div>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <a href="homepage.html"><img src="./Images/sunny_logo.svg" alt="" height="100px"></a>
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check" onclick="gone()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links">
+      <a href="roominfo.html">Rooms</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="events.html">Events</a>
+      <a href="menu.html">Dining</a>
+      <a href="contact_us.html">Contact Us</a>
+    </div>
+    </div>
 
   <div class="pagetitle_event">
     <div class="title">

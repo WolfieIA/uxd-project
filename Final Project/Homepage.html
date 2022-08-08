@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="./CSS files/style.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<div class="topnav">
-  <a class="active" href="Homepage.html"><img src="Images/hotellogo.png" height="100"width="140"></a>
-  <a href="#">Rooms</a>
-  <a href="#">Facilities</a>
-  <a href="#">Events</a>
-  <a href="#">Promotion</a>
-  <a href="Contact Us.html">Contact Us</a>
-</div>
-</head>
 <body>
-  <body style="background-color:lightgrey; ">
+  <script type="text/javascript">
+      function gone(){
+        document.getElementById('title').classList.toggle("gone");
+        document.querySelector('.book-form').classList.toggle('gone');
+        document.querySelector('.nav-btn').classList.toggle('open');
+      }
+  </script>
+  </div>
+  </head>
+  <body>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="homepage.html"><img src="./Images/sunny_logo.svg" alt="" height="100px"></a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check" onclick="gone()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
 
-</div>
-<div>
-  <div>
-<img class="Lady" src="Images/Lady standing on the ocean.png" height="" width="100%">
-
+      <div class="nav-links">
+        <a href="roominfo.html">Rooms</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="events.html">Events</a>
+        <a href="menu.html">Dining</a>
+        <a href="contact_us.html">Contact Us</a>
+      </div>
+      </div>
+<div id="title">
+  <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./Images/homepage_pic.png);"></div>
 <h2 class="heading">PARADISE IN THE CITY</h2>
-<h6 class="subheading">A place of relaxation , A place to empty the mind, Reflect on the past and the future.</h6>
-</div>
-<img class="vector1" src="Images/vector1.png" height="80%"width="50%" >
+<div class="vector1" id="title">
 
     <div class="container">
-         <form action=""class="form book-form">
+         <form action=""class="book-form">
 
              <div class="input-group">
                   <label for="check-in"class="input-label">Check in</label>
@@ -47,32 +64,31 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
               </select>
-</div>
-<div class="input-group">
-    <label for="children"class="input-label">Children</label>
-    <select class="options"id="children">
-         <option value="0">0</option>
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5</option>
-    </select>
+            </div>
+            <div class="input-group">
+              <label for="children"class="input-label">Children</label>
+              <select class="options"id="children">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <button type="submit"class="btn form-btn btn-purple">Check for availability
+              <span class="dots"><i class="#"></i></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
 
-</div>
-<button type="submit"class="btn form-btn btn-purple">Check for availability
-<span class="dots"><i class="#"></i></span>
-</button>
-</form>
-</div>
-</div>
+    <div class="pagedesc">
+      <h1>About Us</h1>
+      <p>The sun streams in through the ceiling windows to the floor. Your request will be met with tea to fresh seafood. The Sunny Coastal is welcoming and pleasant, yet unmistakably nostalgic. Every design element was chosen with care to capture the playfulness and thoughtful look of childhood. This is your urban retreat, tucked away but only minutes from Singapore's excitement and delights.</p>
+    </div>
 
-<div>
-<img id="leaves" src="Images/leaves.png" height="100px" width="100%">
-<h2 class=heading2>ABOUT US</h2>
-</div>
-
-<p class="about">The sun streams in through the ceiling windows to the floor. Your request will be met with tea to fresh seafood. The Sunny Coastal is welcoming and pleasant, yet unmistakably nostalgic. Every design element was chosen with care to capture the playfulness and thoughtful look of childhood. This is your urban retreat, tucked away but only minutes from Singapore's excitement and delights. </p>
 <h1>Amenities</h1>
 <div id="Faci">
 <div class="slider">
@@ -252,9 +268,6 @@
   </div>
 </div>
 </div>
-
-
-
 <div>
 <footer class="footer">
    <div class="containerA">
@@ -264,7 +277,7 @@
         <ul>
           <li><a href="#">about us</a></li>
           <li><a href="#">our services</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -297,10 +310,10 @@
         <h4>follow us</h4>
         <div class="social-links">
           <ul>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://sg.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
         </ul>
         </div>
       </div>
@@ -308,12 +321,5 @@
    </div>
 </footer>
 </div>
-
-
-
-
-
-
-
 </body>
 </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./CSS Files/thebooking.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./CSS Files/daterangepicker.css">
+    <link rel="stylesheet" href="./CSS Files/template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>  </head>
+  <body>
+    <div class="testbox">
+  <form>
+    <div class="banner">
+      <h1>Hotel Reservation Form</h1>
+    </div>
+    <br />
+    <fieldset>
+      <legend>Contact Information</legend>
+      <div class="columns">
+        <div class="item">
+          <label for="fname">First Name<span>*</span></label>
+          <input id="fname" type="text" name="fname"/>
+        </div>
+        <div class="item">
+          <label for="lname"> Last Name<span>*</span></label>
+          <input id="lname" type="text" name="lname" />
+        </div>
+        <div class="item">
+          <label for="address">Address<span>*</span></label>
+          <input id="address" type="address" name="address" />
+        </div>
+        <div class="item">
+          <label for="zip">Zip Code<span>*</span></label>
+          <input id="zip" type="number" name="zip" required />
+        </div>
+
+        <div class="item">
+          <label for="city">City<span>*</span></label>
+          <input id="city" type="text" name="city" />
+        </div>
+
+        <div class="item">
+          <label for="eaddress">Email Address<span>*</span></label>
+          <input id="eaddress" type="email" name="eaddress" />
+        </div>
+        <div class="item">
+          <label for="phone">Phone<span>*</span></label>
+          <input id="phone" type="tel" name="phone" />
+        </div>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>reservation details</legend>
+      <div class="columns">
+        <div class="item">
+          <label for="stayrange">Duration of stay <span>*</span></label>
+          <input type="text" name="stayrange" placeholder="Duration of stay" required>
+          <script type="txt/javascript">
+          $(function() {
+
+          $('input[name="stayrange"]').daterangepicker({
+              autoUpdateInput: false,
+              locale: {
+                  cancelLabel: 'Clear'
+              }
+          });
+
+          $('input[name="stayrange"]').daterangepicker({ locale: {
+            format: 'DD/MM/YYYY' ,
+            "applyLabel": "Select",
+            "firstDay": 1,
+          } });
+
+
+          $('input[name="stayrange"]').on('apply.daterangepicker', function(ev, picker) {
+              $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+          });
+
+          $('input[name="stayrange"]').on('cancel.daterangepicker', function(ev, picker) {
+              $(this).val('');
+          });
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1;
+            var yyyy = today.getFullYear();
+            if(dd<10){
+              dd='0'+dd;
+            }
+            if(mm<10){
+              mm='0'+mm;
+            }
+            var today = dd+'/'+mm+'/'+yyyy;
+          });
+          </script>
+          <script type="text/javascript">
+          $(function() {
+            $('input[name="stayrange"]').daterangepicker({
+              singleDatePicker: false,
+              showDropdowns: false,
+              minYear: 1901,
+              minDate: new Date(),
+              maxYear: parseInt(moment().format('YYYY'),10)
+            });
+          });
+          </script>
+        </div>
+
+        <div class="item">
+          <label for="adults">Number of Adults</label>
+          <select name="adults" id="adults" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <label for="adults">Number of Children</label>
+          <select name="children" id="children" required>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        <div class="item" style=width:100%>
+          <label for="room">Number of rooms</label>
+          <input id="room" type="number" name="room" />
+        </div>
+        <div class="item">
+          <select>
+            <option value="" disabled hidden selected>Room 1 type</option>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+            <option value="premier">Premier</option>
+          </select>
+        </div>
+      </div>
+      <div class="item">
+        <label for="instruction">Special Instructions</label>
+        <textarea id="instruction" rows="3"></textarea>
+      </div>
+    </fieldset>
+    <div class="btn-block">
+      <button type="submit" href="/">Submit</button>
+    </div>
+  </form>
+</div>
+  </body>
+</html>
