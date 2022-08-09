@@ -466,7 +466,7 @@ margin: 0;
 
 @media (max-width: 800px) {
   .pagedesc h1 {
-  font-size: 18px
+  font-size: 28px
   }
   .pagedesc p {
 
@@ -516,7 +516,7 @@ margin: 10px auto;
 @media (max-width: 960px) {
   .bookingGrid {
     grid-template-columns: 1fr;
-    grid-template-rows: 340px 235px;
+    grid-template-rows: 340px 245px;
   }
 }
 
