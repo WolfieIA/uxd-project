@@ -82,7 +82,7 @@
               <label for="eight">8pm</label>
             </div>
           </div>
-          <p> numer of booking:<span id="counter">0</span></p>
+          <p> Booking Quantity:<span id="counter">0</span></p>
           <p> Time: <span id="time"></span></p>
           <script type="text/javascript">
             var today = new Date();
@@ -130,7 +130,7 @@
             return false;
           }
           else if (count >2) {
-            alert("max of booking is 2");
+            alert("max of booking is 2 slot");
             return false;
           }
           else {
@@ -203,9 +203,9 @@
                 <label for="six2">9.30pm</label>
               </div>
             </div>
-            <p> numer of booking:<span id="counter2">0</span></p>
+            <p>Booking Quantity:<span id="counter2">0</span></p>
             <p> Time: <span id="time2"></span></p>
-            <script type="text/javascript" >
+            <script type="text/javascript">
               var today = new Date();
                       var dd = String(today.getDate()).padStart(2, '0');
                       var mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -253,8 +253,8 @@
                           alert("input value");
                           return false;
                         }
-                        else if (coun2 >2) {
-                          alert("max of booking is 2");
+                        else if (coun2 >1) {
+                          alert("max of booking is 1 slot");
                           return false;
                         }
                         else {
@@ -274,6 +274,7 @@
           </div>
         </div>
       </div></form>
+
       <form  action="index.html" onsubmit="return validation3()">
           <div class="type" id="type3">
             <div class="form_section" >
@@ -287,54 +288,76 @@
               <input type="date"  name="date_picker3" /required>
               <div class="timeslot" >
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="nine"/>
-                  <label for="nine3">9am</label>
+                  <input type="checkbox" class="checkbox3" id="slot1" name="timeslot" value="9"/>
+                  <label for="slot1">9am</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox" name="timeslot" value="ten"/>
-                  <label for="ten3">10am</label>
+                  <input type="checkbox" class="checkbox3" id="slot2" name="timeslot" value="9.45"/>
+                  <label for="slot2">9.45pm</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="eleven"/>
-                  <label for="eleven">11am</label>
+                  <input type="checkbox" class="checkbox3" id="slot3" name="timeslot" value="10.30"/>
+                  <label for="slot3">10.30am</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="12"/>
-                  <label for="twelve3">12pm</label>
+                  <input type="checkbox" class="checkbox3" id="slot4" name="timeslot" value="11.15"/>
+                  <label for="slot4">11.15am</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="1pm"/>
-                  <label for="one3">1pm</label>
+                  <input type="checkbox" class="checkbox3" id="slot5"  name="timeslot" value="12"/>
+                  <label for="slot5">12pm</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="2"/>
-                  <label for="two3">2pm</label>
+                  <input type="checkbox" class="checkbox3" id="slot6" name="timeslot" value="12.45"/>
+                  <label for="slot6">12.45pm</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="3"/>
-                  <label for="three3">3pm</label>
+                  <input type="checkbox" class="checkbox3" id="slot7" name="timeslot" value="1.30"/>
+                  <label for="slot7">1.30pm</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="4"/>
-                  <label for="four3">4pm</label>
+                  <input type="checkbox" class="checkbox3" id="slot8" name="timeslot" value="2.15"/>
+                  <label for="slot8">2.15pm</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="5"/>
-                  <label for="five3">5pm</label>
+                  <input type="checkbox" class="checkbox3" id="slot9"  name="timeslot" value="3"/>
+                  <label for="slot9">3pm</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox" name="timeslot" value="6"/>
-                  <label for="six3">6pm</label>
+                  <input type="checkbox" class="checkbox3" id="slot10" name="timeslot" value="3.45"/>
+                  <label for="slot10">3.45pm</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="7"/>
-                  <label for="seven3">7pm</label>
+                  <input type="checkbox"class="checkbox3" id="slot11" name="timeslot" value="4.30"/>
+                  <label for="slot11">4.30pm</label>
                 </div>
                 <div class="room">
-                  <input type="checkbox"  name="timeslot" value="8"/>
-                  <label for="eight3">8pm</label>
+                  <input type="checkbox"class="checkbox3" id="slot12"  name="timeslot" value="5.15"/>
+                  <label for="slot12">5.15pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox"class="checkbox3" id="slot13"  name="timeslot" value="6"/>
+                  <label for="slot13">6pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox"class="checkbox3" id="slot14" name="timeslot" value="6.45"/>
+                  <label for="slot14">6.45pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox"class="checkbox3" id="slot15" name="timeslot" value="7.30"/>
+                  <label for="slot15">7.30pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox"class="checkbox3"  id="slot16" name="timeslot" value="8.15"/>
+                  <label for="slot16">8.15pm</label>
+                </div>
+                <div class="room">
+                  <input type="checkbox" class="checkbox3" id="slot17" name="timeslot" value="9"/>
+                  <label for="slot17">9pm</label>
                 </div>
               </div>
+              <p> Booking Quantity:<span id="counter3">0</span></p>
+              <p> Time: <span id="time3"></span></p>
               <script type="text/javascript">
                 var today = new Date();
                         var dd = String(today.getDate()).padStart(2, '0');
@@ -342,6 +365,72 @@
                         var yyyy = today.getFullYear();
                         today = yyyy + '-' + mm + '-' + dd;
                         $('#date_picker3').attr('min',today);
+                        var checkbox3 = document.querySelectorAll(".checkbox3");
+                        var count3 = 0;
+                        var list3 = [];
+                        for (var i = 0; i < checkbox3.length; i++) {
+                          checkbox3[i].addEventListener('click', function(){
+                            if (this.value == 9){
+                              var end3 = parseFloat(this.value)+parseFloat(0.45);
+                              var dec = end3.toFixed(2);
+                              var booking3 = this.value+"am-"+dec +"am";
+                            }
+                            if (this.value == 9.45 || this.value == 10.30){
+                              var end3 = parseFloat(this.value)+parseFloat(0.85);
+                              var dec = end3.toFixed(2);
+                              var booking3 = this.value+"am-"+dec +"am";
+                            }
+                            else if (this.value == 11.15 ){
+                              var end3 = parseFloat(this.value)+parseFloat(0.85);
+                              var dec = end3.toFixed(2);
+                              var booking3 = this.value+"am-"+dec +"pm";
+                            }
+                            else if (this.value == 12 ){
+                              var end3 = parseFloat(this.value)+parseFloat(0.45);
+                              var dec = end3.toFixed(2);
+                              var booking3 = this.value+"pm-"+dec +"pm";
+                            }
+                            else if (this.value == 12.45) {
+                              var end3 = parseFloat(this.value)-parseFloat(10.85);
+                              var dec = end3.toFixed(2);
+                              var booking3 = this.value+"pm-"+dec +"pm";
+                            }
+                            else if (this.value == 3 || this.value == 6 || this.value == 9) {
+                              var end3 = parseFloat(this.value)+parseFloat(0.45);
+                              var dec = end3.toFixed(2);
+                              var booking3 = this.value+"pm-"+dec +"pm";
+                            }
+
+                            else {
+                              var end3 = parseFloat(this.value)+parseFloat(0.85);
+                              var dec = end3.toFixed(2);
+                              var booking3 = this.value+"pm-"+dec +"pm";
+                            }
+                            if(this.checked ==true){
+                              count3++;
+                              list3.push(booking3);
+                              document.getElementById("time3").innerText = list3;
+                            }else {
+                              count3--;
+                              list3 = list3.filter(number => number !== booking3);
+                              document.getElementById("time3").innerText = list3;
+                            }
+                            document.getElementById("counter3").innerText = count3;
+                          })
+                        }
+                        function validation3(){
+                          if(count3 == 0){
+                            alert("input value");
+                            return false;
+                          }
+                          else if (coun3 >1) {
+                            alert("max of booking is 1 slot");
+                            return false;
+                          }
+                          else {
+                            alert("successful");
+                          }
+                        }
               </script>
               </div>
               <div class="form_section contact">
