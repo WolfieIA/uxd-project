@@ -1,10 +1,12 @@
-
+body{
+  background-image: url('./Images/texture1.jpg');
+}
 
 form {
-  width: 60%;
-  margin: 100px auto;
+  width: 100%;
+  margin: 0 auto;
   position: inherit;
-  padding: 30px;
+  padding: 0px;
   background-color: white;
 }
 
@@ -134,13 +136,14 @@ h1 {
 }
 
 .form_section {
-  margin: 40px auto;
+  margin: 20px auto;
   width: 90%;
 }
 
 ::placeholder {
   color: black;
 }
+
 
 button {
   text-transform: uppercase;
@@ -180,8 +183,12 @@ button:hover {
   position: relative;
 
 }
+.imagefix{
+  position: relative;
+}
 
 /* time slot*/
+
 .room {
   display: inline-block;
   margin: 0.5rem 1rem 0.5rem 0;
@@ -189,10 +196,6 @@ button:hover {
 
 .room input {
   display: none;
-
-}
-#tpye3{
-  display: block;
 }
 .room label {
   font-family: sans-serif;
@@ -207,8 +210,7 @@ button:hover {
   margin-right: auto;
   text-align: center;
 }
-
-.room input:checked + label {
+input:checked + label {
   background-color: green;
   border-color: green;
   color: white;
@@ -225,4 +227,55 @@ button:hover {
   margin-right: auto;
   background-color: white;
   padding-left: 15px;
+}
+
+/*
+.timeslot2{
+  border: 1px solid black;
+  width: 65%;
+  margin-left:  auto;
+  margin-right: auto;
+  background-color: white;
+  padding-left: 15px;
+}
+.room2 {
+  display: inline-block;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.room2 input {
+  display: none;
+
+}
+.timeslot2{
+  border: 1px solid black;
+  width: 65%;
+  margin-left:  auto;
+  margin-right: auto;
+  background-color: white;
+  padding-left: 15px;
+}
+.room2 label {
+  font-family: sans-serif;
+  display: block;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+  width: 70px;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.room2 input:checked + .room2 label {
+  background-color: green;
+  border-color: green;
+  color: white;
+}
+.room2 input:checked + .room2 label:hover{
+  background-color: green;
+  border-color: green;
+  color: white;
 }
