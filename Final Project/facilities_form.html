@@ -287,8 +287,6 @@
             <div class="imagefix">
             <img src="./images/spa.jpg"  width="400px" height="350px">
           </div>
-
-
               <h2>Date & booking</h2>
               <label for="date_picker3">date of booking:</label>
               <input type="date"  name="date_picker3" /required>
@@ -431,14 +429,14 @@
                             alert("input value");
                             return false;
                           }
-                          else if (coun3 >1) {
+                          else if (count3 >1) {
                             alert("only 1 slot per booking");
                             return false;
                           }
                           else {
                             alert("successful");
                             var sendvalue = document.getElementsByClassName("sendvalue");
-                            localStorage.setItem("sendvalue", "time booking:" + list);
+                            localStorage.setItem("sendvalue", "time booking:" + list3);
                             window.location.href="Formcompleted.html";
                           }
                         }
