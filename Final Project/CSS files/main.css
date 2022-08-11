@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
 /*NAVIGATION BAR*/
 .nav {
   height: 120px;
@@ -208,193 +209,93 @@
 }
 .gone{
   visibility: hidden;
-  
-}
-h1{
-position: absolute;
-top: 28%;
-left: 50%;
-text-align: center;
-margin-top: 15px;
-font-size: 400%;
-text-align: center;
-color: white;
-  text-shadow: 3px 2px black;
-  z-index: 5;
-  transform: translate(-50%, -50%);
-}
-.cover{
-  clear: both;
-  width: 100%;
-  opacity: 0.5;
-  display: flex;
-z-index: 1;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.imgheader{
-  clear: both;
-  width: 100%;
-  opacity: 0.5;
-  display: flex;
-z-index: 1;
 
 }
-.darken{
-  background-color: black;
-}
 
-
-.borderss{
-  margin-left: auto;
-  margin-top:29%;
-  border: 2px solid orange;
-  padding: 40px;
-  width: 350px;
-  height: 300px;
-  background-color: white;
-  position: absolute;
-top: 31%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-.overlay p{
-  background-color: #000;
-
-}
-.left {
-  position: absolute;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  margin-top: 80px;
-  background-color: white;
-  z-index: 3;
-}
-.centered {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 80px;
-  background-color: white;
-  z-index: 3;
-}
-.right {
-  position: absolute;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  margin-top: 80px;
-  background-color: white;
-  z-index: 3;
-}
-.type {
-  text-align: center;
-}
-.container {
-  position: relative;
-  width: 50%;
-  margin-left: auto;
-    margin-top:19%;
-    border: 2px solid rgba(12, 105, 118, 1);
-    padding: 40px;
-    width: 350px;
-    height: 300px;
-    background-color: white;
-    position: absolute;
-    left: 20%;
-    transform: translate(-50%, -50%);
-}
-.container2 {
-  position: relative;
-  width: 50%;
-  margin-left: auto;
-  margin-top: 19%;
-  border: 2px solid rgba(12, 105, 118, 1);
-  padding: 40px;
-  width: 350px;
-  height: 300px;
-  background-color: white;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.container3 {
-  position: relative;
-  width: 50%;
-  margin-left: auto;
-  margin-top:19%;
-  border: 2px solid rgba(12, 105, 118, 1);
-  padding: 40px;
-  width: 350px;
-  height: 300px;
-  background-color: white;
-  position: absolute;
-
-  left: 80%;
-  transform: translate(-50%, -50%);
-}
 
 .image {
   display: block;
-  width: 100%;
-  height: 100%;
-}
-.overlay {
-  position: absolute;
-  top: 40px;
-  bottom: 0;
-  left: 40px;
-  right: 0;
-  height: 79%;
-  width: 82%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: black;
+  width: 300px;
+  height: 250px;
+  margin: 30px;
 }
 
-.container:hover .overlay {
-  opacity: 0.5;
-}
-.container2:hover .overlay {
-  opacity: 0.5;
-}
-.container3:hover .overlay {
-  opacity: 0.5;
+.container{
+  display: flex;
+ text-align: center;
+ margin-left: 120px;
+ font-style: Libre Baskerville;
 }
 
-.text {
-  color: white;
-  font-size: 20px;
+
+
+h3{
+  font-style: libre
+}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #fff;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
-.closebutton,.closebutton2,.closebutton3{
-  text-align: center;
-  color: orange;
-  border-radius: 20px;
-  background-color: #fff;
-  border:1px solid orange;
-  padding:10px;
-  width: 20%;
-  margin: 20px 30px 30px 30px;
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
-.closebutton:hover,.closebutton2:hover,.closebutton3:hover{
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
   color: white;
-  background-color: orange;
 }
-.images{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
 }
-h3{
-  color: orange;
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
 }
 
 
@@ -795,6 +696,9 @@ background-size: cover;
     display: block;
     margin-top: 40% auto;
     width: 100%;
+  }
+  .bookingGrid{
+    display: block;
   }
 
 }
