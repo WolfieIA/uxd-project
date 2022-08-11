@@ -328,6 +328,7 @@
   font-size: 1.7rem;
   color:#666;
   padding:1rem 0;
+  font-family: work sans;
  }
 
  .speciality .box-container{
@@ -416,6 +417,7 @@
    font-size: 2rem;
    padding:.5rem 1rem;
    border-radius: .5rem;
+   font-family: work sans;
   }
 
   .popular .box-container .box h3{
@@ -473,6 +475,7 @@
    font-size: 1.5rem;
    color:#666;
    padding:1rem 0;
+   font-family: work sans;
   }
 
   .gallery .box-container .box:hover .content{
