@@ -173,10 +173,10 @@ button:hover {
 .button {
   margin: 0 0 0 300px;
 }
-.type{
+/* .type{
   display: none;
   position: absolute;
-}
+} */
 .choice{
   position: relative;
 }
