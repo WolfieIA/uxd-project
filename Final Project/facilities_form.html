@@ -31,58 +31,58 @@
           </div>
           <h2>Date & booking</h2>
           <label for="date_picker1">date of booking:</label>
-          <input type="date" id="date_picker1" name="date_picker1" /required>
+          <input type="date" id="date_picker1" name="date" /required>
           <div class="timeslot" >
             <div class="room">
-              <input type="checkbox" class="checkbox" id="nine" name="timeslot" value="9" />
+              <input type="checkbox" class="checkbox" id="nine"  value="9" />
               <label for="nine" class="a">9am</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="ten" name="timeslot" value="10"/>
+              <input type="checkbox" class="checkbox" id="ten"  value="10"/>
               <label for="ten">10am</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="eleven" name="timeslot" value="11" />
+              <input type="checkbox" class="checkbox" id="eleven"  value="11" />
               <label for="eleven">11am</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="twelve" name="timeslot" value="12" />
+              <input type="checkbox" class="checkbox" id="twelve"  value="12" />
               <label for="twelve">12pm</label>
             </div>
             <div class="room">
-              <input type="checkbox"class="checkbox" id="one"  name="timeslot" value="1" />
+              <input type="checkbox"class="checkbox" id="one"   value="1" />
               <label for="one">1pm</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="two" name="timeslot" value="2" />
+              <input type="checkbox" class="checkbox" id="two"  value="2" />
               <label for="two">2pm</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="three" name="timeslot" value="3" />
+              <input type="checkbox" class="checkbox" id="three"  value="3" />
               <label for="three">3pm</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="four"  name="timeslot" value="4" />
+              <input type="checkbox" class="checkbox" id="four"   value="4" />
               <label for="four">4pm</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="five" name="timeslot" value="5" />
+              <input type="checkbox" class="checkbox" id="five"  value="5" />
               <label for="five">5pm</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="six" name="timeslot" value="6" />
+              <input type="checkbox" class="checkbox" id="six"  value="6" />
               <label for="six">6pm</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="seven" name="timeslot" value="7"/>
+              <input type="checkbox" class="checkbox" id="seven"  value="7"/>
               <label for="seven">7pm</label>
             </div>
             <div class="room">
-              <input type="checkbox" class="checkbox" id="eight" name="timeslot" value="8" />
+              <input type="checkbox" class="checkbox" id="eight"  value="8" />
               <label for="eight">8pm</label>
             </div>
           </div>
-          <p> Booking Quantity:<span id="counter">0</span></p>
+          <p> Booking Quantity:<span id="counter" >0</span></p>
           <p> Time: <span id="time"></span></p>
           <script type="text/javascript">
             var today = new Date();
@@ -135,17 +135,20 @@
           }
           else {
             alert("successful");
+            var sendvalue = document.getElementsByClassName("sendvalue");
+            localStorage.setItem("sendvalue", "time booking:" + list);
+            window.location.href="Formcompleted.html";
           }
         }
           </script>
           </div>
           <div class="form_section contact">
             <h2>Contact Information</h2>
-            <input type="text" name="name1" placeholder="First name*" required>
-            <input type="text" name="name2" placeholder="Last name*" required><br>
-            <input type="tel" name="name3" placeholder="Phone Number*" required>
+            <input type="text" name="First name" placeholder="First name*" required>
+            <input type="text" name="Last name" placeholder="Last name*" required><br>
+            <input type="contact" name="contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
         <div class="button">
-          <button type="submit" name="submit">submit</button>
+          <button type="submit" >submit</button>
       </div>
         </div>
 
@@ -204,7 +207,7 @@
               </div>
             </div>
             <p>Booking Quantity:<span id="counter2">0</span></p>
-            <p> Time: <span id="time2"></span></p>
+            <p class="sendvalue"> Time: <span id="time2"></span></p>
             <script type="text/javascript">
               var today = new Date();
                       var dd = String(today.getDate()).padStart(2, '0');
@@ -259,6 +262,9 @@
                         }
                         else {
                           alert("successful");
+                          var sendvalue = document.getElementsByClassName("sendvalue");
+                          localStorage.setItem("sendvalue", "time booking:" + list2);
+                          window.location.href="Formcompleted.html";
                         }
                       }
             </script>
@@ -267,7 +273,7 @@
               <h2>Contact Information</h2>
               <input type="text" name="fname4" placeholder="First name*" required>
               <input type="text" name="lname5" placeholder="Last name*" required><br>
-              <input type="tel" name="ph" placeholder="Phone Number*" required>
+              <input type="contact" name="contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
 
           <div class="button">
             <button type="sumbit" name="submit">submit</button>
@@ -356,8 +362,10 @@
                   <label for="slot17">9pm</label>
                 </div>
               </div>
+
               <p> Booking Quantity:<span id="counter3">0</span></p>
               <p> Time: <span id="time3"></span></p>
+              </div>
               <script type="text/javascript">
                 var today = new Date();
                         var dd = String(today.getDate()).padStart(2, '0');
@@ -391,7 +399,7 @@
                               var booking3 = this.value+"pm-"+dec +"pm";
                             }
                             else if (this.value == 12.45) {
-                              var end3 = parseFloat(this.value)-parseFloat(10.85);
+                              var end3 = parseFloat(this.value)-parseFloat(11.15);
                               var dec = end3.toFixed(2);
                               var booking3 = this.value+"pm-"+dec +"pm";
                             }
@@ -424,20 +432,23 @@
                             return false;
                           }
                           else if (coun3 >1) {
-                            alert("max of booking is 1 slot");
+                            alert("only 1 slot per booking");
                             return false;
                           }
                           else {
                             alert("successful");
+                            var sendvalue = document.getElementsByClassName("sendvalue");
+                            localStorage.setItem("sendvalue", "time booking:" + list);
+                            window.location.href="Formcompleted.html";
                           }
                         }
               </script>
-              </div>
+
               <div class="form_section contact">
                 <h2>Contact Information</h2>
                 <input type="text" name="name7" placeholder="First name*" required>
                 <input type="text" name="name8" placeholder="Last name*" required><br>
-                <input type="tel" name="name9" placeholder="Phone Number*" required>
+              <input type="contact" name="contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
 
             <div class="button">
               <button type="sumbit" name="sumbit">submit</button>
@@ -447,6 +458,10 @@
     </form>
 
     <script>
+var swimming =localStorage.getItem("swimming");
+var gym =localStorage.getItem("gym");
+var spa =localStorage.getItem("spa");
+
 
     var btn1 = document.getElementById("choice1");
     var btn2 = document.getElementById("choice2");
@@ -454,6 +469,30 @@
     var form1 = document.getElementById("type1");
     var form2 = document.getElementById("type2");
     var form3 = document.getElementById("type3");
+    if (swimming==1) {
+        form1.style.display = "block";
+        form2.style.display = "none";
+        form3.style.display = "none";
+        btn1.style.color = "red";
+        btn2.style.color = "black";
+        btn3.style.color = "black";
+    }
+    if (gym==2) {
+      form1.style.display = "none";
+      form2.style.display = "block";
+      form3.style.display = "none";
+      btn1.style.color = "black";
+      btn2.style.color = "orange";
+      btn3.style.color = "black";
+    }
+    if(spa==3){
+      form1.style.display = "none";
+      form2.style.display = "none";
+      form3.style.display = "block";
+      btn1.style.color = "black";
+      btn2.style.color = "black";
+      btn3.style.color = "orange";
+    }
     function swimmingpoolForm() {
       form1.style.display = "block";
       form2.style.display = "none";
