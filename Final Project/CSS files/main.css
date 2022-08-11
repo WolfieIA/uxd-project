@@ -697,5 +697,8 @@ background-size: cover;
     margin-top: 40% auto;
     width: 100%;
   }
+  .bookingGrid{
+    display: block;
+  }
 
 }

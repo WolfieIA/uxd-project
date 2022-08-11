@@ -214,7 +214,7 @@ button {
 }
 
 .room input {
-  display: none;
+  display: block;
 
 }
 
@@ -232,12 +232,12 @@ button {
   text-align: center;
 }
 
-.room input:checked + label {
+.room input:checked ~ label {
   background-color: green;
   border-color: green;
   color: white;
 }
-.room input:checked + label:hover{
+.room input:checked ~ label:hover{
   background-color: green;
   border-color: green;
   color: white;
