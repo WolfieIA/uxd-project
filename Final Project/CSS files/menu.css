@@ -228,7 +228,7 @@
   }
 
   *::selection{
-   background:var(--red);
+   background:rgba(228, 99, 27, 1);
    color:#fff;
   }
 
@@ -255,14 +255,14 @@
   }
 
   .heading span{
-   color:var(--red);
+   color:rgba(228, 99, 27, 1);
   }
 
   .btn{
    display: inline-block;
    padding:.8rem 3rem;
-   border:.2rem solid var(--red);
-   color:var(--red);
+   border:.2rem solid rgba(228, 99, 27, 1);
+   color:rgba(228, 99, 27, 1);
    cursor: pointer;
    font-size: 1.7rem;
    border-radius: .5rem;
@@ -278,7 +278,7 @@
    top:0; right: 0;
    width:0%;
    height:100%;
-   background:var(--red);
+   background:rgba(228, 99, 27, 1);
    transition: .3s linear;
    z-index: -1;
   }
@@ -412,7 +412,7 @@
   .popular .box-container .box .price{
    position: absolute;
    top:3rem; left:3rem;
-   background:var(--red);
+   background:rgba(228, 99, 27, 1);
    color:#fff;
    font-size: 2rem;
    padding:.5rem 1rem;
@@ -550,7 +550,8 @@
   	list-style: none;
   }
   .footer{
-    background-color: #152238;
+    background-color: rgba(17, 75, 130, 1);
+    background-color:#152238;
     padding: 80px 0;
     font-family: work sans;
 
@@ -566,6 +567,7 @@
   	margin-bottom: 35px;
   	font-weight: 500;
   	position: relative;
+    font-family: work sans;
   }
   .footer-col h4::before{
   	content: '';
@@ -588,6 +590,7 @@
   	font-weight: 400;
   	display: block;
   	transition: all 0.3s ease;
+    font-family: work sans;
   }
   .footer-col ul li a:hover{
   	color: lightblue;
