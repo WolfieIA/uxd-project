@@ -550,7 +550,8 @@
   	list-style: none;
   }
   .footer{
-    background-color: #152238;
+    background-color: rgba(17, 75, 130, 1);
+    background-color:#152238;
     padding: 80px 0;
     font-family: work sans;
 
@@ -566,6 +567,7 @@
   	margin-bottom: 35px;
   	font-weight: 500;
   	position: relative;
+    font-family: work sans;
   }
   .footer-col h4::before{
   	content: '';
@@ -588,6 +590,7 @@
   	font-weight: 400;
   	display: block;
   	transition: all 0.3s ease;
+    font-family: work sans;
   }
   .footer-col ul li a:hover{
   	color: lightblue;
