@@ -1,4 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+h1 {
+font-family: Libre Baskerville;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+font-weight: 500;
+margin: 0;
+font-size: 36px;
+}
+
+h2 {
+font-family: Libre Baskerville;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+font-weight: 500;
+margin: 0;
+font-size: 28px;
+}
+
+h3 {
+font-family: Libre Baskerville;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+font-weight: 500;
+margin: 0;
+font-size: 20px;
+}
+
+p,ul {
+font-family: Work Sans;
+word-break: break-word;
+font-size: 18px;
+}
+
+html,body {
+margin:0;
+padding:0;
+overflow-x: hidden;
+}
+
 /*NAVIGATION BAR*/
 .nav {
   height: 120px;
@@ -224,14 +263,10 @@
   display: flex;
  text-align: center;
  margin-left: 120px;
- font-style: Libre Baskerville;
+font-family: work sans;
 }
 
 
-
-h3{
-  font-style: libre
-}
 /* Slideshow container */
 .slideshow-container {
   position: relative;
@@ -449,27 +484,26 @@ background-size: cover;
 }
 
 .category {
-  margin: 20vh auto 20vh auto;
+margin: 100px auto;
 }
 
 .category h2 {
-  display: flex;
-	width: 80%;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-  margin: auto;
-  font-weight: bold;
-
+display: flex;
+width: 80%;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: auto;
+font-weight: bold;
 }
 
 .category h2:after {
-  content: '';
-	border-top: 2px solid;
-	margin: auto auto auto 1vw;
-  padding: auto;
-	flex: 1 0 20px;
-	color: rgba(12, 105, 118, 1);
+content: '';
+border-top: 2px solid;
+margin: auto auto auto 1vw;
+padding: auto;
+flex: 1 0 20px;
+color: rgba(17, 75, 130, 1);
 }
 
 
@@ -610,44 +644,61 @@ background-size: cover;
 }
 
 /*footer*/
+.containerA{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer ul{
+	list-style: none;
+  padding-left: 0;
+}
 .footer{
-	background-color: #152238;
-    padding: 80px 0;
+  background-color: rgba(17, 75, 130, 1);
+  background-color:#152238;
+  padding: 80px 0;
+  font-family: work sans;
+
 }
 .footer-col{
-   width: 25%;
+   width: 20%;
    padding: 0 15px;
 }
 .footer-col h4{
 	font-size: 18px;
 	color: #ffffff;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	margin-bottom: 35px;
 	font-weight: 500;
-	position: relative;
+	position:relative;
+  font-family: work sans;
 }
 .footer-col h4::before{
 	content: '';
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #e91e63;
+  background-color: rgba(228, 99, 27, 1);
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
 }
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
+  padding-left: 0px;
 }
 .footer-col ul li a{
 	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
+	text-transform: uppercase;
+	color: white;
 	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
+	font-weight: 400;
 	display: block;
 	transition: all 0.3s ease;
+  font-family: work sans;
 }
 .footer-col ul li a:hover{
 	color: lightblue;
@@ -669,11 +720,20 @@ background-size: cover;
 	color: #24262b;
 	background-color: #ffffff;
 }
-@media screen and (max-width: 800px) {
-  body{
-    width: 90%:auto;
-    margin: auto;
-  }
+
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
   header{
     text-align: justify;
   }
