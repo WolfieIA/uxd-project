@@ -48,7 +48,7 @@
         </div>
 
       <div class="booking-form-bar">
-        <form class="" action="#" method="post">
+        <form class="" action="thebooking.html" method="get">
             <select name="adults" id="adults"  required>
                 <option value="" disabled selected hidden>&#xf007;&nbsp;&nbsp;&nbsp;&nbsp;Adults</option>
                   <option value="1">1</option>
@@ -92,7 +92,7 @@
                     $this.find( "option:first" ).text($this.val() + ' rooms').val( $this.val() ).prop('selected',true);
                 } )
             </script>
-            <input type="text" name="stayrange" placeholder="Duration of stay" required>
+            <input type="text" name="stayrange" placeholder="Duration of stay" id='stayrange' required>
             <script type="txt/javascript">
             $(function() {
 
@@ -142,7 +142,21 @@
             });
             </script>
 
-          <input type="submit" name="room-available" value="rates & availability" size="100px">
+            <script type="text/javascript">
+              function roomInfo(){
+                var children = document.getElementById("children").value;
+                var adults = document.getElementById("adults").value;
+                var rooms = document.getElementById("rooms").value;
+                var stayrange = document.getElementById("stayrange").value;
+
+                localStorage.setItem("Adults", adults);
+                localStorage.setItem("Children", children);
+                localStorage.setItem("Rooms", rooms);
+                localStorage.setItem("Stay Range", stayrange);
+              }
+            </script>
+
+          <input type="submit" name="room-available" value="rates & availability" size="100px" onclick="roomInfo()">
         </form>
       </div>
 
