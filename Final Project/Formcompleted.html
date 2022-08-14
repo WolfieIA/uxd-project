@@ -1,71 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
 <title>Form Processor</title>
 </head>
-<style >
-body{
-  background-image: url(./Images/texture1.jpg);
-}
-  .center{
-    display: block;
-    margin-top:10%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  border: 2px solid orange;
-  background-color: white;
-  border-radius: 20px;
-  text-align: center;
-  padding: 10px;
-  }
-  button {
-    text-transform: uppercase;
-    padding: 10px 5px 10px 5px;
-    font-family: Work Sans;
-    color: rgba(228, 99, 27, 1);
-    background: none;
-    border: 2px solid rgba(228, 99, 27, 1);
-    width: 30%;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 520;
-    font-size: 2vh;
-    transition: 0.12s ease-in-out;
-    align: center;
-    float: none;
-  }
-  button:hover {
-    color: white;
-    background-color: rgba(228, 99, 27, 1);
-    border-color: rgba(228, 99, 27, 1);
-    cursor: pointer;
-  }
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+</head>
 <body>
   <div class="center">
-  <img src="./Images/tick.jpg" width="100px">
-<script type="text/javascript">
-<!-- HIDE FROM INCOMPATIBLE BROWSERS
-document.write("<h1>Your form has been submitted!</h1><h2>You entered the following data:</h2>");
-var formData = location.search;
+    <h1>Your form has been submitted!</h1>
+    <p>You have entered the following data:</p>
+    <p>
+      <script type="text/javascript">
+      <!-- HIDE FROM INCOMPATIBLE BROWSERS
+      var formData = location.search;
 
-formData = formData.substring(1, formData.length);
-while (formData.indexOf("+") != -1) {
-	formData = formData.replace("+", " ");
-}
-formData = unescape(formData);
-var formArray = formData.split("&");
-for (var i=0; i < formArray.length; ++i) {
-	document.writeln(formArray[i] + "<br />");
-}
-var b =localStorage.getItem("sendvalue");
-document.writeln(b);
-// STOP HIDING FROM INCOMPATIBLE BROWSERS -->
-</script><br>
-<button onclick="document.location='mainfacilities.html'">>Continue</button>
+      formData = formData.substring(1, formData.length);
+      while (formData.indexOf("+") != -1) {
+      	formData = formData.replace("+", " ");
+      }
+      formData = unescape(formData);
+      var formArray = formData.split("&");
+      for (var i=0; i < formArray.length; ++i) {
+      	document.writeln(formArray[i] + "<br />");
+      }
+      var b =localStorage.getItem("sendvalue");
+      document.writeln(b);
+      // STOP HIDING FROM INCOMPATIBLE BROWSERS -->
+      </script>
+    </p>
+<button onclick="document.location='mainfacilities.html'">Return</button>
   </div>
 </body>
 </html>
