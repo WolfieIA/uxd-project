@@ -119,6 +119,9 @@ label {
 .contact input[type=email]{
   width: 35%;
 }
+.contact input[type=number]{
+  width: 35%;
+}
 
 .contact label {
   margin-left: 30px;
@@ -139,6 +142,7 @@ h1 {
   margin: 20px auto;
   width: 80%;
   border: 1px solid black;
+  padding: 10px;
 }
 
 ::placeholder {
@@ -162,6 +166,7 @@ button {
   transition: 0.12s ease-in-out;
   align: center;
   float: none;
+  padding: 10px;
 }
 
 button:hover {
@@ -173,6 +178,10 @@ button:hover {
 .button {
   margin: 0 0 0 300px;
 }
+button[type=sumbit]
+{
+  width: 30%;
+}
 /* .type{
   display: none;
   position: absolute;
@@ -180,10 +189,11 @@ button:hover {
 .choice{
   position: relative;
 }
-.imagefix{
+.imagefix img{
   display: block;
-  margin-left: 350px;
-  margin-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
 
 }
 
@@ -227,4 +237,26 @@ input:checked + label {
   margin-right: auto;
   background-color: white;
   padding-left: 15px;
+}
+@media (width: 880px) {
+  input{
+    clear: both;
+    display: block;
+  }
+  .form_section img{
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20%;
+  }
+  .imagefix img{
+    clear: both;
+    display: block;
+    width: 100%;
+  }
+  div .btn button{
+    clear: both;
+    max-width: 30%;
+    display: block;
+  }
 }

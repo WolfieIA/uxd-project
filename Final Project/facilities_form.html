@@ -27,9 +27,9 @@
         <div class="type" id="type1">
         <div class="form_section" >
           <div class="imagefix">
-            <img src="./images/swimming.jfif" width="400px" height="350px">
+            <img src="./images/swimming.jfif" >
           </div>
-          <h2>Date & booking</h2>
+          <h2>Date & Time booking</h2>
           <label for="date_picker1">date of booking:</label>
           <input type="date" id="date_picker1" name="date" /required>
           <div class="timeslot" >
@@ -147,6 +147,7 @@
             <input type="text" name="First name" placeholder="First name*" required>
             <input type="text" name="Last name" placeholder="Last name*" required><br>
             <input type="contact" name="contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
+            <input type="number" name="Number of people attend" placeholder="no. of people" min="1" max="10" required/>
         <div class="button">
           <button type="submit" >submit</button>
       </div>
@@ -158,15 +159,15 @@
         <div class="type" id="type2">
           <div class="form_section" >
             <div class="imagefix">
-              <img src="./images/gym.jpg"  width="400px" height="350px" >
+              <img src="./images/gym.jpg"  >
             </div>
-            <h2>Date & booking</h2>
-
+            <h2>Date & Time booking</h2>
+            <label for="date_picker2">date of booking:</label>
             <input type="date" id="date_picker2" name="date_picker2" /required>
 
             <div class="timeslot" >
               <div class="room">
-                <input type="checkbox" class="checkbox2" id="nine2"  value="9.0"/>
+                <input type="checkbox" class="checkbox2" id="nine2"  value="9.00"/>
                 <label for="nine2">9am</label>
               </div>
               <div class="room">
@@ -174,7 +175,7 @@
                 <label for="ten2">10.30am</label>
               </div>
               <div class="room">
-                <input type="checkbox" class="checkbox2" id="eleven2"  value="12"/>
+                <input type="checkbox" class="checkbox2" id="eleven2"  value="12.00"/>
                 <label for="eleven2">12pm</label>
               </div>
               <div class="room">
@@ -182,7 +183,7 @@
                 <label for="twelve2">1.30pm</label>
               </div>
               <div class="room">
-                <input type="checkbox" class="checkbox2" id="one2"  value="3"/>
+                <input type="checkbox" class="checkbox2" id="one2"  value="3.00"/>
                 <label for="one2">3pm</label>
               </div>
               <div class="room">
@@ -190,7 +191,7 @@
                 <label for="two2">4.30pm</label>
               </div>
               <div class="room">
-                <input type="checkbox" class="checkbox2" id="three2"   value="6"/>
+                <input type="checkbox" class="checkbox2" id="three2"   value="6.00"/>
                 <label for="three2">6pm</label>
               </div>
               <div class="room">
@@ -198,7 +199,7 @@
                 <label for="four2">7.30pm</label>
               </div>
               <div class="room">
-                <input type="checkbox" class="checkbox2" id="five2"  value="8"/>
+                <input type="checkbox" class="checkbox2" id="five2"  value="8.00"/>
                 <label for="five2">8pm</label>
               </div>
               <div class="room">
@@ -227,7 +228,8 @@
                           }
                           else if (this.value == 10.30) {
                             var end2 = parseFloat(this.value)+parseFloat(1.70);
-                            var booking2 = this.value+"am-"+end2 +"pm";
+                            var dec = end2.toFixed(2);
+                            var booking2 = this.value+"am-"+dec +"pm";
                           }
                           else if (this.value == 1.30 || this.value == 4.30 || this.value == 7.30 || this.value == 9.30) {
                             var end2 = parseFloat(this.value)+parseFloat(1.7);
@@ -237,7 +239,7 @@
                           else {
                             var end2 = parseFloat(this.value)+parseFloat(1.30);
                             var dec = end2.toFixed(2);
-                            var booking2 = this.value+"pm-"+end2 +"pm";
+                            var booking2 = this.value+"pm-"+dec +"pm";
                           }
                           if(this.checked ==true){
                             count2++;
@@ -284,9 +286,9 @@
           <div class="type" id="type3">
             <div class="form_section" >
             <div class="imagefix">
-            <img src="./images/spa.jpg"  width="400px" height="350px">
+            <img src="./images/spa.jpg"  >
           </div>
-              <h2>Date & booking</h2>
+              <h2>Date & Time booking</h2>
               <label for="date_picker3">date of booking:</label>
               <input type="date"  name="date_picker3" /required>
               <div class="timeslot" >
@@ -456,7 +458,7 @@
 var swimming =localStorage.getItem("swimming");
 var gym =localStorage.getItem("gym");
 var spa =localStorage.getItem("spa");
-var valu1 =localStorage.getItem(value);
+
     var btn1 = document.getElementById("choice1");
     var btn2 = document.getElementById("choice2");
     var btn3 = document.getElementById("choice3");
