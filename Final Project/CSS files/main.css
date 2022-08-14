@@ -263,7 +263,7 @@ font-size: 20px;
 /* Slides */
 .mySlides {
   display: none;
-  padding: 80px;
+  padding: 20px 80px;
   text-align: center;
 \
 }
@@ -300,7 +300,7 @@ font-size: 20px;
 .dot-container {
     text-align: center;
     padding: 20px;
-    background: #ddd;
+    background: rgba(255, 255, 255, 0);
 }
 
 /* The dots/bullets/indicators */
@@ -539,6 +539,7 @@ background-size: cover;
   width: 65vw;
   overflow: hidden;
   margin: 5vh auto 5vh auto;
+
 }
 
 .facilityPic {
@@ -553,8 +554,7 @@ background-size: cover;
 
 .facilityInfo {
   width: auto;
-  align-self: center;
-  justify-self: center;
+  text-align: left;
 }
 
 .facilityInfo button {
@@ -572,81 +572,11 @@ background-size: cover;
   font-size: 14px;
 }
 
-.facilityInfo button:hover {
-  color: white;
-  background-color: rgba(228, 99, 27, 1);
-  border-color: rgba(228, 99, 27, 1);
-  cursor: pointer;
-}
-
-.facilityInfo hr {
-  width: 4vw;
-  border: 1px solid rgba(12, 105, 118, 1);
-  margin-right: 100%;
-  background-color: rgba(12, 105, 118, 1);
-  overflow-x: visible;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-}
-
-.facilityInfo a {
-  text-decoration: none;
-  color: rgba(12, 105, 118, 1);
-  padding-bottom: 5px;
-  font-family: Work Sans;
-  margin-bottom: 40px;
-  font-size: 2vh;
-}
-
-.facilityInfo p {
-  font-size: 15px;
-}
-
-.facilityInfo h3 {
-  font-size: 20px;
-}
-
-.photogrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  column-gap: 30px;
-  row-gap: 10px;
-  width: 90%;
-  height: auto;
-  overflow: hidden;
-  margin: 30px auto 30px auto;
-}
-
-.photogrid img {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  overflow-x: hidden;
-  transition-duration: 0.3s ease-in-out;
-  object-fit: contain;
-}
-
-.photofix{
-  width: 400px;
-  height: 300px;
-  overflow: hidden;
-  overflow-x: hidden;
-  transition-duration: 0.3s ease-in-out;
-  object-fit: contain;
-}
-
 .container2{
   display: flex;
   margin-left:   auto;
   margin-right:  auto;
   width: 80%;
-}
-
-.Galleries{
-  border: 2px solid blue;
-  padding: 10px;
-  text-align: center;
 }
 
 /*footer*/
@@ -762,6 +692,7 @@ containerA{
     margin-top: 40% auto;
     width: 100%;
   }
+
   .bookingGrid,.container{
     display: block;
   }
