@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="./CSS files/main.css">
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body >
   <header>
     <div class="nav">
@@ -42,12 +43,12 @@
 
 </header>
 
-<div class="pagetitle"  style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/tableshot1.jpg);"></div>
-  <div class="title" id='title'>
+<div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/background.png);">
+  <div class="title">
     <h1>Facility</h1>
     <p>A sentence to summarise page</p>
   </div>
-
+</div>
 
 <div class="booking-form-bar">
   <form class="" action="index.html" method="post">
@@ -133,31 +134,21 @@
     <input type="button" name="room-available" value="rates & availability" size="100px">
   </form>
 </div>
-
-
   <div class="category">
   <h2>Facility Gallery</h2>
 </div>
-
-  <div class="container">
-    <div class="cate">
-
+  <div class="container2">
+    <div class="Galleries">
     <h3>Swmming Pool</h3>
-
-      <img src="./Images/swimming.jfif" class="image">
+      <img src="./Images/swimming.jfif" height="250px" width="350px">
  </div>
-
- <div class="cate">
-
+ <div class="Galleries">
  <h3>Gym Studio</h3>
-
-      <img src="./Images/gym.png" class="image">
+      <img src="./Images/gym.png" height="250px" width="350px">
  </div>
- <div class="cate">
-
+ <div class="Galleries">
  <h3>Spa & Relaxing</h3>
-
-      <img src="./Images/spa.jpg" class="image">
+      <img src="./Images/spa.jpg" height="250px" width="350px">
  </div>
   </div>
 
@@ -176,15 +167,10 @@
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
           sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button type="button" name="event-booking" class="swimming"onclick="swimmingpoolForm()" >BOOK NOW</button>
+        <button type="button" name="event-booking" value="1" onclick="swimmingpoolForm()" >BOOK NOW</button>
       </div>
     </div>
-    <script>
-    function swimmingpoolForm(){
-    var swimming = document.getElementsByClassName("swimming");
-    localStorage.setItem("swimming", 1);
-    window.location.href="facilities_form.html";}
-    </script>
+
   </div>
   <div class="mySlides" id="two">
     <div class="bookingGrid">
@@ -196,15 +182,10 @@
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
           sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button type="button" name="event-booking" class="gym"onclick="GymForm()">BOOK NOW</button>
+        <button type="button" name="event-booking" class="gym" value="2" onclick="GymForm()">BOOK NOW</button>
       </div>
     </div>
-    <script>
-    function GymForm(){
-    var gym = document.getElementsByClassName("gym");
-    localStorage.setItem("gym", 2);
-    window.location.href="facilities_form.html";}
-    </script>
+
   </div>
   <div class="mySlides" id="three">
     <div class="bookingGrid">
@@ -216,14 +197,12 @@
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
           sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button type="button" name="event-booking" class="spa" onclick="SpaForm()">BOOK NOW</button>
+        <button type="button" name="event-booking" class="spa" value="3" onclick="SpaForm()">BOOK NOW</button>
       </div>
     </div>
     <script>
-    function SpaForm(){
-    var spa = document.getElementsByClassName("spa");
-    localStorage.setItem("spa", 3);
-    window.location.href="facilities_form.html";}
+
+
     </script>
 
 
@@ -243,8 +222,24 @@
   <script src="linkpage.js">
   </script>
   <script>
+  function swimmingpoolForm(){
+  var swimming = document.getElementsByClassName("swimming");
+  localStorage.setItem("swimming", 1);
+  window.location.href="facilities_form.html";
+}
+  function GymForm(){
+  var gym = document.getElementsByClassName("gym");
+  localStorage.setItem("gym", 2);
+  window.location.href="facilities_form.html";
+}
+  function SpaForm(){
+  var spa = document.getElementsByClassName("spa");
+  localStorage.setItem("spa", 3);
+  window.location.href="facilities_form.html";}
 
 var slideIndex = 1;
+
+
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -276,59 +271,5 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
   </script>
-  <div>
-  <footer class="footer">
-     <div class="containerA">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Sunny Coastal Hotel</h4>
-          <ul>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">our services</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Rooms</h4>
-          <ul>
-            <li><a href="room.html">Classic</a></li>
-            <li><a href="room.html">Deluxe</a></li>
-            <li><a href="room.html">Suite</a></li>
-            <li><a href="room.html">Premier</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Facilities</h4>
-          <ul>
-            <li><a href="#">Gym</a></li>
-            <li><a href="#">Swimming Pool</a></li>
-            <li><a href="#">Spa</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>get help</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Bookings</a></li>
-            <li><a href="#">Availability</a></li>
-            <li><a href="#">payment options</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>follow us</h4>
-          <div class="social-links">
-            <ul>
-            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-            <a href="https://sg.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-          </ul>
-          </div>
-        </div>
-      </div>
-     </div>
-  </footer>
-  </div>
 
 </body>
-</html>

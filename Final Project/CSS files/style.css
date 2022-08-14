@@ -1027,7 +1027,7 @@ margin: 0;
   font-family: Work Sans;
   color: rgba(228, 99, 27, 1);
   background: none;
-  border: 2px solid rgba(28, 99, 27, 1);
+  border: 2px solid rgba(228, 99, 27, 1);
   width: 17vw;
   height: auto;
   letter-spacing: 0.1em;
@@ -1041,8 +1041,8 @@ margin: 0;
 
 .venueinfo button:hover {
   color: white;
-  background-color: rgba(28, 99, 27, 1);
-  border-color: rgba(28, 99, 27, 1);
+  background-color: rgba(228, 99, 27, 1);
+  border-color: rgba(228, 99, 27, 1);
   cursor: pointer;
 }
 
