@@ -31,7 +31,7 @@
           </div>
           <h2>Date & Time booking</h2>
           <label for="date_picker1">date of booking:</label>
-          <input type="date" id="date_picker1" name="date" /required>
+          <input type="date" id="date_picker1" name="Booking Date" /required>
           <div class="timeslot" >
             <div class="room">
               <input type="checkbox" class="checkbox" id="nine"  value="9" />
@@ -136,7 +136,7 @@
           else {
             alert("successful");
             var sendvalue = document.getElementsByClassName("sendvalue");
-            localStorage.setItem("sendvalue", "time booking:" + list);
+            localStorage.setItem("sendvalue", "Booking Time(s): " + list);
             window.location.href="Formcompleted.html";
           }
         }
@@ -146,8 +146,8 @@
             <h2>Contact Information</h2>
             <input type="text" name="First name" placeholder="First name*" required>
             <input type="text" name="Last name" placeholder="Last name*" required><br>
-            <input type="contact" name="contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
-            <input type="number" name="Number of people attend" placeholder="no. of people" min="1" max="10" required/>
+            <input type="contact" name="Contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
+            <input type="number" name="Pax" placeholder="Pax" min="1" max="10" required/>
         <div class="button">
           <button type="submit" >submit</button>
       </div>
@@ -163,7 +163,7 @@
             </div>
             <h2>Date & Time booking</h2>
             <label for="date_picker2">date of booking:</label>
-            <input type="date" id="date_picker2" name="date_picker2" /required>
+            <input type="date" id="date_picker2" name="Booking Date" /required>
 
             <div class="timeslot" >
               <div class="room">
@@ -264,7 +264,7 @@
                         }
                         else {
                           var sendvalue = document.getElementsByClassName("sendvalue");
-                          localStorage.setItem("sendvalue", "time booking:" + list2);
+                          localStorage.setItem("sendvalue", "Booking Time(s): " + list2);
                           window.location.href="Formcompleted.html";
                         }
                       }
@@ -274,9 +274,9 @@
               <h2>Contact Information</h2>
               <input type="text" name="First name" placeholder="First name*" required>
               <input type="text" name="Last name" placeholder="Last name*" required><br>
-              <input type="contact" name="contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
+              <input type="contact" name="Contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
           <div class="button">
-            <button type="sumbit" name="submit">submit</button>
+            <button type="submit" name="">submit</button>
           </div>
         </div>
       </div></form>
@@ -287,9 +287,9 @@
             <div class="imagefix">
             <img src="./images/spa.jpg"  >
           </div>
-              <h2>Date & Time booking</h2>
-              <label for="date_picker3">date of booking:</label>
-              <input type="date"  name="date_picker3" /required>
+              <h2>Date & Booking Time</h2>
+              <label for="Booking Date">date of booking:</label>
+              <input type="date"  name="Booking Date" id="date_picker3"required>
               <div class="timeslot" >
                 <div class="room">
                   <input type="checkbox" class="checkbox3" id="slot1" value="9"/>
@@ -434,7 +434,7 @@
                           }
                           else {
                             var sendvalue = document.getElementsByClassName("sendvalue");
-                            localStorage.setItem("sendvalue", "time booking:" + list3);
+                            localStorage.setItem("sendvalue", "Booking Time(s): " + list3);
                             window.location.href="Formcompleted.html";
                           }
                         }
@@ -444,10 +444,10 @@
                 <h2>Contact Information</h2>
                 <input type="text" name="First name" placeholder="First name*" required>
                 <input type="text" name="Last name" placeholder="Last name*" required><br>
-              <input type="contact" name="contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
+              <input type="contact" name="Contact"  title="8 digit" pattern="\d{8}" placeholder="Phone Number*" required>
 
             <div class="button">
-              <button type="sumbit" name="sumbit">submit</button>
+              <button type="submit" name="">submit</button>
             </div>
           </div>
               </div>

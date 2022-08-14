@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+body{
+  text-align: center;
+}
+
+h1 {
+  font-family: libre Baskerville;
+}
+
+p {
+  font-family: work sans;
+}
+
+button {
+  text-transform: uppercase;
+  padding: 10px 5px 10px 5px;
+  font-family: Work Sans;
+  color: rgba(228, 99, 27, 1);
+  background: none;
+  border: 2px solid rgba(228, 99, 27, 1);
+  width: 30%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 520;
+  font-size: 2vh;
+  transition: 0.12s ease-in-out;
+  align: center;
+  float: none;
+}
+button:hover {
+    color: white;
+    background-color: rgba(228, 99, 27, 1);
+    border-color: rgba(228, 99, 27, 1);
+    cursor: pointer;
+}

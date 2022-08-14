@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="Response"></p>
+    <script type="text/javascript">
+    var formData = location.search;
+    formData = formData.substring(1, formData.length);
+    while (formData.indexOf("+") != -1) {
+      formData = formData.replace("+", " ");
+    }
+    formData = unescape(formData);
+    var formArray = formData.split("&");
+    var info = "";
+    for (var i=0; i < formArray.length; ++i) {
+      info += formArray[i] + "<br />";
+      info = info.replace("=",": " );
+    }
+    document.getElementById("Response").innerHTML=info;
+    </script>
+  </body>
+</html>

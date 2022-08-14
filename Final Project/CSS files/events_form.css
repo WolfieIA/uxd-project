@@ -173,3 +173,8 @@ button:hover {
 
 .button {
   margin: 0 0 0 300px;
+}
+
+span {
+  color: red;
+}

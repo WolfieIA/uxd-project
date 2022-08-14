@@ -7,24 +7,24 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="./CSS Files/daterangepicker.css">
   </head>
   <body style="background-image: url(./Images/texture1.jpg)">
-    <form class="" action="submit()" method="post">
+    <form class="" action="eventFormP.html" method="get">
       <h1>Event proposal request</h1>
       <div class="form_section">
         <h2>event information</h2>
             <input type="text" name="event_name" class="form_input" placeholder="Event Name*" required maxlength="60">
             <select class="event_type" name="event_type" required>
-              <option value="" selected hidden disabled class="required">Type of Event*</option>
+              <option value="" selected hidden disabled class="required">Type of Event <span>*</span></option>
               <option value="">Conference</option>
               <option value="">Meeting</option>
               <option value="">Wedding</option>
               <option value="">Training</option>
               <option value="">Social Event</option>
             </select>
-            <select class="guestno" name="guestno" required>
-              <option value="" selected hidden disabled>Number of Guests*</option>
+            <select class="guestno" name="Number of Guests" required>
+              <option value="" selected hidden disabled>Number of Guests <span>*</span></option>
               <option value="">0-25</option>
               <option value="">26-50</option>
               <option value="">51-75</option>
@@ -35,40 +35,39 @@
         <div class="form_section">
           <h2>Event Date</h2>
           <div style="margin-left:15px;">
-            <label id="event_datetimerange">Official Date*</label>
-            <input type="text" name="event_datetimerange" value="" id="event_datetimerange" required>
-              <script>
-                $(function() {
-                  $('input[name="event_datetimerange"]').daterangepicker({
-                    timePicker: true,
-                    startDate: moment().startOf('hour'),
-                    endDate: moment().startOf('hour').add(32, 'hour'),
-                    locale: {
-                      format: 'M/DD hh:mm A'
-                    }
-                  });
-                });
-              </script>
-            <label for="">Are your dates flexible?*</label>
+            <label id="event_datetimerange">Official Date <span>*</span></label>
+            <input type="text" name="Event Date" value="" id="event_datetimerange" required>
+            <script type="text/javascript">
+            $(function() {
+              $('input[name="Event Date"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: false,
+                minYear: 1901,
+                minDate: new Date(),
+                maxYear: parseInt(moment().format('YYYY'),10)
+              });
+            });
+            </script>
+            <script type="txt/javascript">
+              $('input[name="Event Date"]').daterangepicker({
+                  locale: {
+                  "format": "DD/MM/YYYY",
+                  "applyLabel": "Select",
+                  "firstDay": 1
+              }
+            });
+
+
+            </script>
+            <label for="">Are your dates flexible?<span>*</span></label>
             <label for="dateflex">Yes</label>
-            <input type="radio" name="dateflex" value="Yes" required id="yesflex" checked>
+            <input type="radio" name="Are your dates flexible" value="Yes" required id="yesflex" checked>
             <label for="dateflex">No</label>
-            <input type="radio" name="dateflex" value="No" required id="noflex">
+            <input type="radio" name="Are your dates flexible" value="No" required id="noflex">
             <div id="alt_datetimerange">
               <label>Alternate Date*</label>
-              <input type="text" name="alt_datetimerange" value="" required>
-                <script>
-                  $(function() {
-                    $('input[name="alt_datetimerange"]').daterangepicker({
-                      timePicker: true,
-                      startDate: moment().startOf('hour'),
-                      endDate: moment().startOf('hour').add(32, 'hour'),
-                      locale: {
-                        format: 'M/DD hh:mm A'
-                      }
-                    });
-                  });
-                </script>
+              <input type="text" name="Alternative Date" value="" required>
+
                 <script type="text/javascript">
                   $('#yesflex').change(function() {
                       if(this.checked) {
@@ -88,11 +87,11 @@
           </div>
           <div class="form_section contact">
             <h2>Contact Information</h2>
-            <input type="text" name="name" placeholder="First name*" required>
-            <input type="text" name="name" placeholder="Last name*" required><br>
-            <input type="tel" name="name" placeholder="Phone Number*" required>
+            <input type="text" name="First name" placeholder="First name *" required>
+            <input type="text" name="Last Name" placeholder="Last name *" required><br>
+            <input type="tel" name="Phone Number:" placeholder="Phone Number *" required>
             <input type="email" name="" placeholder="Email*" required><br><br><br>
-            <label for="">Are you a business*</label>
+            <label for="">Are you a business<span>*</span></label>
             <label for="bizboolean">Yes</label>
             <input type="radio" name="bizboolean" value="Yes" required id="amBiz" checked>
             <label for="bizboolean">No</label>

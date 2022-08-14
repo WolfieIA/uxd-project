@@ -606,14 +606,14 @@ font-size: 20px;
 
 .photogrid {
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: auto;
-column-gap: 30px;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 0.7fr 0.7fr 0.7fr;
+column-gap: 20px;
 row-gap: 10px;
 width: 90%;
 height: auto;
 overflow: hidden;
-margin: 30px auto 30px auto;
+margin: auto;
 }
 
 .photogrid img {
@@ -622,7 +622,11 @@ height: 100%;
 overflow: hidden;
 overflow-x: hidden;
 transition-duration: 0.3s ease-in-out;
-object-fit: contain;
+object-fit: cover;
+}
+
+@media (max-width: 960px) {
+
 }
 
 /*FOOTER*/

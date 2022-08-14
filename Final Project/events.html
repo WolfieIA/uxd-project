@@ -2,11 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Page Name</title>
+    <title>Events</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./CSS Files/daterangepicker.css">
     <link rel="stylesheet" href="./CSS Files/template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -34,7 +35,7 @@
           }
       </script>
       <div class="nav-links">
-        <a href="roominfo.html">Rooms</a>
+        <a href="room.html">Rooms</a>
         <a href="mainfacilities.html">Facilities</a>
         <a href="events.html">Events</a>
         <a href="menu.html">Dining</a>
@@ -48,7 +49,7 @@
         </div>
 
       <div class="booking-form-bar">
-        <form class="" action="thebooking.html" method="get">
+        <form class="" action="#" method="post">
             <select name="adults" id="adults"  required>
                 <option value="" disabled selected hidden>&#xf007;&nbsp;&nbsp;&nbsp;&nbsp;Adults</option>
                   <option value="1">1</option>
@@ -92,7 +93,7 @@
                     $this.find( "option:first" ).text($this.val() + ' rooms').val( $this.val() ).prop('selected',true);
                 } )
             </script>
-            <input type="text" name="stayrange" placeholder="Duration of stay" id='stayrange' required>
+            <input type="text" name="stayrange" placeholder="Duration of stay" required>
             <script type="txt/javascript">
             $(function() {
 
@@ -142,21 +143,7 @@
             });
             </script>
 
-            <script type="text/javascript">
-              function roomInfo(){
-                var children = document.getElementById("children").value;
-                var adults = document.getElementById("adults").value;
-                var rooms = document.getElementById("rooms").value;
-                var stayrange = document.getElementById("stayrange").value;
-
-                localStorage.setItem("Adults", adults);
-                localStorage.setItem("Children", children);
-                localStorage.setItem("Rooms", rooms);
-                localStorage.setItem("Stay Range", stayrange);
-              }
-            </script>
-
-          <input type="submit" name="room-available" value="rates & availability" size="100px" onclick="roomInfo()">
+          <input type="submit" name="room-available" value="rates & availability" size="100px">
         </form>
       </div>
 
