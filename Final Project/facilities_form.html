@@ -14,21 +14,17 @@
 
       <div class="choice">
       <h1>Facility Form</h1>
-      <div class="form_section">
         <h2>Type of facility</h2>
-            <div class="btn">
+            <div id="tab">
               <button id="choice1"  onclick="swimmingpoolForm()">swimming pool</button>
               <button id="choice2" onclick="GymForm()">gym studio</button>
-              <button id="choice3" onclick="SpaForm()" >Spa & Relaxing</button>
+              <button id="choice3" onclick="SpaForm()" >Spa & Relaxation</button>
             </div>
-        </div>
 </div>
 <form  action="Formcompleted.html"  onsubmit="return validation1()">
         <div class="type" id="type1">
         <div class="form_section" >
-          <div class="imagefix">
-            <img src="./images/swimming.jfif" >
-          </div>
+          <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(https://images.unsplash.com/photo-1498747946579-bde604cb8f44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80);"></div>
           <h2>Date & Time booking</h2>
           <label for="date_picker1">date of booking:</label>
           <input type="date" id="date_picker1" name="Booking Date" /required>
@@ -158,9 +154,7 @@
         <form  action="Formcompleted.html"  onsubmit="return validation2()">
         <div class="type" id="type2">
           <div class="form_section" >
-            <div class="imagefix">
-              <img src="./images/gym.jpg"  >
-            </div>
+            <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/gym.jpg);"></div>
             <h2>Date & Time booking</h2>
             <label for="date_picker2">Booking Date:</label>
             <input type="date" id="date_picker2" name="Booking Date" /required>
@@ -284,11 +278,9 @@
       <form  action="Formcompleted.html" onsubmit="return validation3()">
           <div class="type" id="type3">
             <div class="form_section" >
-            <div class="imagefix">
-            <img src="./images/spa.jpg"  >
-          </div>
+              <div class="pagetitle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(./Images/hotelpic1.jpg);"></div>
               <h2>Date & Booking Time</h2>
-              <label for="Booking Date">date of booking:</label>
+              <label for="Booking Date">Booking Date:</label>
               <input type="date"  name="Booking Date" id="date_picker3"required>
               <div class="timeslot" >
                 <div class="room">
@@ -458,60 +450,57 @@ var swimming =localStorage.getItem("swimming");
 var gym =localStorage.getItem("gym");
 var spa =localStorage.getItem("spa");
 
-    var btn1 = document.getElementById("choice1");
+    var btn1 = document.getElementById("choice1", "choice2");
     var btn2 = document.getElementById("choice2");
     var btn3 = document.getElementById("choice3");
     var form1 = document.getElementById("type1");
     var form2 = document.getElementById("type2");
     var form3 = document.getElementById("type3");
-    if (swimming==1) {
-        form1.style.display = "block";
-        form2.style.display = "none";
-        form3.style.display = "none";
-        btn1.style.color = "red";
-        btn2.style.color = "black";
-        btn3.style.color = "black";
-    }
-    if (gym==1) {
-      form1.style.display = "none";
-      form2.style.display = "block";
-      form3.style.display = "none";
-      btn1.style.color = "black";
-      btn2.style.color = "orange";
-      btn3.style.color = "black";
-    }
-    if(spa==1){
-      form1.style.display = "none";
-      form2.style.display = "none";
-      form3.style.display = "block";
-      btn1.style.color = "black";
-      btn2.style.color = "black";
-      btn3.style.color = "orange";
-    }
+
     function swimmingpoolForm() {
       form1.style.display = "block";
       form2.style.display = "none";
       form3.style.display = "none";
-      btn1.style.color = "red";
-      btn2.style.color = "black";
-      btn3.style.color = "black";
-
-    }
+      btn1.style.color = "white";
+      btn1.style.backgroundColor = "rgba(17, 75, 130, 1)";
+      btn2.style.color = "rgba(17, 75, 130, 1)";
+      btn2.style.backgroundColor = "transparent";
+      btn3.style.color = "rgba(17, 75, 130, 1)";
+      btn3.style.backgroundColor = "transparent";
+    };
     function GymForm(){
       form1.style.display = "none";
       form2.style.display = "block";
       form3.style.display = "none";
-      btn1.style.color = "black";
-      btn2.style.color = "orange";
-      btn3.style.color = "black";
-    }
+      btn2.style.color = "white";
+      btn2.style.backgroundColor = "rgba(17, 75, 130, 1)";
+      btn1.style.color = "rgba(17, 75, 130, 1)";
+      btn1.style.backgroundColor = "transparent";
+      btn3.style.color = "rgba(17, 75, 130, 1)";
+      btn3.style.backgroundColor = "transparent";
+    };
     function SpaForm(){
       form1.style.display = "none";
       form2.style.display = "none";
       form3.style.display = "block";
-      btn1.style.color = "black";
-      btn2.style.color = "black";
-      btn3.style.color = "orange";
+      btn3.style.color = "white";
+      btn3.style.backgroundColor = "rgba(17, 75, 130, 1)";
+      btn2.style.color = "rgba(17, 75, 130, 1)";
+      btn2.style.backgroundColor = "transparent";
+      btn1.style.color = "rgba(17, 75, 130, 1)";
+      btn1.style.backgroundColor = "transparent";
+    };
+
+    if (swimming==1) {
+        swimmingpoolForm();
+
+    }
+    if (gym==1) {
+      GymForm();
+    }
+    if(spa==1){
+      SpaForm();
+
     }
 
 
