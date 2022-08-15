@@ -154,7 +154,7 @@
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
           sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button type="button" name="event-booking" value="1" onclick="swimmingpoolForm()" >BOOK NOW</button>
+        <button type="button" name="event-booking" onclick="swimmingpoolForm()" >BOOK NOW</button>
       </div>
     </div>
 
@@ -169,7 +169,7 @@
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
           sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button type="button" name="event-booking" class="gym" value="2" onclick="GymForm()">BOOK NOW</button>
+        <button type="button" name="event-booking" class="gym" onclick="GymForm()">BOOK NOW</button>
       </div>
     </div>
 
@@ -184,7 +184,7 @@
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
           sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button type="button" name="event-booking" class="spa" value="3" onclick="SpaForm()">BOOK NOW</button>
+        <button type="button" name="event-booking" class="spa" onclick="SpaForm()">BOOK NOW</button>
       </div>
     </div>
   </div>
@@ -201,19 +201,25 @@
   <script src="linkpage.js">
   </script>
   <script>
-  function swimmingpoolForm(){
   var swimming = document.getElementsByClassName("swimming");
+  var gym = document.getElementsByClassName("gym");
+  var spa = document.getElementsByClassName("spa");
+
+  localStorage.setItem("swimming", 0);
+  localStorage.setItem("gym", 0);
+  localStorage.setItem("spa", 0);
+
+
+  function swimmingpoolForm(){
   localStorage.setItem("swimming", 1);
   window.location.href="facilities_form.html";
 }
   function GymForm(){
-  var gym = document.getElementsByClassName("gym");
-  localStorage.setItem("gym", 2);
+  localStorage.setItem("gym", 1);
   window.location.href="facilities_form.html";
 }
   function SpaForm(){
-  var spa = document.getElementsByClassName("spa");
-  localStorage.setItem("spa", 3);
+  localStorage.setItem("spa", 1);
   window.location.href="facilities_form.html";}
 
 var slideIndex = 1;
@@ -276,6 +282,7 @@ function showSlides(n) {
         <img src="./Images/swim.jpg" alt="">
       </div>
     </div>
+    <br>
 
 <div>
 <footer class="footer">
