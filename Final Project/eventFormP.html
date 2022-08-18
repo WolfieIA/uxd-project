@@ -18,6 +18,7 @@
     for (var i=0; i < formArray.length; ++i) {
       info += formArray[i] + "<br />";
       info = info.replace("=",": " );
+      info = info.replace("_"," " );
     }
     document.getElementById("Response").innerHTML=info;
     </script>
