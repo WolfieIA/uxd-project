@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="./CSS files/style.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <body>
   <script type="text/javascript">
       function gone(){
@@ -50,10 +51,124 @@
              <div class="input-group">
                   <label for="check-in"class="input-label">Check in</label>
                   <input type="date"class="input"id="check-in">
+                  <script type="text/javascript">
+                    var today = new Date();
+                            var dd = String(today.getDate()).padStart(2, '0');
+                            var mm = String(today.getMonth() + 1).padStart(2, '0');
+                            var yyyy = today.getFullYear();
+                            today = yyyy + '-' + mm + '-' + dd;
+                            $('#check-in').attr('min',today);
+                var checkbox = document.querySelectorAll(".checkbox");
+                var count = 0;
+                var list = [];
+                for (var i = 0; i < checkbox.length; i++) {
+                  checkbox[i].addEventListener('click', function(){
+                    if (this.value == 9|| this.value == 10){
+                      var end = +parseInt(this.value)+parseInt(1);
+                      var booking = this.value+"am-"+end +"am";
+                    }
+                    else if (this.value == 11) {
+                      var end = +parseInt(this.value)+parseInt(1);
+                      var booking = this.value+"am-"+end +"pm";
+                    }else if (this.value == 12) {
+                      var end = +parseInt(this.value)-parseInt(11);
+                      var booking = this.value+"am-"+end +"pm";
+                    }
+                    else {
+                      var end = +parseInt(this.value)+parseInt(1);
+                      var booking = this.value+"pm-"+end +"pm";
+                    }
+                    if(this.checked ==true){
+                      count++;
+                      list.push(booking);
+                      document.getElementById("time").innerText = list;
+                    }
+                    else {
+                      count--;
+                      list = list.filter(value => value !== booking);
+                      document.getElementById("time").innerText = list;
+                    }
+                    document.getElementById("counter").innerText = count;
+                  })
+                }
+                function validation1(){
+                  if(count == 0){
+                    alert("input value");
+                    return false;
+                  }
+                  else if (count >2) {
+                    alert("max of booking is 2 slot");
+                    return false;
+                  }
+                  else {
+
+                    var sendvalue = document.getElementsByClassName("sendvalue");
+                    localStorage.setItem("sendvalue", "Booking Time(s): " + list);
+                    window.location.href="Formcompleted.html";
+                  }
+                }
+                  </script>
              </div>
              <div class="input-group">
                   <label for="check-out"class="input-label">Check out</label>
                   <input type="date"class="input" id="check-out">
+                  <script type="text/javascript">
+                    var today = new Date();
+                            var dd = String(today.getDate()).padStart(2, '0');
+                            var mm = String(today.getMonth() + 1).padStart(2, '0');
+                            var yyyy = today.getFullYear();
+                            today = yyyy + '-' + mm + '-' + dd;
+                            $('#check-out').attr('min',today);
+                var checkbox = document.querySelectorAll(".checkbox");
+                var count = 0;
+                var list = [];
+                for (var i = 0; i < checkbox.length; i++) {
+                  checkbox[i].addEventListener('click', function(){
+                    if (this.value == 9|| this.value == 10){
+                      var end = +parseInt(this.value)+parseInt(1);
+                      var booking = this.value+"am-"+end +"am";
+                    }
+                    else if (this.value == 11) {
+                      var end = +parseInt(this.value)+parseInt(1);
+                      var booking = this.value+"am-"+end +"pm";
+                    }else if (this.value == 12) {
+                      var end = +parseInt(this.value)-parseInt(11);
+                      var booking = this.value+"am-"+end +"pm";
+                    }
+                    else {
+                      var end = +parseInt(this.value)+parseInt(1);
+                      var booking = this.value+"pm-"+end +"pm";
+                    }
+                    if(this.checked ==true){
+                      count++;
+                      list.push(booking);
+                      document.getElementById("time").innerText = list;
+                    }
+                    else {
+                      count--;
+                      list = list.filter(value => value !== booking);
+                      document.getElementById("time").innerText = list;
+                    }
+                    document.getElementById("counter").innerText = count;
+                  })
+                }
+                function validation1(){
+                  if(count == 0){
+                    alert("input value");
+                    return false;
+                  }
+                  else if (count >2) {
+                    alert("max of booking is 2 slot");
+                    return false;
+                  }
+                  else {
+
+                    var sendvalue = document.getElementsByClassName("sendvalue");
+                    localStorage.setItem("sendvalue", "Booking Time(s): " + list);
+                    window.location.href="Formcompleted.html";
+                  }
+                }
+                  </script>
              </div>
              <div class="input-group">
                <label for="children"class="input-label">Adults</label>
